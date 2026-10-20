@@ -30,27 +30,122 @@ A deletion is complete only when:
 
 All participant-facing files are inside `dataset/`.
 
-Only `dataset/deletion_requests.csv` requires answers. The other files provide context:
+| File | Contents |
+| --- | --- |
+| `deletion_requests.csv` | Requests that must be audited |
+| `sample_deletion_requests.csv` | Sample requests |
+| `sample_output.csv` | Correct answers for the sample requests |
+| `user_identities.csv` | Current user identities |
+| `user_audit_log.csv` | Historical identity changes |
+| `system_activity.csv` | Deletion, sync, export, backup, and restore activity |
+| `deletion_rules.csv` | Required treatment for each data category |
+| `evidence_files.csv` | Manifest of the supplied evidence files |
+| `output.csv` | Blank submission template |
 
-1. `dataset/deletion_requests.csv` - Deletion requests that must be audited.
-2. `dataset/sample_deletion_requests.csv` - Example deletion requests.
-3. `dataset/sample_output.csv` - Completed canonical answers for the sample requests.
-4. `dataset/user_identities.csv` - One current identity row for each user.
-5. `dataset/user_audit_log.csv` - Historical changes to users' names, email addresses, phone numbers, and other identifiers.
-6. `dataset/system_activity.csv` - Operations reported by services, workers, syncs, exports, backups, and restore processes.
-7. `dataset/deletion_rules.csv` - Rules defining whether each category of data must be deleted, redacted, anonymized, or retained.
-8. `dataset/evidence_files.csv` - Global manifest of the supplied PDFs, images, logs, SQLite snapshots, JSON records, emails, and text files.
-9. `dataset/output.csv` - Blank submission template. Fill this file with answers for `deletion_requests.csv`.
+Evidence may be stored as PDFs, images, logs, JSON, or SQLite snapshots under `dataset/evidence/`.
 
-Evidence files are stored under `dataset/evidence/`. For example:
+## Input
+
+Each row in `deletion_requests.csv` is one case:
 
 ```text
-dataset/evidence/documents/<file_id>.pdf
-dataset/evidence/images/<file_id>.png
-dataset/evidence/logs/<file_id>.log
-dataset/evidence/databases/<file_id>.sqlite
+case_id,email,requested_at,reported_status,reported_at,audit_at,request_text
 ```
 
-Use the supplied identity, activity, evidence, and timestamp data to determine the deletion state at `audit_at`. Activity and evidence records are global and may include unrelated users and files. Ignore evidence produced after `audit_at`.
+`reported_status` may be `COMPLETE`, `PARTIALLY_COMPLETE`, or `NOT_STARTED`. It is a claim from the existing deletion workflow, not proof of the true state.
 
+## Required Output
 
+Produce one or more ordered rows in `output.csv` for every case:
+
+```text
+case_id,step_no,system_id,object_id,operation,state,evidence_id
+```
+
+| Column | Meaning |
+| --- | --- |
+| `case_id` | Case being audited |
+| `step_no` | Step order, starting at `1` |
+| `system_id` | System containing the record or process |
+| `object_id` | Record, export, backup, or data flow |
+| `operation` | Finding, remediation action, or verification |
+| `state` | Observed or required state |
+| `evidence_id` | Supporting `activity_id`, `audit_id`, or `file_id` |
+
+Every case begins with exactly one assessment row. Leave `system_id`, `object_id`, and `evidence_id` empty for that row.
+
+```csv
+case_id,step_no,system_id,object_id,operation,state,evidence_id
+C0001,1,,,ASSESS_DELETION,INCOMPLETE,
+C0001,2,analytics_platform,ANL000124,REPORT_REMAINING_RECORD,PRESENT,F000121
+C0001,3,integration_service,FLOW000091,REPORT_ACTIVE_DATA_FLOW,ACTIVE,ACT000882
+C0001,4,integration_service,FLOW000091,DISABLE_DATA_FLOW,DISABLED,
+C0001,5,analytics_platform,ANL000124,DELETE_RECORD,ABSENT,
+C0001,6,analytics_platform,ANL000124,VERIFY_RECORD_ABSENT,ABSENT,
+C0001,7,integration_service,FLOW000091,VERIFY_DATA_FLOW_DISABLED,DISABLED,
+```
+
+## Allowed Operations
+
+| Purpose | Operation | State |
+| --- | --- | --- |
+| Assessment | `ASSESS_DELETION` | `COMPLETE` or `INCOMPLETE` |
+| Finding | `REPORT_REMAINING_RECORD` | `PRESENT` |
+| Finding | `REPORT_EXPOSED_PII` | `PRESENT` |
+| Finding | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` |
+| Finding | `REPORT_RESTORE_RISK` | `ACTIVE` |
+| Remediation | `DISABLE_DATA_FLOW` | `DISABLED` |
+| Remediation | `BLOCK_RESTORE` | `BLOCKED` |
+| Remediation | `DELETE_RECORD` | `ABSENT` |
+| Remediation | `REDACT_RECORD` | `REDACTED` |
+| Remediation | `ANONYMIZE_RECORD` | `ANONYMIZED` |
+| Verification | `VERIFY_RECORD_ABSENT` | `ABSENT` |
+| Verification | `VERIFY_RECORD_PRESENT` | `PRESENT` |
+| Verification | `VERIFY_RECORD_REDACTED` | `REDACTED` |
+| Verification | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` |
+| Verification | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` |
+| Verification | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` |
+
+## Rules
+
+- Use current and historical identifiers to find the user's data.
+- Determine the state at `audit_at`. Reported statuses do not prove deletion.
+- Follow `deletion_rules.csv` and identify any sync or restore process that could recreate the data.
+- Order rows as: assessment, findings, remediation, verification.
+- Disable data flows and block restore risks before changing records.
+- Cite evidence for findings. Leave evidence empty for proposed remediation.
+
+## Evaluation
+
+`output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of the final assessment, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of the remediation plan.
+
+Your `code.zip` must include `evaluation/evaluation_report.md` containing:
+
+- case-level assessment accuracy;
+- row-level and field-level accuracy;
+- sequence accuracy;
+- at least three additional evaluation cases created by your team; and
+- failures found and improvements made.
+
+## Submission
+
+| Item | Description |
+| --- | --- |
+| `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
+| `output.csv` | Ordered answers for every deletion request |
+| `chat_transcript` | Transcript showing how the system was developed or used |
+| AI interview | Explanation of the approach and evaluation |
+
+### Token Usage and Cost Analysis
+
+Your `code.zip` must include one token-usage file:
+
+```text
+evaluation/usage_report.md
+```
+
+The report must summarize the final full-dataset run that produced `output.csv`, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. If multiple models are used, include both per-model and overall totals in the same file.
+
+Do not include API keys, credentials, or sensitive configuration values in the submission.
+
+These are the required deliverables. Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency.
