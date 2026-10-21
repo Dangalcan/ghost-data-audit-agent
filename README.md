@@ -6,7 +6,7 @@ Build an AI agent that audits whether a user's personal data was actually delete
 
 A deletion workflow may report **Complete** while data still exists in databases, logs, support attachments, exports, search indexes, archives, or backups. Sync and restore processes may also bring deleted data back.
 
-For each request, the agent must determine whether deletion is `COMPLETE` or `INCOMPLETE`, report any remaining data or recreation risk, and produce the ordered remediation and verification steps required to finish the deletion safely.
+For each request, the agent must first determine whether deletion was actually requested. It then returns `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`, reports any remaining data or recreation risk, and produces the ordered remediation and verification steps required to finish an authorized deletion safely.
 
 Read [problem_statement.md](./problem_statement.md) for the complete challenge contract.
 
@@ -16,7 +16,7 @@ All participant-facing files are in `dataset/`:
 
 | File | Contents |
 | --- | --- |
-| `deletion_requests.csv` | 500 requests to audit |
+| `deletion_requests.csv` | 510 requests to audit: 500 deletion cases and 10 non-deletion safety cases |
 | `sample_deletion_requests.csv` | 30 sample requests |
 | `sample_output.csv` | Correct sample answers |
 | `user_identities.csv` | Current user identities |
@@ -38,9 +38,9 @@ Create `output.csv` with these columns in this exact order:
 case_id,deletion_status,steps_json
 ```
 
-Produce exactly one row per deletion request. `deletion_status` is `COMPLETE` or `INCOMPLETE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use `sample_output.csv` as the format reference.
+Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array for `NOT_APPLICABLE`. Use `sample_output.csv` as the format reference.
 
-The final file must contain 500 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
+The final file must contain 510 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
 
 ## Evaluation
 
@@ -72,7 +72,7 @@ This repository includes [AGENTS.md](./AGENTS.md), which asks compatible AI codi
 | Item | Description |
 | --- | --- |
 | `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | One answer row for each of the 500 deletion requests |
+| `output.csv` | One answer row for each of the 510 requests |
 | `chat_transcript` | Transcript showing how the system was developed or used |
 | AI interview | Explanation of the approach and evaluation |
 

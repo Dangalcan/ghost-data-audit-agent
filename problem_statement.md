@@ -6,15 +6,16 @@ A user deletes an old account. A few days later, they try to use the same email 
 
 The primary account is no longer visible, and the deletion workflow says **“Complete.”** However, the email may still exist in a secondary database, support attachment, search index, analytics export, log, archive, or backup. A synchronization or restore process may also recreate information after it was deleted.
 
-The agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete.
+
+For deletion requests, the agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete.
 
 When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain.
 
 ## What You Need to Build
 
-For each deletion request, build a system that determines:
+For each request, build a system that determines:
 
-- whether the deletion is `COMPLETE` or `INCOMPLETE`;
+- whether the deletion is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` because the person did not request deletion;
 - which records or identifiers still expose the user;
 - which active processes can recreate deleted data;
 - the ordered remediation steps required to complete the request.
@@ -65,10 +66,10 @@ case_id,deletion_status,steps_json
 | Column | Meaning |
 | --- | --- |
 | `case_id` | Case being audited |
-| `deletion_status` | `COMPLETE` or `INCOMPLETE` |
+| `deletion_status` | `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` |
 | `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |
 
-The final file must contain exactly 500 data rows, sorted by `case_id`.
+The final file must contain exactly 510 data rows, sorted by `case_id`.
 
 Each object in `steps_json` must contain:
 
@@ -86,7 +87,13 @@ Each object in `steps_json` must contain:
 
 `phase` must be `FINDING`, `REMEDIATION`, or `VERIFICATION`. Step numbers start at `1` and increase consecutively. Array order is significant.
 
-For `COMPLETE`, include only verification steps proving the current state. For `INCOMPLETE`, include findings, the complete remediation plan, and the checks that must pass afterward.
+For `COMPLETE`, include only verification steps proving the current state. For `INCOMPLETE`, include findings, the complete remediation plan, and the checks that must pass afterward. For `NOT_APPLICABLE`, use an empty JSON array (`[]`) because no deletion or deletion verification is authorized.
+
+A non-deletion row therefore has this form:
+
+```csv
+C0501,NOT_APPLICABLE,[]
+```
 
 The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.
 
@@ -137,7 +144,7 @@ Your `code.zip` must include `evaluation/evaluation_report.md` containing:
 | Item | Description |
 | --- | --- |
 | `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | One answer row for every deletion request |
+| `output.csv` | One answer row for every request |
 | `chat_transcript` | Transcript showing how the system was developed or used |
 | AI interview | Explanation of the approach and evaluation |
 
