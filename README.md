@@ -16,8 +16,8 @@ All participant-facing files are in `dataset/`:
 
 | File | Contents |
 | --- | --- |
-| `deletion_requests.csv` | 510 requests to audit: 500 deletion cases and 10 non-deletion safety cases |
-| `sample_deletion_requests.csv` | 30 sample requests |
+| `deletion_requests.csv` | 518 requests |
+| `sample_deletion_requests.csv` | 32 sample requests |
 | `sample_output.csv` | Correct sample answers |
 | `user_identities.csv` | Current user identities |
 | `user_audit_log.csv` | Historical identity changes |
@@ -40,7 +40,7 @@ case_id,deletion_status,steps_json
 
 Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array for `NOT_APPLICABLE`. Use `sample_output.csv` as the format reference.
 
-The final file must contain 510 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
+The final file must contain 518 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
 
 ## Evaluation
 
@@ -72,7 +72,7 @@ This repository includes [AGENTS.md](./AGENTS.md), which asks compatible AI codi
 | Item | Description |
 | --- | --- |
 | `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | One answer row for each of the 510 requests |
+| `output.csv` | One answer row for each of the 518 requests |
 | `chat_transcript` | Transcript showing how the system was developed or used |
 | AI interview | Explanation of the approach and evaluation |
 

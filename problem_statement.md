@@ -11,6 +11,8 @@ For deletion requests, the agent must investigate the supplied records, determin
 
 When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain.
 
+Some systems preserve an account tombstone so permitted records can continue to reference the same internal `user_id`. In these records, the stable user reference may remain, but direct identifiers such as name, email, phone, and email hash must be removed.
+
 ## What You Need to Build
 
 For each request, build a system that determines:
@@ -69,7 +71,7 @@ case_id,deletion_status,steps_json
 | `deletion_status` | `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` |
 | `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |
 
-The final file must contain exactly 510 data rows, sorted by `case_id`.
+The final file must contain exactly 518 data rows, sorted by `case_id`.
 
 Each object in `steps_json` must contain:
 
@@ -122,6 +124,7 @@ The grader parses `steps_json` as JSON. JSON object-key order and whitespace are
 - Use current and historical identifiers to find the user's data.
 - Determine the state at `audit_at`. Reported statuses do not prove deletion.
 - Follow `deletion_rules.csv` and identify any sync or restore process that could recreate the data.
+- When policy permits an account tombstone, preserve its stable subject reference while removing every prohibited direct identifier.
 - Order steps as findings, remediation, then verification.
 - Disable data flows and block restore risks before changing records.
 - Findings must cite evidence. Proposed remediation and future verification steps use an empty `evidence_id`.
