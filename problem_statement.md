@@ -56,73 +56,78 @@ case_id,email,requested_at,reported_status,reported_at,audit_at,request_text
 
 ## Required Output
 
-Produce one or more ordered rows in `output.csv` for every case:
+Produce exactly one row in `output.csv` for every case in `deletion_requests.csv`:
 
 ```text
-case_id,step_no,system_id,object_id,operation,state,evidence_id
+case_id,deletion_status,steps_json
 ```
 
 | Column | Meaning |
 | --- | --- |
 | `case_id` | Case being audited |
-| `step_no` | Step order, starting at `1` |
-| `system_id` | System containing the record or process |
-| `object_id` | Record, export, backup, or data flow |
-| `operation` | Finding, remediation action, or verification |
-| `state` | Observed or required state |
-| `evidence_id` | Supporting `activity_id`, `audit_id`, or `file_id` |
+| `deletion_status` | `COMPLETE` or `INCOMPLETE` |
+| `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |
 
-Every case begins with exactly one assessment row. Leave `system_id`, `object_id`, and `evidence_id` empty for that row.
+The final file must contain exactly 500 data rows, sorted by `case_id`.
 
-```csv
-case_id,step_no,system_id,object_id,operation,state,evidence_id
-C0001,1,,,ASSESS_DELETION,INCOMPLETE,
-C0001,2,analytics_platform,ANL000124,REPORT_REMAINING_RECORD,PRESENT,F000121
-C0001,3,integration_service,FLOW000091,REPORT_ACTIVE_DATA_FLOW,ACTIVE,ACT000882
-C0001,4,integration_service,FLOW000091,DISABLE_DATA_FLOW,DISABLED,
-C0001,5,analytics_platform,ANL000124,DELETE_RECORD,ABSENT,
-C0001,6,analytics_platform,ANL000124,VERIFY_RECORD_ABSENT,ABSENT,
-C0001,7,integration_service,FLOW000091,VERIFY_DATA_FLOW_DISABLED,DISABLED,
+Each object in `steps_json` must contain:
+
+```json
+{
+  "step_no": 1,
+  "phase": "FINDING",
+  "system_id": "account_service",
+  "object_id": "ACC000005",
+  "operation": "REPORT_REMAINING_RECORD",
+  "state": "PRESENT",
+  "evidence_id": "F000001"
+}
 ```
+
+`phase` must be `FINDING`, `REMEDIATION`, or `VERIFICATION`. Step numbers start at `1` and increase consecutively. Array order is significant.
+
+For `COMPLETE`, include only verification steps proving the current state. For `INCOMPLETE`, include findings, the complete remediation plan, and the checks that must pass afterward.
+
+The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.
 
 ## Allowed Operations
 
-| Purpose | Operation | State |
+| Phase | Operation | State |
 | --- | --- | --- |
-| Assessment | `ASSESS_DELETION` | `COMPLETE` or `INCOMPLETE` |
-| Finding | `REPORT_REMAINING_RECORD` | `PRESENT` |
-| Finding | `REPORT_EXPOSED_PII` | `PRESENT` |
-| Finding | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` |
-| Finding | `REPORT_RESTORE_RISK` | `ACTIVE` |
-| Remediation | `DISABLE_DATA_FLOW` | `DISABLED` |
-| Remediation | `BLOCK_RESTORE` | `BLOCKED` |
-| Remediation | `DELETE_RECORD` | `ABSENT` |
-| Remediation | `REDACT_RECORD` | `REDACTED` |
-| Remediation | `ANONYMIZE_RECORD` | `ANONYMIZED` |
-| Verification | `VERIFY_RECORD_ABSENT` | `ABSENT` |
-| Verification | `VERIFY_RECORD_PRESENT` | `PRESENT` |
-| Verification | `VERIFY_RECORD_REDACTED` | `REDACTED` |
-| Verification | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` |
-| Verification | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` |
-| Verification | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` |
+| `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` |
+| `FINDING` | `REPORT_EXPOSED_PII` | `PRESENT` |
+| `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` |
+| `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` |
+| `REMEDIATION` | `DISABLE_DATA_FLOW` | `DISABLED` |
+| `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` |
+| `REMEDIATION` | `DELETE_RECORD` | `ABSENT` |
+| `REMEDIATION` | `REDACT_RECORD` | `REDACTED` |
+| `REMEDIATION` | `ANONYMIZE_RECORD` | `ANONYMIZED` |
+| `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` |
+| `VERIFICATION` | `VERIFY_RECORD_PRESENT` | `PRESENT` |
+| `VERIFICATION` | `VERIFY_RECORD_REDACTED` | `REDACTED` |
+| `VERIFICATION` | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` |
+| `VERIFICATION` | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` |
+| `VERIFICATION` | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` |
 
 ## Rules
 
 - Use current and historical identifiers to find the user's data.
 - Determine the state at `audit_at`. Reported statuses do not prove deletion.
 - Follow `deletion_rules.csv` and identify any sync or restore process that could recreate the data.
-- Order rows as: assessment, findings, remediation, verification.
+- Order steps as findings, remediation, then verification.
 - Disable data flows and block restore risks before changing records.
-- Cite evidence for findings. Leave evidence empty for proposed remediation.
+- Findings must cite evidence. Proposed remediation and future verification steps use an empty `evidence_id`.
+- Verification steps for a `COMPLETE` case must cite evidence proving the current state.
 
 ## Evaluation
 
-`output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of the final assessment, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of the remediation plan.
+`output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of `deletion_status`, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of `steps_json`.
 
 Your `code.zip` must include `evaluation/evaluation_report.md` containing:
 
-- case-level assessment accuracy;
-- row-level and field-level accuracy;
+- case-level status accuracy;
+- step-level and field-level accuracy;
 - sequence accuracy;
 - at least three additional evaluation cases created by your team; and
 - failures found and improvements made.
@@ -132,7 +137,7 @@ Your `code.zip` must include `evaluation/evaluation_report.md` containing:
 | Item | Description |
 | --- | --- |
 | `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | Ordered answers for every deletion request |
+| `output.csv` | One answer row for every deletion request |
 | `chat_transcript` | Transcript showing how the system was developed or used |
 | AI interview | Explanation of the approach and evaluation |
 

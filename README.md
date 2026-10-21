@@ -35,10 +35,12 @@ Only `deletion_requests.csv` requires answers. The other files provide evidence 
 Create `output.csv` with these columns in this exact order:
 
 ```text
-case_id,step_no,system_id,object_id,operation,state,evidence_id
+case_id,deletion_status,steps_json
 ```
 
-Each case must begin with one `ASSESS_DELETION` row, followed by its findings, remediation actions, and verification checks. Use `sample_output.csv` as the format reference.
+Produce exactly one row per deletion request. `deletion_status` is `COMPLETE` or `INCOMPLETE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use `sample_output.csv` as the format reference.
+
+The final file must contain 500 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
 
 ## Evaluation
 
@@ -70,7 +72,7 @@ This repository includes [AGENTS.md](./AGENTS.md), which asks compatible AI codi
 | Item | Description |
 | --- | --- |
 | `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | Ordered answers for all 500 deletion requests |
+| `output.csv` | One answer row for each of the 500 deletion requests |
 | `chat_transcript` | Transcript showing how the system was developed or used |
 | AI interview | Explanation of the approach and evaluation |
 
@@ -78,8 +80,8 @@ You may use any programming language, model, framework, or retrieval approach. I
 
 Before submitting, confirm that:
 
-- every case in `deletion_requests.csv` appears in `output.csv`;
-- columns and step numbers follow the required format;
+- `output.csv` contains exactly one row for every case in `deletion_requests.csv`;
+- every `steps_json` value is a valid JSON array with consecutive step numbers;
 - findings cite valid evidence IDs;
-- proposed remediation rows leave `evidence_id` empty; and
+- proposed remediation and future verification steps use an empty `evidence_id`; and
 - no API keys, credentials, real personal data, or sensitive configuration values are included.
