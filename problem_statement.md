@@ -45,7 +45,7 @@ All participant-facing files are inside `dataset/`.
 | `evidence_files.csv` | Manifest of the supplied evidence files |
 | `output.csv` | Blank submission template |
 
-Evidence may be stored as PDFs, images, logs, JSON, or SQLite snapshots under `dataset/evidence/`.
+Evidence may be stored as PDFs, images, logs, JSON, or SQLite-compatible SQL snapshot exports under `dataset/evidence/`.
 
 ## Input
 
