@@ -80,7 +80,7 @@ Each object in `steps_json` must contain:
   "step_no": 1,
   "phase": "FINDING",
   "system_id": "account_service",
-  "object_id": "ACC000005",
+  "resource_id": "ACC000005",
   "operation": "REPORT_REMAINING_RECORD",
   "state": "PRESENT",
   "evidence_id": "F000001"
