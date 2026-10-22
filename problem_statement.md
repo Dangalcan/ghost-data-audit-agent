@@ -83,7 +83,7 @@ Each object in `steps_json` must contain:
   "resource_id": "account_005",
   "operation": "REPORT_REMAINING_RECORD",
   "state": "PRESENT",
-  "evidence_id": "F000001"
+  "evidence_id": "evidence_01"
 }
 ```
 
