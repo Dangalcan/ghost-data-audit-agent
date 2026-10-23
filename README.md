@@ -1,4 +1,4 @@
-# HackerRank Orchestrate — October 2026
+# HackerRank Orchestrate - October 2026
 
 ## Ghost Data Still Exists
 
