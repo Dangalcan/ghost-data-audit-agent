@@ -26,7 +26,7 @@ All participant-facing files are in `dataset/`:
 | `evidence_files.csv` | Manifest of supplied evidence files |
 | `output.csv` | Blank output template |
 
-Evidence is stored under `dataset/evidence/` and may include PDFs, images, logs, JSON, or SQL snapshot exports. SQL captures may contain a primary database, regional replicas, a reporting replica, or a failover replica so replication drift can be investigated directly. The `.sql` files are readable as text and executable with SQLite.
+Evidence is stored under `dataset/evidence/` and may include PDFs, images, logs, JSON, plain text, or SQL snapshot exports. SQL captures may contain a primary database, regional replicas, a reporting replica, or a failover replica so replication drift can be investigated directly. The `.sql` files are readable as text and executable with SQLite.
 
 Only `deletion_requests.csv` requires answers. The other files provide evidence and context.
 

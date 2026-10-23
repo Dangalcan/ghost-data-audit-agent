@@ -1,10 +1,10 @@
 # Ghost Data Still Exists
 
-Build an AI-powered deletion audit agent that proves whether a user's personal data is truly gone.
+Northstar Shop lost **$2.4 million** after one supposedly deleted customer came back as a ghost in its systems. Every internal dashboard showed the deletion request as **“Complete.”** Weeks later, the same customer tried to create a new account. The platform refused: **“This email is already registered.”**
 
-A user deletes an old account. A few days later, they try to use the same email address again and the platform responds: **“This email is already registered.”**
+What looked like a simple signup bug exposed a much larger failure. The investigation uncovered personal data across secondary databases, support attachments, search indexes, analytics exports, logs, archives, and backups. A synchronization job had even recreated information that the primary account service had successfully deleted.
 
-The primary account is no longer visible, and the deletion workflow says **“Complete.”** However, the email may still exist in a secondary database, support attachment, search index, analytics export, log, archive, or backup. A synchronization or restore process may also recreate information after it was deleted.
+Northstar Shop now needs an AI-powered deletion audit agent that can prove whether a user's personal data is truly gone before another failure causes financial and reputational damage.
 
 
 For deletion requests, the agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete.
