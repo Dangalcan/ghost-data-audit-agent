@@ -93,7 +93,7 @@ For `COMPLETE`, include only verification steps proving the current state. For `
 A non-deletion row therefore has this form:
 
 ```csv
-C0501,NOT_APPLICABLE,[]
+case_000,NOT_APPLICABLE,[]
 ```
 
 The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.
