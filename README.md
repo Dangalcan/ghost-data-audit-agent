@@ -8,7 +8,37 @@ A deletion workflow may report **Complete** while data still exists in databases
 
 For each request, the agent must first determine whether deletion was actually requested. It then returns `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`, reports any remaining data or recreation risk, and produces the ordered remediation and verification steps required to finish an authorized deletion safely.
 
-Read [problem_statement.md](./problem_statement.md) for the complete challenge contract.
+Read [`problem_statement.md`](./problem_statement.md) for the complete challenge contract.
+
+---
+
+## Quick Start
+
+Clone the repository and move into the project directory:
+
+```bash
+git clone https://github.com/interviewstreet/hackerrank-orchestrate-october26.git
+cd hackerrank-orchestrate-october26
+```
+
+Start your AI coding tool from the **repository root** so it automatically reads [`AGENTS.md`](./AGENTS.md) and logs your session turns to `log.txt` in the root directory.
+
+Build your solution in `code/main.py`, or use another language and document its setup and run command clearly in your README.
+
+Your solution must:
+
+- Read the input files from `dataset/`
+- Generate one prediction row for every request in `dataset/deletion_requests.csv`
+- Write the final predictions to `output.csv` in the repository root
+
+Run the starter Python entry point with:
+
+```bash
+python3 code/main.py
+```
+
+The blank template at `dataset/output.csv` is provided as a reference. Your final generated file for submission must be the root-level `output.csv`.
+
 
 ## Dataset
 
@@ -30,6 +60,8 @@ Evidence is stored under `dataset/evidence/` and may include PDFs, images, logs,
 
 Only `deletion_requests.csv` requires answers. The other files provide evidence and context.
 
+---
+
 ## Output
 
 Create `output.csv` with these columns in this exact order:
@@ -38,9 +70,11 @@ Create `output.csv` with these columns in this exact order:
 case_id,deletion_status,steps_json
 ```
 
-Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array for `NOT_APPLICABLE`. Use `sample_output.csv` as the format reference.
+Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array (`[]`) for `NOT_APPLICABLE`. Use `dataset/sample_output.csv` as the format reference.
 
-The final file must contain 518 data rows sorted by `case_id`. The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
+The final file must contain 518 data rows sorted by `case_id` (plus the header row). The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
+
+---
 
 ## Evaluation
 
@@ -59,29 +93,64 @@ evaluation/evaluation_report.md
 evaluation/usage_report.md
 ```
 
-`evaluation_report.md` must cover case, row, field, and sequence accuracy, at least three additional evaluation cases, failures found, and improvements made.
+- `evaluation_report.md` must cover case, row, field, and sequence accuracy, at least three additional evaluation cases created by you, failures found, and improvements made.
+- `usage_report.md` must cover the final full-dataset run, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. Include per-model and overall totals when using multiple models.
 
-`usage_report.md` must cover the final full-dataset run, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. Include per-model and overall totals when using multiple models.
+**Important:** Write your complete evaluation metrics, custom evaluation test cases, and token/cost breakdowns directly inside `evaluation_report.md` and `usage_report.md`, and keep prompts in source code or Markdown files. Automated code evaluation ignores raw data files (`.csv`, `.tsv`, `.json`, `.jsonl`, `.sql`, `.log`), so content stored only in those formats will not be visible to the code judge or AI interviewer.
+
+---
 
 ## Chat Transcript
 
-This repository includes [AGENTS.md](./AGENTS.md), which asks compatible AI coding tools to append conversation summaries to `log.txt`. Submit that log as the chat transcript. Do not include secrets in prompts, code, configuration, or logs.
+This repository includes [`AGENTS.md`](./AGENTS.md), which instructs compatible AI coding tools to append conversation summaries to `log.txt` in the repository root:
 
-## Submission
+| Platform | Path |
+| --- | --- |
+| macOS / Linux | `<repo root>/log.txt` |
+| Windows | `<repo root>\log.txt` |
+
+- Always launch your AI coding agent from the repository root (or explicitly ask it to read `./AGENTS.md` first) so every turn is logged to `log.txt` with the required `User Prompt`, `Agent Response Summary`, `Actions`, and `Context` sections.
+- Upload `log.txt` directly as your `chat_transcript` submission on HackerRank.
+- Do not include API keys, tokens, credentials, or secrets in prompts, code, configuration, or `log.txt`.
+
+---
+
+## Packaging `code.zip` and Submission
 
 | Item | Description |
 | --- | --- |
-| `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
-| `output.csv` | One answer row for each of the 518 requests |
-| `chat_transcript` | Transcript showing how the system was developed or used |
-| AI interview | Explanation of the approach and evaluation |
+| `code.zip` | Runnable solution, prompts, configuration, `README.md`, and `evaluation/` reports |
+| `output.csv` | One answer row for each of the 518 requests in `dataset/deletion_requests.csv` |
+| `chat_transcript` | The root `log.txt` file generated by your coding agent |
+| AI interview | Live explanation of your architecture, approach, and evaluation |
 
-You may use any programming language, model, framework, or retrieval approach. Include clear setup and execution instructions in `code.zip`.
+You may use any programming language, model, framework, or retrieval approach. Include clear setup and execution instructions in `README.md` inside `code.zip`.
+
+To package `code.zip` from the repository root without bundling the dataset:
+
+**macOS / Linux:**
+
+```bash
+zip -r code.zip README.md code -x "*/__pycache__/*" "*/.venv/*" "*/venv/*" "*/node_modules/*" "*/.git/*" "*/.DS_Store"
+```
+
+**Windows (PowerShell):**
+
+```powershell
+Compress-Archive -Path README.md, code -DestinationPath code.zip -Force
+```
+
+When packaging `code.zip`:
+
+- Do **not** include `dataset/`, virtual environments (`.venv`, `node_modules`), or build caches.
+- Do **not** include nested archives (`.zip`, `.tar`, `.gz`, `.tgz`, `.7z`, `.rar`) inside `code.zip` — submissions containing nested archive files will be rejected.
 
 Before submitting, confirm that:
 
-- `output.csv` contains exactly one row for every case in `deletion_requests.csv`;
-- every `steps_json` value is a valid JSON array with consecutive step numbers;
-- findings cite valid evidence IDs;
-- proposed remediation and future verification steps use an empty `evidence_id`; and
+- `output.csv` has the exact header `case_id,deletion_status,steps_json` and contains all 518 data rows sorted by `case_id`;
+- every `steps_json` value is a valid JSON array with consecutive step numbers starting at `1`;
+- findings cite valid evidence IDs, and `COMPLETE` verification steps cite evidence proving the current state;
+- proposed remediation and future verification steps use an empty `evidence_id` (`""`);
+- `code.zip` includes your runnable code, `README.md`, `evaluation/evaluation_report.md`, and `evaluation/usage_report.md`;
+- `log.txt` follows the `AGENTS.md` turn format and is uploaded to the `chat_transcript` slot; and
 - no API keys, credentials, real personal data, or sensitive configuration values are included.
