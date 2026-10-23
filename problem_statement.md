@@ -6,7 +6,6 @@ What looked like a simple signup bug exposed a much larger failure. The investig
 
 Northstar Shop now needs an AI-powered deletion audit agent that can prove whether a user's personal data is truly gone before another failure causes financial and reputational damage.
 
-
 For deletion requests, the agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete.
 
 When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain.
@@ -101,23 +100,23 @@ The grader parses `steps_json` as JSON. JSON object-key order and whitespace are
 
 ## Allowed Operations
 
-| Phase | Operation | State |
-| --- | --- | --- |
-| `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` |
-| `FINDING` | `REPORT_EXPOSED_PII` | `PRESENT` |
-| `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` |
-| `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` |
-| `REMEDIATION` | `DISABLE_DATA_FLOW` | `DISABLED` |
-| `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` |
-| `REMEDIATION` | `DELETE_RECORD` | `ABSENT` |
-| `REMEDIATION` | `REDACT_RECORD` | `REDACTED` |
-| `REMEDIATION` | `ANONYMIZE_RECORD` | `ANONYMIZED` |
-| `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` |
-| `VERIFICATION` | `VERIFY_RECORD_PRESENT` | `PRESENT` |
-| `VERIFICATION` | `VERIFY_RECORD_REDACTED` | `REDACTED` |
-| `VERIFICATION` | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` |
-| `VERIFICATION` | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` |
-| `VERIFICATION` | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` |
+| Phase | Operation | State | Meaning |
+| --- | --- | --- | --- |
+| `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |
+| `FINDING` | `REPORT_EXPOSED_PII` | `PRESENT` | A record may remain, but it still contains identifiers that should have been redacted or anonymized. |
+| `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |
+| `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` | A backup or restore path can bring deleted data back. |
+| `REMEDIATION` | `DISABLE_DATA_FLOW` | `DISABLED` | Stop the process that can copy or recreate the data. |
+| `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |
+| `REMEDIATION` | `DELETE_RECORD` | `ABSENT` | Remove the entire record. |
+| `REMEDIATION` | `REDACT_RECORD` | `REDACTED` | Keep the record but remove the identifying fields required by policy. |
+| `REMEDIATION` | `ANONYMIZE_RECORD` | `ANONYMIZED` | Keep the record after irreversibly unlinking it from the user. |
+| `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` | Confirm that a record no longer exists. |
+| `VERIFICATION` | `VERIFY_RECORD_PRESENT` | `PRESENT` | Confirm that a policy-required retained record still exists. |
+| `VERIFICATION` | `VERIFY_RECORD_REDACTED` | `REDACTED` | Confirm that required identifying fields have been removed. |
+| `VERIFICATION` | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` | Confirm that the record can no longer be linked to the user. |
+| `VERIFICATION` | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` | Confirm that the relevant data flow is inactive. |
+| `VERIFICATION` | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` | Confirm that the affected data cannot be restored. |
 
 ## Rules
 
