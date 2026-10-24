@@ -1,4 +1,5 @@
 """Tests for the reviewer's tools and for the code-side validation of its answers."""
+
 from __future__ import annotations
 
 import os
@@ -33,33 +34,65 @@ def test_tools_return_structured_data_and_handle_bad_input():
 def test_read_source_resolves_every_pointer_kind():
     line = tool_read_source("evidence_94", "resource_lookup_trace_20260926_103856.log:19")
     assert "account_7566" in line["text"] and "http_status=404" in line["text"]
-    rec = tool_read_source("evidence_92", "service_resource_export_20260915_114455.json:account_service.profile_lookups[0]")
+    rec = tool_read_source(
+        "evidence_92", "service_resource_export_20260915_114455.json:account_service.profile_lookups[0]"
+    )
     assert "account_3136" in rec["text"]
-    row = tool_read_source("evidence_54", "customer_accounts_failover_replica_20260902.sql:customer_profiles_failover_replica[0]")
+    row = tool_read_source(
+        "evidence_54", "customer_accounts_failover_replica_20260902.sql:customer_profiles_failover_replica[0]"
+    )
     assert "account_005" in row["text"]
 
 
 def test_veto_is_rejected_unless_the_source_proves_it():
     case, result = _sample("case_05")  # account_005 still present in the failover replica
     finding = next(s for s in result.steps if s.phase == "FINDING")
-    bad = Review(case_id=case.case_id, verdict="DISAGREE", vetoes=[{
-        "resource_id": finding.resource_id, "evidence_id": "evidence_54",
-        "source": "customer_accounts_failover_replica_20260902.sql:customer_profiles_failover_replica[0]",
-        "quote": "this text is not in the row", "reason": "made up"}])
+    bad = Review(
+        case_id=case.case_id,
+        verdict="DISAGREE",
+        vetoes=[
+            {
+                "resource_id": finding.resource_id,
+                "evidence_id": "evidence_54",
+                "source": "customer_accounts_failover_replica_20260902.sql:customer_profiles_failover_replica[0]",
+                "quote": "this text is not in the row",
+                "reason": "made up",
+            }
+        ],
+    )
     validate_review(case, result, bad)
     assert not bad.accepted_vetoes and bad.rejected[0]["rejected_because"] == "quote not found verbatim in the source"
-    late = Review(case_id=case.case_id, verdict="DISAGREE", vetoes=[{
-        "resource_id": finding.resource_id, "evidence_id": "evidence_02",
-        "source": "customer_data_snapshot_bundle_20260917.json:snapshots[0][0]", "quote": "account_5684", "reason": "later file"}])
+    late = Review(
+        case_id=case.case_id,
+        verdict="DISAGREE",
+        vetoes=[
+            {
+                "resource_id": finding.resource_id,
+                "evidence_id": "evidence_02",
+                "source": "customer_data_snapshot_bundle_20260917.json:snapshots[0][0]",
+                "quote": "account_5684",
+                "reason": "later file",
+            }
+        ],
+    )
     validate_review(case, result, late)
     assert late.rejected[0]["rejected_because"] == "evidence captured after audit_at"
     # a real contradiction pattern: the line names the resource, the quote is verbatim and carries a 404 marker
     case3, result3 = _sample("case_03")
     fake_finding_result = result3
-    good = Review(case_id=case3.case_id, verdict="DISAGREE", vetoes=[{
-        "resource_id": "account_7566", "evidence_id": "evidence_94",
-        "source": "resource_lookup_trace_20260926_103856.log:19",
-        "quote": "profile_lookup_completed resource_id=account_7566 rows=0 http_status=404", "reason": "lookup returned 404"}])
+    good = Review(
+        case_id=case3.case_id,
+        verdict="DISAGREE",
+        vetoes=[
+            {
+                "resource_id": "account_7566",
+                "evidence_id": "evidence_94",
+                "source": "resource_lookup_trace_20260926_103856.log:19",
+                "quote": "profile_lookup_completed resource_id=account_7566 rows=0 http_status=404",
+                "reason": "lookup returned 404",
+            }
+        ],
+    )
     validate_review(case3, fake_finding_result, good)
     # case_03 has no finding on account_7566, so the veto is rejected for that reason, not for the evidence
     assert good.rejected[0]["rejected_because"] == "no such finding in the draft"
@@ -67,9 +100,19 @@ def test_veto_is_rejected_unless_the_source_proves_it():
 
 def test_proposal_requires_resource_and_subject_in_the_source():
     case, result = _sample("case_12")
-    rev = Review(case_id=case.case_id, verdict="DISAGREE", proposals=[{
-        "resource_id": "search_9999", "evidence_id": "evidence_01", "source": "service_events_ap_south_20260915.log:92",
-        "quote": "analytics_9914", "reason": "x"}])
+    rev = Review(
+        case_id=case.case_id,
+        verdict="DISAGREE",
+        proposals=[
+            {
+                "resource_id": "search_9999",
+                "evidence_id": "evidence_01",
+                "source": "service_events_ap_south_20260915.log:92",
+                "quote": "analytics_9914",
+                "reason": "x",
+            }
+        ],
+    )
     validate_review(case, result, rev)
     assert rev.rejected and rev.rejected[0]["rejected_because"] == "source does not mention the resource"
 

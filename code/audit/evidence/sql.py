@@ -6,14 +6,14 @@ accounts failover (customer_profiles_primary / _failover_replica), search primar
 Every copy seen in any table becomes an observation (replica name kept), so drift
 between primary and replica is visible to the state engine.
 """
+
 from __future__ import annotations
 
 import json
 import re
 import sqlite3
-from typing import Dict, List, Set
 
-from .base import Observation, ParsedEvidence, Scope
+from .base import ParsedEvidence, Scope
 from .records_json import COLLECTION_KIND, record_observation
 
 TABLE_KIND = {
@@ -41,14 +41,14 @@ TABLE_SYSTEM = {
 
 def parse_sql(path, evidence_id: str, captured_at: str) -> ParsedEvidence:
     parsed = ParsedEvidence(evidence_id=evidence_id, captured_at=captured_at)
-    script = open(path, encoding="utf-8").read()
+    script = path.read_text(encoding="utf-8")
     m = re.search(r"Captured at:\s*(\S+)", script)
     when = m.group(1) if m else captured_at
     con = sqlite3.connect(":memory:")
     con.row_factory = sqlite3.Row
     con.executescript(script)
     tables = [r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type='table'")]
-    scope_systems: Dict[str, Set[str]] = {}
+    scope_systems: dict[str, set[str]] = {}
     if "snapshot_scope" in tables:
         for r in con.execute("SELECT origin_system, captured_at FROM snapshot_scope"):
             scope_systems.setdefault(r["origin_system"], set())
@@ -59,7 +59,14 @@ def parse_sql(path, evidence_id: str, captured_at: str) -> ParsedEvidence:
         rows = [dict(r) for r in con.execute(f'SELECT * FROM "{table}"')]
         replica = None
         base = table
-        for suffix in ("_failover_replica", "_primary", "_read_replica", "_reporting_replica", "_replica_ap_south", "_replica_eu_west"):
+        for suffix in (
+            "_failover_replica",
+            "_primary",
+            "_read_replica",
+            "_reporting_replica",
+            "_replica_ap_south",
+            "_replica_eu_west",
+        ):
             if table.endswith(suffix):
                 replica = suffix.lstrip("_")
                 base = table[: -len(suffix)]

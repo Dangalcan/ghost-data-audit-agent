@@ -13,6 +13,7 @@ the exact ordered steps. They cover situations the public sample does not isolat
 
 Run: python code/evaluation/custom_cases.py
 """
+
 from __future__ import annotations
 
 import json
@@ -31,9 +32,17 @@ from audit.state import state_at  # noqa: E402
 AUDIT_AT = "2026-09-15T12:00:00Z"
 
 
-def O(rid, when, presence="PRESENT", ev="evidence_x", captured=None, kind=None, **kw):
-    return Observation(resource_id=rid, evidence_id=ev, observed_at=when, presence=presence,
-                       kind=kind or default_kind(rid), tokens=tokens_from_values([]), captured_at=captured or when, **kw)
+def obs_at(rid, when, presence="PRESENT", ev="evidence_x", captured=None, kind=None, **kw):
+    return Observation(
+        resource_id=rid,
+        evidence_id=ev,
+        observed_at=when,
+        presence=presence,
+        kind=kind or default_kind(rid),
+        tokens=tokens_from_values([]),
+        captured_at=captured or when,
+        **kw,
+    )
 
 
 def decide(observations, scopes=(), audit_at=AUDIT_AT):
@@ -70,77 +79,175 @@ def case(name, expected_status, expected_steps, build):
 
 # C1 - historical email: the analytics platform still keys a contact entry by the hash of
 # the OLD email address. Policy: SECONDARY_IDENTIFIER -> DELETE (not ANONYMIZE).
-case("C1 historical email hash-only analytics contact", "INCOMPLETE", [
-    ("FINDING", "analytics_platform", "analytics_9914", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_01"),
-    ("REMEDIATION", "analytics_platform", "analytics_9914", "DELETE_RECORD", "ABSENT", ""),
-    ("VERIFICATION", "account_service", "account_9797", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
-    ("VERIFICATION", "analytics_platform", "analytics_9914", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
-    ("VERIFICATION", "security_service", "audit_record_2945", "VERIFY_RECORD_PRESENT", "PRESENT", ""),
-], lambda: decide([
-    O("account_9797", "2026-09-15T11:56:57Z", "ABSENT", "evidence_01"),
-    O("analytics_9914", "2026-09-15T11:58:26Z", "PRESENT", "evidence_01", kind="analytics_contact", pii=True),
-    O("audit_record_2945", "2026-09-15T11:55:40Z", "PRESENT", "evidence_01", retention_until="2034-09-30T23:59:59Z"),
-]))
+case(
+    "C1 historical email hash-only analytics contact",
+    "INCOMPLETE",
+    [
+        ("FINDING", "analytics_platform", "analytics_9914", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_01"),
+        ("REMEDIATION", "analytics_platform", "analytics_9914", "DELETE_RECORD", "ABSENT", ""),
+        ("VERIFICATION", "account_service", "account_9797", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
+        ("VERIFICATION", "analytics_platform", "analytics_9914", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
+        ("VERIFICATION", "security_service", "audit_record_2945", "VERIFY_RECORD_PRESENT", "PRESENT", ""),
+    ],
+    lambda: decide(
+        [
+            obs_at("account_9797", "2026-09-15T11:56:57Z", "ABSENT", "evidence_01"),
+            obs_at(
+                "analytics_9914", "2026-09-15T11:58:26Z", "PRESENT", "evidence_01", kind="analytics_contact", pii=True
+            ),
+            obs_at(
+                "audit_record_2945",
+                "2026-09-15T11:55:40Z",
+                "PRESENT",
+                "evidence_01",
+                retention_until="2034-09-30T23:59:59Z",
+            ),
+        ]
+    ),
+)
 
 # C2 - replication drift: the primary table no longer holds the profile but the failover
 # replica (same capture) still does -> the record still exists.
-case("C2 replication drift keeps the profile alive", "INCOMPLETE", [
-    ("FINDING", "account_service", "account_005", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_54"),
-    ("REMEDIATION", "account_service", "account_005", "DELETE_RECORD", "ABSENT", ""),
-    ("VERIFICATION", "account_service", "account_005", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
-], lambda: decide([
-    O("account_005", "2026-09-02T23:00:00Z", "ABSENT", "evidence_54", replica="primary"),
-    O("account_005", "2026-09-02T23:00:00Z", "PRESENT", "evidence_54", replica="failover_replica", pii=True),
-], audit_at="2026-09-08T13:40:00Z"))
+case(
+    "C2 replication drift keeps the profile alive",
+    "INCOMPLETE",
+    [
+        ("FINDING", "account_service", "account_005", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_54"),
+        ("REMEDIATION", "account_service", "account_005", "DELETE_RECORD", "ABSENT", ""),
+        ("VERIFICATION", "account_service", "account_005", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
+    ],
+    lambda: decide(
+        [
+            obs_at("account_005", "2026-09-02T23:00:00Z", "ABSENT", "evidence_54", replica="primary"),
+            obs_at(
+                "account_005", "2026-09-02T23:00:00Z", "PRESENT", "evidence_54", replica="failover_replica", pii=True
+            ),
+        ],
+        audit_at="2026-09-08T13:40:00Z",
+    ),
+)
 
 # C3 - non-deletion request that mentions deletion -> NOT_APPLICABLE, no steps.
-case("C3 non-deletion request with deletion vocabulary", "NOT_APPLICABLE", [], lambda: (
-    "NOT_APPLICABLE" if guard("Please do not delete anything. I only want a copy of the information held on my account; I still use it.")["label"] == "NON_DELETION" else "COMPLETE", []))
+case(
+    "C3 non-deletion request with deletion vocabulary",
+    "NOT_APPLICABLE",
+    [],
+    lambda: (
+        "NOT_APPLICABLE"
+        if guard(
+            "Please do not delete anything. I only want a copy of the information held on my account; I still use it."
+        )["label"]
+        == "NON_DELETION"
+        else "COMPLETE",
+        [],
+    ),
+)
 
 # C4 - tombstone still carries name/email; audit record retained; account gone.
-case("C4 tombstone exposing identifiers", "INCOMPLETE", [
-    ("FINDING", "identity_service", "tombstone_9178", "REPORT_EXPOSED_PII", "PRESENT", "evidence_51"),
-    ("REMEDIATION", "identity_service", "tombstone_9178", "REDACT_RECORD", "REDACTED", ""),
-    ("VERIFICATION", "account_service", "account_8858", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
-    ("VERIFICATION", "security_service", "audit_record_7068", "VERIFY_RECORD_PRESENT", "PRESENT", ""),
-    ("VERIFICATION", "identity_service", "tombstone_9178", "VERIFY_RECORD_REDACTED", "REDACTED", ""),
-], lambda: decide([
-    O("tombstone_9178", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51", pii=True),
-    O("audit_record_7068", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51"),
-], scopes=[Scope("account_service", "evidence_51", "2026-09-15T12:00:00Z", {"account_8858x"}, "2026-09-15T12:00:00Z")]
-   if False else [Scope("account_service", "evidence_51", "2026-09-15T12:00:00Z", set(), "2026-09-15T12:00:00Z")]) if False else decide([
-    O("account_8858", "2026-09-15T12:00:00Z", "ABSENT", "evidence_51", implicit=True),
-    O("tombstone_9178", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51", pii=True),
-    O("audit_record_7068", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51"),
-]))
+case(
+    "C4 tombstone exposing identifiers",
+    "INCOMPLETE",
+    [
+        ("FINDING", "identity_service", "tombstone_9178", "REPORT_EXPOSED_PII", "PRESENT", "evidence_51"),
+        ("REMEDIATION", "identity_service", "tombstone_9178", "REDACT_RECORD", "REDACTED", ""),
+        ("VERIFICATION", "account_service", "account_8858", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
+        ("VERIFICATION", "security_service", "audit_record_7068", "VERIFY_RECORD_PRESENT", "PRESENT", ""),
+        ("VERIFICATION", "identity_service", "tombstone_9178", "VERIFY_RECORD_REDACTED", "REDACTED", ""),
+    ],
+    lambda: (
+        decide(
+            [
+                obs_at("tombstone_9178", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51", pii=True),
+                obs_at("audit_record_7068", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51"),
+            ],
+            scopes=[
+                Scope(
+                    "account_service", "evidence_51", "2026-09-15T12:00:00Z", {"account_8858x"}, "2026-09-15T12:00:00Z"
+                )
+            ]
+            if False
+            else [Scope("account_service", "evidence_51", "2026-09-15T12:00:00Z", set(), "2026-09-15T12:00:00Z")],
+        )
+        if False
+        else decide(
+            [
+                obs_at("account_8858", "2026-09-15T12:00:00Z", "ABSENT", "evidence_51", implicit=True),
+                obs_at("tombstone_9178", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51", pii=True),
+                obs_at("audit_record_7068", "2026-09-15T12:00:00Z", "PRESENT", "evidence_51"),
+            ]
+        )
+    ),
+)
 
 # C5 - a later capture (file captured after audit_at) shows the search entry deleted; the
 # auditor could not have seen it, so the entry is still PRESENT at audit_at.
-case("C5 evidence captured after audit_at is ignored", "INCOMPLETE", [
-    ("FINDING", "search_service", "search_4013", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_94"),
-    ("REMEDIATION", "search_service", "search_4013", "DELETE_RECORD", "ABSENT", ""),
-    ("VERIFICATION", "search_service", "search_4013", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
-], lambda: decide([
-    O("search_4013", "2026-09-26T09:00:00Z", "PRESENT", "evidence_94", captured="2026-09-26T10:38:56Z", pii=True),
-    O("search_4013", "2026-09-26T10:50:00Z", "ABSENT", "evidence_99", captured="2026-09-28T00:00:00Z"),
-], audit_at="2026-09-26T11:00:00Z"))
+case(
+    "C5 evidence captured after audit_at is ignored",
+    "INCOMPLETE",
+    [
+        ("FINDING", "search_service", "search_4013", "REPORT_REMAINING_RECORD", "PRESENT", "evidence_94"),
+        ("REMEDIATION", "search_service", "search_4013", "DELETE_RECORD", "ABSENT", ""),
+        ("VERIFICATION", "search_service", "search_4013", "VERIFY_RECORD_ABSENT", "ABSENT", ""),
+    ],
+    lambda: decide(
+        [
+            obs_at(
+                "search_4013",
+                "2026-09-26T09:00:00Z",
+                "PRESENT",
+                "evidence_94",
+                captured="2026-09-26T10:38:56Z",
+                pii=True,
+            ),
+            obs_at("search_4013", "2026-09-26T10:50:00Z", "ABSENT", "evidence_99", captured="2026-09-28T00:00:00Z"),
+        ],
+        audit_at="2026-09-26T11:00:00Z",
+    ),
+)
 
 # C6 - everything compliant: verification steps cite the proving evidence, in table order.
-case("C6 complete deletion cites proof per record", "COMPLETE", [
-    ("VERIFICATION", "account_service", "account_5684", "VERIFY_RECORD_ABSENT", "ABSENT", "evidence_92"),
-    ("VERIFICATION", "security_service", "audit_record_5416", "VERIFY_RECORD_PRESENT", "PRESENT", "evidence_92"),
-    ("VERIFICATION", "support_platform", "support_4715", "VERIFY_RECORD_REDACTED", "REDACTED", "evidence_92"),
-    ("VERIFICATION", "analytics_platform", "analytics_4566", "VERIFY_RECORD_ANONYMIZED", "ANONYMIZED", "evidence_92"),
-    ("VERIFICATION", "integration_service", "data_flow_6244", "VERIFY_DATA_FLOW_DISABLED", "DISABLED", "evidence_92"),
-    ("VERIFICATION", "backup_service", "backup_3120", "VERIFY_RESTORE_BLOCKED", "BLOCKED", "evidence_92"),
-], lambda: decide([
-    O("account_5684", "2026-09-15T09:01:48Z", "ABSENT", "evidence_92"),
-    O("audit_record_5416", "2026-09-15T09:30:00Z", "PRESENT", "evidence_92", retention_until="2034-09-30T23:59:59Z"),
-    O("support_4715", "2026-09-15T10:00:00Z", "PRESENT", "evidence_92", pii=False),
-    O("analytics_4566", "2026-09-15T11:29:16Z", "PRESENT", "evidence_92", pii=False),
-    O("data_flow_6244", "2026-09-15T10:10:00Z", "PRESENT", "evidence_92", enabled=False),
-    O("backup_3120", "2026-09-15T10:58:35Z", "PRESENT", "evidence_92", restore_allowed=False),
-]))
+case(
+    "C6 complete deletion cites proof per record",
+    "COMPLETE",
+    [
+        ("VERIFICATION", "account_service", "account_5684", "VERIFY_RECORD_ABSENT", "ABSENT", "evidence_92"),
+        ("VERIFICATION", "security_service", "audit_record_5416", "VERIFY_RECORD_PRESENT", "PRESENT", "evidence_92"),
+        ("VERIFICATION", "support_platform", "support_4715", "VERIFY_RECORD_REDACTED", "REDACTED", "evidence_92"),
+        (
+            "VERIFICATION",
+            "analytics_platform",
+            "analytics_4566",
+            "VERIFY_RECORD_ANONYMIZED",
+            "ANONYMIZED",
+            "evidence_92",
+        ),
+        (
+            "VERIFICATION",
+            "integration_service",
+            "data_flow_6244",
+            "VERIFY_DATA_FLOW_DISABLED",
+            "DISABLED",
+            "evidence_92",
+        ),
+        ("VERIFICATION", "backup_service", "backup_3120", "VERIFY_RESTORE_BLOCKED", "BLOCKED", "evidence_92"),
+    ],
+    lambda: decide(
+        [
+            obs_at("account_5684", "2026-09-15T09:01:48Z", "ABSENT", "evidence_92"),
+            obs_at(
+                "audit_record_5416",
+                "2026-09-15T09:30:00Z",
+                "PRESENT",
+                "evidence_92",
+                retention_until="2034-09-30T23:59:59Z",
+            ),
+            obs_at("support_4715", "2026-09-15T10:00:00Z", "PRESENT", "evidence_92", pii=False),
+            obs_at("analytics_4566", "2026-09-15T11:29:16Z", "PRESENT", "evidence_92", pii=False),
+            obs_at("data_flow_6244", "2026-09-15T10:10:00Z", "PRESENT", "evidence_92", enabled=False),
+            obs_at("backup_3120", "2026-09-15T10:58:35Z", "PRESENT", "evidence_92", restore_allowed=False),
+        ]
+    ),
+)
 
 
 def run() -> int:

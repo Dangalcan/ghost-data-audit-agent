@@ -11,12 +11,12 @@ Usage:
   python code/evaluation/main.py                       # evaluates code/evaluation/sample_predictions.csv
   python code/evaluation/main.py --pred path.csv --gold dataset/sample_output.csv --verbose
 """
+
 from __future__ import annotations
 
 import argparse
 import csv
 import json
-import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -45,7 +45,7 @@ def evaluate(pred: dict, gold: dict, verbose: bool = False) -> dict:
     n = len(gold)
     case_ok = row_ok = 0
     tp = fp = fn = 0
-    field_hits = {f: 0 for f in FIELDS}
+    field_hits = dict.fromkeys(FIELDS, 0)
     field_total = 0
     seq_num = seq_den = 0
     per_case = []
@@ -69,7 +69,9 @@ def evaluate(pred: dict, gold: dict, verbose: bool = False) -> dict:
                 field_hits[f] += gk[k].get(f, "") == pk[k].get(f, "")
         seq_num += lcs(pt, gt)
         seq_den += max(len(gt), 1)
-        per_case.append((cid, g["deletion_status"], p["deletion_status"] if p else None, len(gs & ps), len(gs), len(ps)))
+        per_case.append(
+            (cid, g["deletion_status"], p["deletion_status"] if p else None, len(gs & ps), len(gs), len(ps))
+        )
         if verbose and (not status_ok or gt != pt):
             print(f"\n## {cid}: gold={g['deletion_status']} pred={p['deletion_status'] if p else None}")
             for s in gt:
@@ -80,17 +82,20 @@ def evaluate(pred: dict, gold: dict, verbose: bool = False) -> dict:
     prec = tp / (tp + fp) if tp + fp else 0.0
     rec = tp / (tp + fn) if tp + fn else 0.0
     f1 = 2 * prec * rec / (prec + rec) if prec + rec else 0.0
-    out = {
+    return {
         "cases": n,
         "case_accuracy": case_ok / n,
         "row_accuracy": row_ok / n,
-        "step_precision": prec, "step_recall": rec, "step_f1": f1,
-        "step_tp": tp, "step_fp": fp, "step_fn": fn,
+        "step_precision": prec,
+        "step_recall": rec,
+        "step_f1": f1,
+        "step_tp": tp,
+        "step_fp": fp,
+        "step_fn": fn,
         "field_accuracy": {f: (field_hits[f] / field_total if field_total else 0.0) for f in FIELDS},
         "sequence_accuracy": seq_num / seq_den if seq_den else 0.0,
         "per_case": per_case,
     }
-    return out
 
 
 def main(argv=None) -> int:
@@ -104,9 +109,11 @@ def main(argv=None) -> int:
     if args.json:
         print(json.dumps({k: v for k, v in m.items() if k != "per_case"}, indent=2))
     else:
-        print(f"cases={m['cases']} case_acc={m['case_accuracy']:.3f} row_acc={m['row_accuracy']:.3f} "
-              f"step P/R/F1={m['step_precision']:.3f}/{m['step_recall']:.3f}/{m['step_f1']:.3f} "
-              f"(tp={m['step_tp']} fp={m['step_fp']} fn={m['step_fn']}) seq_acc={m['sequence_accuracy']:.3f}")
+        print(
+            f"cases={m['cases']} case_acc={m['case_accuracy']:.3f} row_acc={m['row_accuracy']:.3f} "
+            f"step P/R/F1={m['step_precision']:.3f}/{m['step_recall']:.3f}/{m['step_f1']:.3f} "
+            f"(tp={m['step_tp']} fp={m['step_fp']} fn={m['step_fn']}) seq_acc={m['sequence_accuracy']:.3f}"
+        )
         print("field accuracy:", {k: round(v, 3) for k, v in m["field_accuracy"].items()})
     return 0
 

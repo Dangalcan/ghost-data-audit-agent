@@ -8,6 +8,7 @@ Run this AFTER quitting the Claude Code session(s) so the JSONL files are comple
 Then upload agent-trace.zip with the submission. Review the staged files first; they
 contain prompts, tool calls and local paths (no credentials are copied).
 """
+
 from __future__ import annotations
 
 import os

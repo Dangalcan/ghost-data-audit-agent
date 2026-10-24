@@ -5,10 +5,10 @@ An Observation is one *grounded* statement about one resource at one time:
 identifiers". Everything downstream (linkage, state, policy) works on this model,
 so the format zoo in dataset/evidence/ is isolated here.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Set
 
 from ..config import system_for_resource
 from ..identity import Tokens, tokens_from_values
@@ -31,10 +31,19 @@ KIND_BY_RECORD_TYPE = {
     "EMAIL_DELIVERY_LOG": "email_delivery_log",
 }
 DEFAULT_KIND_BY_PREFIX = {
-    "account": "profile", "search": "search_entry", "analytics": "analytics_profile",
-    "support": "support_message", "export": "export", "data_flow": "connector", "backup": "backup",
-    "audit_record": "audit_record", "tombstone": "tombstone", "legal_hold": "legal_hold",
-    "marketing": "marketing_profile", "object": "object", "cache": "cache_entry",
+    "account": "profile",
+    "search": "search_entry",
+    "analytics": "analytics_profile",
+    "support": "support_message",
+    "export": "export",
+    "data_flow": "connector",
+    "backup": "backup",
+    "audit_record": "audit_record",
+    "tombstone": "tombstone",
+    "legal_hold": "legal_hold",
+    "marketing": "marketing_profile",
+    "object": "object",
+    "cache": "cache_entry",
     "email_delivery": "email_delivery_log",
 }
 
@@ -47,19 +56,19 @@ def default_kind(resource_id: str) -> str:
 class Observation:
     resource_id: str
     evidence_id: str
-    observed_at: str                       # ISO-8601 UTC
-    presence: str                          # PRESENT | ABSENT | UNKNOWN
-    kind: str                              # see KIND_BY_RECORD_TYPE values
-    tokens: Tokens                         # identifiers found in / joined to this record
-    pii: Optional[bool] = None             # direct identifiers (name/email/phone/hash) present?
-    enabled: Optional[bool] = None         # connectors
-    restore_allowed: Optional[bool] = None  # backups
-    retention_until: Optional[str] = None  # audit / legal records
-    replica: Optional[str] = None          # table / replica the copy was seen in
-    implicit: bool = False                 # absence inferred from a scoped snapshot
-    source: str = ""                       # file:line or json path (for --explain)
-    extra: Dict[str, object] = field(default_factory=dict)
-    captured_at: str = ""                  # when the *file* was captured (set by the registry)
+    observed_at: str  # ISO-8601 UTC
+    presence: str  # PRESENT | ABSENT | UNKNOWN
+    kind: str  # see KIND_BY_RECORD_TYPE values
+    tokens: Tokens  # identifiers found in / joined to this record
+    pii: bool | None = None  # direct identifiers (name/email/phone/hash) present?
+    enabled: bool | None = None  # connectors
+    restore_allowed: bool | None = None  # backups
+    retention_until: str | None = None  # audit / legal records
+    replica: str | None = None  # table / replica the copy was seen in
+    implicit: bool = False  # absence inferred from a scoped snapshot
+    source: str = ""  # file:line or json path (for --explain)
+    extra: dict[str, object] = field(default_factory=dict)
+    captured_at: str = ""  # when the *file* was captured (set by the registry)
 
     def usable_at(self, audit_at: str) -> bool:
         """Could an auditor have seen this at audit_at? Both the file and the record must predate it."""
@@ -83,18 +92,22 @@ class Observation:
             flags.append(f"replica={self.replica}")
         if self.implicit:
             flags.append("implicit")
-        return (f"{self.observed_at} {self.evidence_id:12} {self.resource_id:18} {self.presence:8} {self.kind:18} "
-                + " ".join(flags) + f" ids={sorted(self.tokens.all)}")
+        return (
+            f"{self.observed_at} {self.evidence_id:12} {self.resource_id:18} {self.presence:8} {self.kind:18} "
+            + " ".join(flags)
+            + f" ids={sorted(self.tokens.all)}"
+        )
 
 
 @dataclass
 class Scope:
     """A snapshot that is complete for one system at one time: resources of that
     system which are absent from `present` were absent at `observed_at`."""
+
     system_id: str
     evidence_id: str
     observed_at: str
-    present: Set[str]
+    present: set[str]
     captured_at: str = ""
 
     def usable_at(self, audit_at: str) -> bool:
@@ -105,16 +118,16 @@ class Scope:
 class ParsedEvidence:
     evidence_id: str
     captured_at: str
-    observations: List[Observation] = field(default_factory=list)
-    scopes: List[Scope] = field(default_factory=list)
-    notes: List[str] = field(default_factory=list)
+    observations: list[Observation] = field(default_factory=list)
+    scopes: list[Scope] = field(default_factory=list)
+    notes: list[str] = field(default_factory=list)
 
     @property
-    def resource_ids(self) -> Set[str]:
+    def resource_ids(self) -> set[str]:
         return {o.resource_id for o in self.observations}
 
 
-def to_bool(value) -> Optional[bool]:
+def to_bool(value) -> bool | None:
     if value is None:
         return None
     if isinstance(value, bool):
@@ -128,7 +141,9 @@ def to_bool(value) -> Optional[bool]:
 
 
 def is_null(value) -> bool:
-    return value is None or (isinstance(value, str) and value.strip().strip('"').lower() in ("", "null", "none", "-", "—"))
+    return value is None or (
+        isinstance(value, str) and value.strip().strip('"').lower() in ("", "null", "none", "-", "—")
+    )
 
 
 def presence_from_result(result: str) -> str:
@@ -140,7 +155,7 @@ def presence_from_result(result: str) -> str:
     return "UNKNOWN"
 
 
-def flags_from_result(kind: str, result: str, subject: Optional[str] = None) -> dict:
+def flags_from_result(kind: str, result: str, subject: str | None = None) -> dict:
     """Map the ledger-style result vocabulary to pii / enabled / restore_allowed.
 
     `subject` is the record's subject reference: a direct identifier (email / phone)
@@ -160,7 +175,14 @@ def flags_from_result(kind: str, result: str, subject: Optional[str] = None) -> 
         out["pii"] = True
     elif r in ("ANONYMIZED", "REDACTED"):
         out["pii"] = False
-    elif r == "FOUND" and kind in ("profile", "search_entry", "export", "support_attachment", "object", "marketing_profile"):
+    elif r == "FOUND" and kind in (
+        "profile",
+        "search_entry",
+        "export",
+        "support_attachment",
+        "object",
+        "marketing_profile",
+    ):
         out["pii"] = True
     return out
 

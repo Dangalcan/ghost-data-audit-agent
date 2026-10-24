@@ -2,6 +2,7 @@
 
 Usage: python tools/package.py
 """
+
 from __future__ import annotations
 
 import zipfile
@@ -19,6 +20,7 @@ def main() -> None:
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
         zf.write(ROOT / "README.md", "README.md")
         zf.write(ROOT / "requirements.txt", "requirements.txt")
+        zf.write(ROOT / "pyproject.toml", "pyproject.toml")
         zf.write(ROOT / ".env.example", ".env.example")
         for p in sorted((ROOT / "code").rglob("*")):
             if p.is_dir() or any(part in EXCLUDE_DIRS for part in p.parts) or p.suffix in EXCLUDE_SUFFIXES:
@@ -26,7 +28,14 @@ def main() -> None:
             zf.write(p, p.relative_to(ROOT).as_posix())
     names = zipfile.ZipFile(out).namelist()
     print(f"{out} written: {len(names)} files, {out.stat().st_size / 1024:.0f} KB")
-    for required in ("code/main.py", "code/evaluation/evaluation_report.md", "code/evaluation/usage_report.md", "README.md"):
+    for required in (
+        "code/main.py",
+        "code/README.md",
+        "code/evaluation/evaluation_report.md",
+        "code/evaluation/usage_report.md",
+        "README.md",
+        "pyproject.toml",
+    ):
         print(("ok  " if required in names else "MISSING ") + required)
 
 

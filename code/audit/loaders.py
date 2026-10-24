@@ -1,10 +1,10 @@
 """Typed loaders for the participant-facing CSV files."""
+
 from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
-from functools import lru_cache
-from typing import Dict, List
+from functools import cache
 
 from .config import DATASET_DIR
 
@@ -76,42 +76,42 @@ class EvidenceFile:
         return self.file_path.rsplit("/", 1)[-1]
 
 
-def _read(name: str) -> List[dict]:
+def _read(name: str) -> list[dict]:
     with open(DATASET_DIR / name, encoding="utf-8", newline="") as fh:
         return list(csv.DictReader(fh))
 
 
-@lru_cache(maxsize=None)
-def load_requests(sample: bool = False) -> List[CaseRequest]:
+@cache
+def load_requests(sample: bool = False) -> list[CaseRequest]:
     name = "sample_deletion_requests.csv" if sample else "deletion_requests.csv"
     return [CaseRequest(**r) for r in _read(name)]
 
 
-@lru_cache(maxsize=None)
-def load_identities() -> List[Identity]:
+@cache
+def load_identities() -> list[Identity]:
     return [Identity(**r) for r in _read("user_identities.csv")]
 
 
-@lru_cache(maxsize=None)
-def load_audit_log() -> List[AuditChange]:
+@cache
+def load_audit_log() -> list[AuditChange]:
     return [AuditChange(**r) for r in _read("user_audit_log.csv")]
 
 
-@lru_cache(maxsize=None)
-def load_activity() -> List[Activity]:
+@cache
+def load_activity() -> list[Activity]:
     return [Activity(**r) for r in _read("system_activity.csv")]
 
 
-@lru_cache(maxsize=None)
-def load_rules() -> List[DeletionRule]:
+@cache
+def load_rules() -> list[DeletionRule]:
     return [DeletionRule(**r) for r in _read("deletion_rules.csv")]
 
 
-@lru_cache(maxsize=None)
-def load_evidence_manifest() -> List[EvidenceFile]:
+@cache
+def load_evidence_manifest() -> list[EvidenceFile]:
     return [EvidenceFile(**r) for r in _read("evidence_files.csv")]
 
 
-@lru_cache(maxsize=None)
-def load_sample_output() -> Dict[str, dict]:
+@cache
+def load_sample_output() -> dict[str, dict]:
     return {r["case_id"]: r for r in _read("sample_output.csv")}

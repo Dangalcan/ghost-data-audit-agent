@@ -4,13 +4,14 @@ The request email may be a current or a historical address (user_audit_log.csv).
 email_hash is sha256(lower-cased email); we pre-compute it for every known
 email so hash-only records (e.g. analytics contact entries) can be matched.
 """
+
 from __future__ import annotations
 
 import hashlib
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from functools import lru_cache
-from typing import Dict, Iterable, Optional, Set, Tuple
+from functools import cache
 
 from .loaders import load_audit_log, load_identities
 
@@ -37,18 +38,18 @@ class Subject:
     user_id: str
     name: str
     current_email: str
-    emails: Set[str] = field(default_factory=set)       # lower-cased, current + historical
-    hashes: Set[str] = field(default_factory=set)       # sha256 of every email + recorded hashes
-    phones: Set[str] = field(default_factory=set)       # digits only, current + historical
-    audit_ids: Dict[str, str] = field(default_factory=dict)  # identifier -> audit_id that recorded it
+    emails: set[str] = field(default_factory=set)  # lower-cased, current + historical
+    hashes: set[str] = field(default_factory=set)  # sha256 of every email + recorded hashes
+    phones: set[str] = field(default_factory=set)  # digits only, current + historical
+    audit_ids: dict[str, str] = field(default_factory=dict)  # identifier -> audit_id that recorded it
 
     @property
-    def identifiers(self) -> Set[str]:
+    def identifiers(self) -> set[str]:
         return set(self.emails) | set(self.hashes) | {self.user_id}
 
-    def match_tokens(self, tokens: "Tokens") -> Set[str]:
+    def match_tokens(self, tokens: Tokens) -> set[str]:
         """Identifiers of this subject that appear in the extracted tokens."""
-        hits: Set[str] = set()
+        hits: set[str] = set()
         hits |= self.emails & tokens.emails
         hits |= self.hashes & tokens.hashes
         if self.user_id in tokens.user_ids:
@@ -68,7 +69,7 @@ class Tokens:
         return bool(self.emails or self.hashes or self.user_ids or self.phones)
 
     @property
-    def all(self) -> Set[str]:
+    def all(self) -> set[str]:
         return set(self.emails) | set(self.hashes) | set(self.user_ids) | set(self.phones)
 
 
@@ -82,7 +83,7 @@ def extract_tokens(text: str) -> Tokens:
     )
 
 
-def tokens_from_values(values: Iterable[Optional[str]]) -> Tokens:
+def tokens_from_values(values: Iterable[str | None]) -> Tokens:
     """Tokens from structured field values (email, user_id, hash, phone columns)."""
     emails, hashes, users, phones = set(), set(), set(), set()
     for v in values:
@@ -107,9 +108,9 @@ def tokens_from_values(values: Iterable[Optional[str]]) -> Tokens:
     return Tokens(frozenset(emails), frozenset(hashes), frozenset(users), frozenset(phones))
 
 
-@lru_cache(maxsize=None)
-def _index() -> Tuple[Dict[str, Subject], Dict[str, Subject]]:
-    by_uid: Dict[str, Subject] = {}
+@cache
+def _index() -> tuple[dict[str, Subject], dict[str, Subject]]:
+    by_uid: dict[str, Subject] = {}
     for ident in load_identities():
         subj = Subject(user_id=ident.user_id, name=ident.name, current_email=norm_email(ident.email))
         subj.emails.add(norm_email(ident.email))
@@ -134,7 +135,7 @@ def _index() -> Tuple[Dict[str, Subject], Dict[str, Subject]]:
                 if norm_phone(value):
                     subj.phones.add(norm_phone(value))
                     subj.audit_ids.setdefault(norm_phone(value), change.audit_id)
-    by_email: Dict[str, Subject] = {}
+    by_email: dict[str, Subject] = {}
     for subj in by_uid.values():
         for e in subj.emails:
             by_email.setdefault(e, subj)
@@ -143,28 +144,28 @@ def _index() -> Tuple[Dict[str, Subject], Dict[str, Subject]]:
     return by_uid, by_email
 
 
-def resolve_subject(email: str) -> Optional[Subject]:
+def resolve_subject(email: str) -> Subject | None:
     return _index()[1].get(norm_email(email))
 
 
-def subject_by_user_id(user_id: str) -> Optional[Subject]:
+def subject_by_user_id(user_id: str) -> Subject | None:
     return _index()[0].get(user_id)
 
 
-def all_subjects() -> Dict[str, Subject]:
+def all_subjects() -> dict[str, Subject]:
     return _index()[0]
 
 
-@lru_cache(maxsize=None)
-def identifier_owner() -> Dict[str, str]:
+@cache
+def identifier_owner() -> dict[str, str]:
     """identifier (email / hash / user_id / phone digits) -> user_id, for global ownership lookups."""
-    owner: Dict[str, str] = {}
+    owner: dict[str, str] = {}
     for uid, subj in all_subjects().items():
         for ident in subj.identifiers | subj.phones:
             owner.setdefault(ident, uid)
     return owner
 
 
-def owners_of(tokens: Tokens) -> Set[str]:
+def owners_of(tokens: Tokens) -> set[str]:
     owner = identifier_owner()
     return {owner[t] for t in tokens.all if t in owner}

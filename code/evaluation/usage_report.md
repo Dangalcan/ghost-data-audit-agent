@@ -39,18 +39,24 @@ at the documented multipliers).
 
 | model | purpose | calls | served from cache | new input tokens | new output tokens |
 |---|---|---|---|---|---|
-| claude-haiku-5-5 | intent | 1100 | 1100 | 0 | 0 |
-| claude-sonnet-5-5 | review | 186 | 90 | 587855 | 71097 |
+| claude-haiku-5-5 | intent | 518 | 518 | 0 | 0 |
+| claude-sonnet-5-5 | review | 93 | 93 | 0 | 0 |
 | claude-sonnet-5-5 | vision | 11 | 11 (read from code/cache/vision) | 0 | 0 |
 
-Intent classifications and screenshot extractions were served from the disk cache; the reviewer
-ran live on the uncertain cases (new tokens above). Request texts repeat
-across cases (518 requests, 398 unique texts; 399 intent calls
-including one smoke test), which is why the intent classifier is called once per unique text rather than once per case.
+Intent classifications, screenshot extractions and the reviewer transcripts of the uncertain cases were
+all served from the disk cache in the final run; the real calls that produced them are the rows of the
+table above. Request texts repeat across cases (518 requests, 375 unique texts;
+399 real intent calls = the unique texts of the evaluation and sample sets
+plus one smoke test), which is why the intent classifier is called once per unique text rather than once per
+case. The 99 real reviewer conversations cover the 93 uncertain cases
+of the final run plus the earlier drafts of a few cases whose evidence handling changed during development
+(each draft is reviewed once; a changed draft is a new review).
 
 ## Why so few tokens
 
 - Evidence (logs, JSON, SQL, PDF text) is parsed by code, never sent to a model.
 - The model only sees the request text (Haiku, ~550 tokens per call) and the 11 screenshots (Sonnet).
 - Disk cache keyed by model + prompt + content; the usage ledger records every call (cached or not).
+- The tool-using reviewer runs only on uncertain cases (93 of 518), with an iteration cap of 8 and
+  truncated tool results; its transcripts are cached per draft.
 - Deterministic engine: reruns are free, reproducible and auditable.

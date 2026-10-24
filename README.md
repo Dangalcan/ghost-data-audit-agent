@@ -48,14 +48,22 @@ python code/main.py --cases case_11 --explain   # evidence chain for one case
 Useful flags: `--review uncertain|all|none` (tool-using reviewer; default `uncertain`),
 `--no-llm` (never call a model: deterministic intent guard + cached screenshot
 extractions; the shipped caches make the full run reproducible offline),
-`--skip-images` (ignore screenshot evidence), `--out path.csv`.
+`--skip-images` (ignore screenshot evidence), `--out path.csv`,
+`--log-level DEBUG|INFO|WARNING|ERROR` (structured `key=value` logs on stderr: model
+calls, retries, reviewer verdicts, progress).
 
 ## Layout
 
 ```
 code/main.py                 CLI entry point
+code/README.md               module map, pipeline, guardrails checklist
 code/audit/                  engine: config, loaders, identity, activity, evidence/*,
-                             linkage, state, policy, planner, intent, llm, agent, prompts/
+                             linkage, state, policy, planner, intent
+code/audit/llm.py            Anthropic client: disk cache, usage ledger, typed retries, schema checks
+code/audit/schemas.py        JSON schemas enforced at every model boundary
+code/audit/agent.py          tool-using reviewer loop + code-side validation of its claims
+code/audit/log.py            structured key=value logging
+code/audit/prompts/          the three prompts + README (design, injection posture, iteration log)
 code/evaluation/main.py      evaluation harness (case / row / step / field / sequence)
 code/evaluation/custom_cases.py   additional evaluation cases
 code/evaluation/evaluation_report.md, usage_report.md   required reports
@@ -64,6 +72,7 @@ code/tests/                  pytest unit tests
 code/cache/vision/           screenshot extractions (JSON, reviewed)
 code/cache/llm/              cached model responses keyed by prompt + content
 code/docs/                   ARCHITECTURE.md, INTERVIEW_NOTES.md
+pyproject.toml               project metadata, ruff and pytest configuration
 tools/package.py             builds code.zip;  tools/collect_agent_trace.py stages agent-trace.zip
 ```
 
@@ -76,7 +85,19 @@ carry an empty `evidence_id`; `NOT_APPLICABLE` rows carry `[]`).
 
 ## Security notes
 
-Request text and screenshot content are untrusted data: they are classified or
-transcribed under a system prompt that forbids following them, and model output is
-validated against closed vocabularies before code uses it. The model has no tools and
-never sees secrets; the API key is read from the environment only.
+Request text, screenshot content and every evidence line are untrusted data: they are
+classified, transcribed or searched under system prompts that forbid following them,
+and every model answer is validated against a JSON schema (`code/audit/schemas.py`) and
+closed vocabularies before code uses it. The intent and vision calls have no tools; the
+reviewer's tools are read-only and its vetoes / proposals are re-verified by code against
+the raw evidence. API calls use bounded typed retries with backoff; refusals are
+detected. No model ever sees a secret: the API key is read from the environment only
+(`.env` is git-ignored).
+
+## Development
+
+```bash
+python -m ruff check code tools && python -m ruff format --check code tools   # lint + format (pyproject.toml)
+python -m pytest code/tests -q                                               # 16 unit tests
+python code/evaluation/custom_cases.py                                       # 6 decision-core cases
+```

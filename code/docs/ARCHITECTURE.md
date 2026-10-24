@@ -62,8 +62,9 @@ agent.py           reviewer loop (Claude Sonnet 5.5) on uncertain cases: tools
 | review | Sonnet 5.5 + tools | investigate a draft, veto a finding, propose a missed resource | cited source must exist, predate audit_at, name the resource, contain the verbatim quote and a compliance marker |
 
 The reviewer is a real agent loop (model-driven tool selection, up to 8 iterations, strict
-tool schemas, retries at the SDK level, timeouts, cached transcripts), but it has no write
-access: the deterministic planner recomputes the case with the validated inputs.
+tool schemas, typed retries with exponential backoff on top of the SDK retries, timeouts,
+cached transcripts, every final answer validated against `schemas.REVIEW_SCHEMA`), but it
+has no write access: the deterministic planner recomputes the case with the validated inputs.
 
 ## Key design decisions
 
@@ -85,9 +86,19 @@ access: the deterministic planner recomputes the case with the validated inputs.
 - `request_text` and screenshot contents are untrusted. They are classified or
   transcribed, never followed; the system prompts say so explicitly and model outputs
   are validated against closed vocabularies before use.
-- No tool use is exposed to the model; the model cannot read files, run code or change
-  state. Code decides, so a prompt injection can at most flip one classification, and the
-  deterministic guard flags any disagreement for review (`intent.note`).
+- The intent and screenshot calls expose no tools. The reviewer's four tools are
+  read-only and return JSON; it cannot read arbitrary files, run code or change state.
+  Code decides, so a prompt injection can at most flip one classification or file a
+  citation that code rejects; the deterministic guard flags any intent disagreement for
+  review (`intent.note`).
+- Every model boundary is typed: JSON schemas in `schemas.py` (intent, vision, review)
+  plus closed vocabularies. A non-conforming answer is an error, never a verdict.
+- Retries are typed and bounded: `llm.with_retries` retries rate limits, overloads, 5xx
+  and transport errors with exponential backoff and jitter (4 attempts, 30 s cap) on top
+  of the SDK's own retries; 4xx errors are never retried; refusals are detected through
+  `stop_reason` and recorded, not swallowed.
+- Structured logging (`log.py`): one `key=value` record per model call, retry, reviewer
+  verdict and progress tick; `--log-level` on the CLI.
 - Secrets only from the environment (`.env`, git-ignored). No PII leaves the pipeline
   except the request text sent for classification; evidence text is never sent to the
   model (only screenshots, which contain fictional data by design of the challenge).
@@ -95,6 +106,19 @@ access: the deterministic planner recomputes the case with the validated inputs.
   `code/evaluation/usage_ledger.jsonl`, so the full run is reproducible and auditable.
 - Degrades gracefully: without an API key the engine still runs (`--no-llm`) using the
   deterministic intent guard and any cached extractions.
+
+## Code quality
+
+- `pyproject.toml` configures ruff (pyflakes, pycodestyle, isort, pyupgrade, bugbear,
+  comprehensions, simplify, return, pylint complexity: at most 14 branches, 60 statements
+  and 8 returns per function) and pytest; `ruff check` and `ruff format --check` are clean.
+- Full type hints on public functions and dataclasses for every record that crosses a
+  module boundary (`Observation`, `Scope`, `Link`, `ResourceState`, `ResourcePlan`, `Step`,
+  `CaseResult`, `Review`).
+- Tests: 16 unit tests (log dialects, identity, state, policy, ordering, reviewer tools,
+  code-side validation of vetoes and proposals), 6 custom evaluation cases, the sample
+  regression (status accuracy 1.0, step F1 0.971) and the contract validator on `output.csv`.
+- Module map and guardrails checklist: `code/README.md`; prompt design: `code/audit/prompts/README.md`.
 
 ## Known limitations
 

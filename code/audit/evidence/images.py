@@ -5,18 +5,18 @@ schema, see prompts/vision_extract.md); every decision is made by code. Extracti
 are cached in code/cache/vision/<file_id>.json so a full run is reproducible and
 costs nothing when the cache is warm.
 """
+
 from __future__ import annotations
 
 import json
 import re
-from typing import Optional
 
 from ..config import VISION_CACHE_DIR
 from ..identity import tokens_from_values
 from .base import KIND_BY_RECORD_TYPE, Observation, ParsedEvidence, default_kind, is_null, to_bool
 
 
-def cached_extraction(evidence_id: str) -> Optional[dict]:
+def cached_extraction(evidence_id: str) -> dict | None:
     p = VISION_CACHE_DIR / f"{evidence_id}.json"
     if p.exists():
         return json.loads(p.read_text(encoding="utf-8"))
@@ -42,7 +42,7 @@ def extraction_to_observations(extraction: dict, evidence_id: str, captured_at: 
         presence = "ABSENT" if status in ("ABSENT", "NOT_FOUND", "DELETED") else "PRESENT"
         restore = to_bool(rec.get("restore_allowed"))
         if kind == "backup" and restore is None and presence == "PRESENT":
-            restore = status != "BLOCKED"   # an archive listed as restorable with no block = restore risk
+            restore = status != "BLOCKED"  # an archive listed as restorable with no block = restore risk
         enabled = to_bool(rec.get("enabled"))
         if kind == "connector" and enabled is None and presence == "PRESENT":
             enabled = status not in ("DISABLED", "BLOCKED")
@@ -52,14 +52,25 @@ def extraction_to_observations(extraction: dict, evidence_id: str, captured_at: 
                 m = re.search(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", str(ts))
                 if m:
                     expires = m.group(0)
-        parsed.observations.append(Observation(
-            resource_id=rid, evidence_id=evidence_id, observed_at=when, presence=presence, kind=kind,
-            tokens=tokens, pii=pii if kind not in ("profile", "search_entry", "export", "support_attachment",
-                                                    "object", "marketing_profile") else True,
-            enabled=enabled, restore_allowed=restore,
-            retention_until=None if is_null(rec.get("retention_until")) else rec.get("retention_until"),
-            source=f"{source}:records[{i}]", extra={"aliases": rec.get("aliases") or [], "notes": rec.get("notes"),
-                                                      "expires_at": expires}))
+        parsed.observations.append(
+            Observation(
+                resource_id=rid,
+                evidence_id=evidence_id,
+                observed_at=when,
+                presence=presence,
+                kind=kind,
+                tokens=tokens,
+                pii=pii
+                if kind
+                not in ("profile", "search_entry", "export", "support_attachment", "object", "marketing_profile")
+                else True,
+                enabled=enabled,
+                restore_allowed=restore,
+                retention_until=None if is_null(rec.get("retention_until")) else rec.get("retention_until"),
+                source=f"{source}:records[{i}]",
+                extra={"aliases": rec.get("aliases") or [], "notes": rec.get("notes"), "expires_at": expires},
+            )
+        )
     parsed.notes.append(extraction.get("summary", ""))
     parsed.records = extraction.get("records", [])  # type: ignore[attr-defined]
     parsed.aliases = {a: r.get("resource_id") for r in extraction.get("records", []) for a in (r.get("aliases") or [])}  # type: ignore[attr-defined]
@@ -71,8 +82,12 @@ def parse_image(path, evidence_id: str, captured_at: str) -> ParsedEvidence:
     if extraction is None:
         try:
             from ..llm import extract_screenshot  # lazy: only when the cache is cold
+
             extraction = extract_screenshot(path, evidence_id)
         except Exception as exc:  # no key / offline: the screenshot contributes nothing
-            return ParsedEvidence(evidence_id=evidence_id, captured_at=captured_at,
-                                  notes=[f"screenshot not extracted ({type(exc).__name__}: {exc})"])
+            return ParsedEvidence(
+                evidence_id=evidence_id,
+                captured_at=captured_at,
+                notes=[f"screenshot not extracted ({type(exc).__name__}: {exc})"],
+            )
     return extraction_to_observations(extraction, evidence_id, captured_at, path.name)
