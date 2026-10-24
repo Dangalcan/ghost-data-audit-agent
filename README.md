@@ -41,6 +41,11 @@ cp .env.example .env                               # put ANTHROPIC_API_KEY=... i
 
 Python 3.10+ (developed on 3.12). `sqlite3` ships with Python. No other services.
 
+Dataset: `dataset/` is the organizer's challenge data from the starter repository
+[interviewstreet/hackerrank-orchestrate-october26](https://github.com/interviewstreet/hackerrank-orchestrate-october26).
+If it is not present in your checkout, copy that repository's `dataset/` folder here
+before running (the engine reads only participant-facing files under `dataset/`).
+
 ## Run
 
 ```bash
