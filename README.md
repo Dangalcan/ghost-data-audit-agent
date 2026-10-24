@@ -9,6 +9,14 @@ writes the ordered findings / remediation / verification plan for all 518 reques
 The challenge contract is in [`problem_statement.md`](./problem_statement.md) and
 [`AGENTS.md`](./AGENTS.md). Design notes: [`code/docs/ARCHITECTURE.md`](./code/docs/ARCHITECTURE.md).
 
+## Result
+
+Submitted 2026-10-24. Live leaderboard at submission time: **#15 of 300** evaluated
+entries (final results announced 2026-10-27). Scores: chat transcript 5.4/10,
+AI judge interview 11.7/30, output CSV 26.4/30, **code zip 21.6/30 (highest code score
+among the top 30)**, total 65.1/100. Everything that was uploaded is archived under
+[`submission/`](./submission/README.md).
+
 ## Approach in one paragraph
 
 **The model describes, deterministic code decides.** Every input format is parsed into
