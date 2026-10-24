@@ -51,7 +51,7 @@ All participant-facing files are in `dataset/`:
 | `sample_output.csv` | Correct sample answers |
 | `user_identities.csv` | Current user identities |
 | `user_audit_log.csv` | Historical identity changes |
-| `system_activity.csv` | Activity across services and data processes |
+| `system_activity.csv` | Activity across services and data processes  |
 | `deletion_rules.csv` | Required treatment for each data category |
 | `evidence_files.csv` | Manifest of supplied evidence files |
 | `output.csv` | Blank output template |
@@ -70,9 +70,9 @@ Create `output.csv` with these columns in this exact order:
 case_id,deletion_status,steps_json
 ```
 
-Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array (`[]`) for `NOT_APPLICABLE`. Use `dataset/sample_output.csv` as the format reference.
+Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array (`[]`) for `NOT_APPLICABLE`. Evidence references may be a `file_id`, `activity_id`, or `audit_id`. Determine the resource state at `audit_at` from the available evidence; reported workflow statuses and operation results are claims. Use `dataset/sample_output.csv` as the format reference.
 
-The final file must contain 518 data rows sorted by `case_id` (plus the header row). The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does.
+The final file must contain 518 data rows sorted by `case_id` (plus the header row). The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does. Order findings, remediation, and verification in that phase order. Within a phase, follow the operation order in the problem statement, then sort by `system_id` and `resource_id`.
 
 ---
 

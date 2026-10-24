@@ -39,7 +39,7 @@ All participant-facing files are inside `dataset/`.
 | `sample_output.csv` | Correct answers for the sample requests |
 | `user_identities.csv` | Current user identities |
 | `user_audit_log.csv` | Historical identity changes |
-| `system_activity.csv` | Deletion, sync, export, backup, and restore activity |
+| `system_activity.csv` | Deletion, sync, export, backup, restore, indexing, and related operational activity |
 | `deletion_rules.csv` | Required treatment for each data category |
 | `evidence_files.csv` | Manifest of the supplied evidence files |
 | `output.csv` | Blank submission template |
@@ -120,14 +120,11 @@ The grader parses `steps_json` as JSON. JSON object-key order and whitespace are
 
 ## Rules
 
-- Use current and historical identifiers to find the user's data.
-- Determine the state at `audit_at`. Reported statuses do not prove deletion.
-- Follow `deletion_rules.csv` and identify any sync or restore process that could recreate the data.
-- When policy permits an account tombstone, preserve its stable subject reference while removing every prohibited direct identifier.
-- Order steps as findings, remediation, then verification.
-- Disable data flows and block restore risks before changing records.
-- Findings must cite evidence. Proposed remediation and future verification steps use an empty `evidence_id`.
-- Verification steps for a `COMPLETE` case must cite evidence proving the current state.
+- Resolve the user’s current and historical identifiers.
+- Determine the resource state at `audit_at` using the available evidence. Reported workflow statuses and operation results are claims.
+- Apply `deletion_rules.csv` to every relevant record, including account tombstones, active data flows, and restore risks.
+- Order steps by phase: findings, remediation, then verification. Within each phase, follow the operation order in the table above, followed by `system_id` and `resource_id` in ascending order.
+- Findings and verification steps for `COMPLETE` cases must cite a `file_id`, `activity_id`, or `audit_id`. Proposed remediation and future verification steps for `INCOMPLETE` cases use an empty `evidence_id`.
 
 ## Evaluation
 
