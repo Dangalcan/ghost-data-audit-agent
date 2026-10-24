@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:55:53Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 544,
+  "output_tokens": 69,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.41,
+  "request_id": "req_011CgMFoT9wwgWfFf5oUMj9S"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly requests deletion of the account tied to their email, including linked identifiers, and asks for confirmation once it is completed.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly requests deletion of the account tied to their email, including linked identifiers, and asks for confirmation once it is completed."
+ }
+}

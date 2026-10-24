@@ -1,0 +1,200 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:51:16Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2773,
+  "output_tokens": 1434,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.04,
+  "request_id": "req_011CgMFSbm34yvXRayCobBLq"
+ },
+ "raw": "{\"captured_at\":\"2026-02-13T08:00:00Z\",\"console\":\"Nimbus Object Storage\",\"summary\":\"Object browser for bucket northstar-customer-data (eu-west-1 / support-attachments / 2026 / 02) listing 8 objects, with details and activity shown for delivery_confirmation_19.pdf.\",\"records\":[{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[\"e71b6d...\"]},\"aliases\":[\"delivery_confirmation_19.pdf\"],\"timestamps\":[\"2026-02-12T18:42:00Z\"],\"notes\":\"684 KB, Standard, v3, application/pdf, AES-256, uploader support-service; activity: v1 created 12 Feb 18:38, v2 upload complete 18:39, v3 metadata update 18:42.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"delivery_confirmation_20.pdf\"],\"timestamps\":[\"2026-02-11T14:17:00Z\"],\"notes\":\"712 KB, Standard, v1.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"return_label_4821.pdf\"],\"timestamps\":[\"2026-02-10T09:33:00Z\"],\"notes\":\"203 KB, Standard, v1.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"return_label_4876.pdf\"],\"timestamps\":[\"2026-02-11T16:05:00Z\"],\"notes\":\"198 KB, Standard, v2.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"invoice_NS-10493.pdf\"],\"timestamps\":[\"2026-02-10T11:21:00Z\"],\"notes\":\"318 KB, Standard, v1.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"parcel_damage_7713.jpg\"],\"timestamps\":[\"2026-02-12T10:08:00Z\"],\"notes\":\"2.4 MB, Standard, v1.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"customer_export_2026-02-10.zip\"],\"timestamps\":[\"2026-02-10T23:14:00Z\"],\"notes\":\"128 MB, Standard, v1.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"object_storage\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"customer_export_2026-02-12.zip\"],\"timestamps\":[\"2026-02-12T21:56:00Z\"],\"notes\":\"131 MB, Standard, v1.\"}]}",
+ "parsed": {
+  "captured_at": "2026-02-13T08:00:00Z",
+  "console": "Nimbus Object Storage",
+  "summary": "Object browser for bucket northstar-customer-data (eu-west-1 / support-attachments / 2026 / 02) listing 8 objects, with details and activity shown for delivery_confirmation_19.pdf.",
+  "records": [
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": [
+      "e71b6d..."
+     ]
+    },
+    "aliases": [
+     "delivery_confirmation_19.pdf"
+    ],
+    "timestamps": [
+     "2026-02-12T18:42:00Z"
+    ],
+    "notes": "684 KB, Standard, v3, application/pdf, AES-256, uploader support-service; activity: v1 created 12 Feb 18:38, v2 upload complete 18:39, v3 metadata update 18:42."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "delivery_confirmation_20.pdf"
+    ],
+    "timestamps": [
+     "2026-02-11T14:17:00Z"
+    ],
+    "notes": "712 KB, Standard, v1."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "return_label_4821.pdf"
+    ],
+    "timestamps": [
+     "2026-02-10T09:33:00Z"
+    ],
+    "notes": "203 KB, Standard, v1."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "return_label_4876.pdf"
+    ],
+    "timestamps": [
+     "2026-02-11T16:05:00Z"
+    ],
+    "notes": "198 KB, Standard, v2."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "invoice_NS-10493.pdf"
+    ],
+    "timestamps": [
+     "2026-02-10T11:21:00Z"
+    ],
+    "notes": "318 KB, Standard, v1."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "parcel_damage_7713.jpg"
+    ],
+    "timestamps": [
+     "2026-02-12T10:08:00Z"
+    ],
+    "notes": "2.4 MB, Standard, v1."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "customer_export_2026-02-10.zip"
+    ],
+    "timestamps": [
+     "2026-02-10T23:14:00Z"
+    ],
+    "notes": "128 MB, Standard, v1."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "object_storage",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "customer_export_2026-02-12.zip"
+    ],
+    "timestamps": [
+     "2026-02-12T21:56:00Z"
+    ],
+    "notes": "131 MB, Standard, v1."
+   }
+  ]
+ }
+}

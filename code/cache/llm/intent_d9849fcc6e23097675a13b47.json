@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:52:53Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 543,
+  "output_tokens": 54,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.74,
+  "request_id": "req_011CgMFaGYc1Vkutrx4fPEWr"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly asks to delete their account and personal data, so this is an erasure request.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly asks to delete their account and personal data, so this is an erasure request."
+ }
+}

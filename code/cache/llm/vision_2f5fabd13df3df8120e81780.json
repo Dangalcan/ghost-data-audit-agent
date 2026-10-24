@@ -1,0 +1,135 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:50:54Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2773,
+  "output_tokens": 1117,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 6.96,
+  "request_id": "req_011CgMFR3Rpnrvf9e5UFbtkk"
+ },
+ "raw": "{\"captured_at\":null,\"console\":\"Vault Recovery Manager - Customer-platform archives\",\"summary\":\"Archives tab of the Vault Recovery Manager lists four weekly customer-platform backup archives, with backup_9287 (areed1433@gmail.com) selected and its details and recent activity shown in the side panel.\",\"records\":[{\"resource_id\":\"backup_9291\",\"record_type\":\"BACKUP_ARCHIVE\",\"system\":\"backup_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"bluepeakco@outlook.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[],\"timestamps\":[\"26 Apr 02:00\"],\"notes\":\"Region ap-southeast-1, size 102.3 GB, AES-256, tier Archive; row highlighted in the list.\"},{\"resource_id\":\"backup_9288\",\"record_type\":\"BACKUP_ARCHIVE\",\"system\":\"backup_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"miller.logistics@company.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[],\"timestamps\":[\"26 Apr 02:00\"],\"notes\":\"Region us-west-2, size 67.1 GB, AES-256, tier Archive.\"},{\"resource_id\":\"backup_9287\",\"record_type\":\"BACKUP_ARCHIVE\",\"system\":\"backup_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"areed1433@gmail.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"s3://northstar-backups/customer-platform/weekly/segment-42-20260426.tar.zst\"],\"timestamps\":[\"2026-04-26T02:00:00Z\",\"Last drill 2026-03-29\",\"Retention end 2026-07-26\"],\"notes\":\"Selected record in the detail panel; region eu-west-1, size 84.7 GB, AES-256, tier Archive, checksum Verified, retention end 26 Jul 2026.\"},{\"resource_id\":\"backup_9286\",\"record_type\":\"BACKUP_ARCHIVE\",\"system\":\"backup_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"summit-retail@company.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[],\"timestamps\":[\"26 Apr 02:00\",\"25 Apr\"],\"notes\":\"Region us-east-1, size 91.4 GB, AES-256, tier Archive; activity log shows it restored 25 Apr, Completed.\"},{\"resource_id\":\"backup_9281\",\"record_type\":\"BACKUP_ARCHIVE\",\"system\":\"backup_service\",\"status\":\"UNKNOWN\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[],\"timestamps\":[\"24 Apr\"],\"notes\":\"Appears only in the activity log: restored 24 Apr, Completed; not in the archive list.\"}]}",
+ "parsed": {
+  "captured_at": null,
+  "console": "Vault Recovery Manager - Customer-platform archives",
+  "summary": "Archives tab of the Vault Recovery Manager lists four weekly customer-platform backup archives, with backup_9287 (areed1433@gmail.com) selected and its details and recent activity shown in the side panel.",
+  "records": [
+   {
+    "resource_id": "backup_9291",
+    "record_type": "BACKUP_ARCHIVE",
+    "system": "backup_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "bluepeakco@outlook.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "26 Apr 02:00"
+    ],
+    "notes": "Region ap-southeast-1, size 102.3 GB, AES-256, tier Archive; row highlighted in the list."
+   },
+   {
+    "resource_id": "backup_9288",
+    "record_type": "BACKUP_ARCHIVE",
+    "system": "backup_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "miller.logistics@company.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "26 Apr 02:00"
+    ],
+    "notes": "Region us-west-2, size 67.1 GB, AES-256, tier Archive."
+   },
+   {
+    "resource_id": "backup_9287",
+    "record_type": "BACKUP_ARCHIVE",
+    "system": "backup_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "areed1433@gmail.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "s3://northstar-backups/customer-platform/weekly/segment-42-20260426.tar.zst"
+    ],
+    "timestamps": [
+     "2026-04-26T02:00:00Z",
+     "Last drill 2026-03-29",
+     "Retention end 2026-07-26"
+    ],
+    "notes": "Selected record in the detail panel; region eu-west-1, size 84.7 GB, AES-256, tier Archive, checksum Verified, retention end 26 Jul 2026."
+   },
+   {
+    "resource_id": "backup_9286",
+    "record_type": "BACKUP_ARCHIVE",
+    "system": "backup_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "summit-retail@company.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "26 Apr 02:00",
+     "25 Apr"
+    ],
+    "notes": "Region us-east-1, size 91.4 GB, AES-256, tier Archive; activity log shows it restored 25 Apr, Completed."
+   },
+   {
+    "resource_id": "backup_9281",
+    "record_type": "BACKUP_ARCHIVE",
+    "system": "backup_service",
+    "status": "UNKNOWN",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "24 Apr"
+    ],
+    "notes": "Appears only in the activity log: restored 24 Apr, Completed; not in the archive list."
+   }
+  ]
+ }
+}

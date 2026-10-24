@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:38Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 528,
+  "output_tokens": 76,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.91,
+  "request_id": "req_011CgMFwDzQNFeCmEnazPFTk"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"medium\", \"reason\": \"The customer asks to remove records linked to both their old and current email addresses, which is a request to erase personal data rather than access, correction, or another non-deletion request.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "medium",
+  "reason": "The customer asks to remove records linked to both their old and current email addresses, which is a request to erase personal data rather than access, correction, or another non-deletion request."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "captured_at": null,
+ "console": "Customer Reference Registry",
+ "summary": "Customer reference page for user_17 (Customer key, Account Platform, eu-west) marked 'Retained reference', listing 4 linked records (one order, two support cases, one finance record), all Active.",
+ "records": [
+  {
+   "resource_id": "user_17",
+   "record_type": "OTHER",
+   "system": "account_service",
+   "status": "RETAINED",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [],
+    "user_ids": [
+     "user_17"
+    ],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "Customer key",
+    "Account Platform",
+    "eu-west"
+   ],
+   "timestamps": [
+    "2024-01-11T08:42:00Z",
+    "2026-03-10T07:18:00Z"
+   ],
+   "notes": "Retained reference; owner team Account Platform; most recent update 10 Mar 2026 07:18 UTC; history entry 'Metadata reviewed' on 10 Mar 2026."
+  },
+  {
+   "resource_id": null,
+   "record_type": "OBJECT",
+   "system": "orders",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [],
+    "user_ids": [
+     "user_17"
+    ],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "ORD-20263245"
+   ],
+   "timestamps": [
+    "2024-01-11T08:45:00Z"
+   ],
+   "notes": "Order linked to customer; status Active."
+  },
+  {
+   "resource_id": null,
+   "record_type": "SUPPORT_MESSAGE",
+   "system": "support_platform",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [],
+    "user_ids": [
+     "user_17"
+    ],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "CS-3245"
+   ],
+   "timestamps": [
+    "2024-02-14T12:16:00Z"
+   ],
+   "notes": "Support case linked to customer; status Active."
+  },
+  {
+   "resource_id": null,
+   "record_type": "SUPPORT_MESSAGE",
+   "system": "support_platform",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [],
+    "user_ids": [
+     "user_17"
+    ],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "CS-3378"
+   ],
+   "timestamps": [
+    "2024-06-03T09:27:00Z"
+   ],
+   "notes": "Support case linked to customer; status Active."
+  },
+  {
+   "resource_id": null,
+   "record_type": "OTHER",
+   "system": "finance",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [],
+    "user_ids": [
+     "user_17"
+    ],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "FIN-7742"
+   ],
+   "timestamps": [
+    "2024-08-22T15:03:00Z"
+   ],
+   "notes": "Finance record linked to customer; status Active."
+  }
+ ],
+ "source_file": "deleted_account_reference_20260310.png"
+}

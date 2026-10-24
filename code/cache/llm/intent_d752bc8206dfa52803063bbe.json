@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:51:48Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 570,
+  "output_tokens": 66,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.85,
+  "request_id": "req_011CgMFVTrs1xnLHoi6cHzQ3"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The Portuguese request asks for permanent deletion of the account linked to the email, which is an erasure request despite the added verification language.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The Portuguese request asks for permanent deletion of the account linked to the email, which is an erasure request despite the added verification language."
+ }
+}

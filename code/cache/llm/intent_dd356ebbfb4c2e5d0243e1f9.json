@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:49Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 532,
+  "output_tokens": 72,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.91,
+  "request_id": "req_011CgMFx31PVbKFdP2D8wb4q"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"medium\", \"reason\": \"The customer asks for confirmation that their account was fully removed, which is a request to verify a deletion already made and therefore counts as a deletion request.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "medium",
+  "reason": "The customer asks for confirmation that their account was fully removed, which is a request to verify a deletion already made and therefore counts as a deletion request."
+ }
+}

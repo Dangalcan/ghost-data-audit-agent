@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:55:18Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 546,
+  "output_tokens": 59,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 2.17,
+  "request_id": "req_011CgMFksRcaqp3wAnnA17XT"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly asks for the account to be permanently deleted and requests confirmation of the outcome.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly asks for the account to be permanently deleted and requests confirmation of the outcome."
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:50:16Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2837,
+  "output_tokens": 915,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 1004,
+  "latency_s": 5.83,
+  "request_id": "req_011CgMFNKXrtSw3JmAW471DL"
+ },
+ "raw": "{\"captured_at\": null, \"console\": \"Customer Operations\", \"summary\": \"Customer Operations profile page for Haruka Sato (user_11, account_5762, Silver tier) showing contact details, two orders, support references CS-8538 and support_9538, and an activity timeline.\", \"records\": [{\"resource_id\": \"account_5762\", \"record_type\": \"USER_PROFILE\", \"system\": \"account_service\", \"status\": \"PRESENT\", \"enabled\": null, \"restore_allowed\": null, \"identifiers\": {\"emails\": [\"haruka.s1838@zoho.com\"], \"user_ids\": [\"user_11\"], \"phones\": [\"+81 90 7610 2507\"], \"names\": [\"Haruka Sato\"], \"hashes\": []}, \"aliases\": [], \"timestamps\": [\"2024-01-12\", \"2026-09-24T09:14:00+09:00\"], \"notes\": \"Silver loyalty tier, market JP, signup channel mobile_app, preferred language Japanese, default address 2-18-4 Kichijoji, Musashino, Tokyo 180-0004.\"}, {\"resource_id\": null, \"record_type\": \"OTHER\", \"system\": \"account_service\", \"status\": \"PRESENT\", \"enabled\": null, \"restore_allowed\": null, \"identifiers\": {\"emails\": [], \"user_ids\": [], \"phones\": [], \"names\": [], \"hashes\": []}, \"aliases\": [\"ORD-20265762\"], \"timestamps\": [\"2026-09-12\", \"2026-09-18\"], \"notes\": \"Order: Ceramic coffee set, qty 1, JPY 8,900, Delivered 18 Sep.\"}, {\"resource_id\": null, \"record_type\": \"OTHER\", \"system\": \"account_service\", \"status\": \"PRESENT\", \"enabled\": null, \"restore_allowed\": null, \"identifiers\": {\"emails\": [], \"user_ids\": [], \"phones\": [], \"names\": [], \"hashes\": []}, \"aliases\": [\"ORD-20265518\"], \"timestamps\": [\"2026-08-28\", \"2026-09-03\"], \"notes\": \"Order: Travel backpack, qty 1, JPY 12,400, Returned 03 Sep.\"}, {\"resource_id\": \"support_9538\", \"record_type\": \"SUPPORT_MESSAGE\", \"system\": \"support_platform\", \"status\": \"PRESENT\", \"enabled\": null, \"restore_allowed\": null, \"identifiers\": {\"emails\": [], \"user_ids\": [], \"phones\": [], \"names\": [], \"hashes\": []}, \"aliases\": [\"CS-8538\"], \"timestamps\": [\"2026-08-28\", \"2026-09-22\", \"2026-09-24\"], \"notes\": \"Support ticket created 28 Aug; support agent responded 22 Sep; customer replied to CS-8538 on 24 Sep.\"}]}",
+ "parsed": {
+  "captured_at": null,
+  "console": "Customer Operations",
+  "summary": "Customer Operations profile page for Haruka Sato (user_11, account_5762, Silver tier) showing contact details, two orders, support references CS-8538 and support_9538, and an activity timeline.",
+  "records": [
+   {
+    "resource_id": "account_5762",
+    "record_type": "USER_PROFILE",
+    "system": "account_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "haruka.s1838@zoho.com"
+     ],
+     "user_ids": [
+      "user_11"
+     ],
+     "phones": [
+      "+81 90 7610 2507"
+     ],
+     "names": [
+      "Haruka Sato"
+     ],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "2024-01-12",
+     "2026-09-24T09:14:00+09:00"
+    ],
+    "notes": "Silver loyalty tier, market JP, signup channel mobile_app, preferred language Japanese, default address 2-18-4 Kichijoji, Musashino, Tokyo 180-0004."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OTHER",
+    "system": "account_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "ORD-20265762"
+    ],
+    "timestamps": [
+     "2026-09-12",
+     "2026-09-18"
+    ],
+    "notes": "Order: Ceramic coffee set, qty 1, JPY 8,900, Delivered 18 Sep."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OTHER",
+    "system": "account_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "ORD-20265518"
+    ],
+    "timestamps": [
+     "2026-08-28",
+     "2026-09-03"
+    ],
+    "notes": "Order: Travel backpack, qty 1, JPY 12,400, Returned 03 Sep."
+   },
+   {
+    "resource_id": "support_9538",
+    "record_type": "SUPPORT_MESSAGE",
+    "system": "support_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "CS-8538"
+    ],
+    "timestamps": [
+     "2026-08-28",
+     "2026-09-22",
+     "2026-09-24"
+    ],
+    "notes": "Support ticket created 28 Aug; support agent responded 22 Sep; customer replied to CS-8538 on 24 Sep."
+   }
+  ]
+ }
+}

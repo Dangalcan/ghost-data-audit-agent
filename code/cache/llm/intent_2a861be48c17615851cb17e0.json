@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:46Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 529,
+  "output_tokens": 65,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 2.08,
+  "request_id": "req_011CgMFwmFMPdJj5DJz4poBu"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The person asks to finish a deletion already requested, including removing the account and its search results, which the guidelines classify as DELETION.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The person asks to finish a deletion already requested, including removing the account and its search results, which the guidelines classify as DELETION."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:49:35Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 523,
+  "output_tokens": 68,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.11,
+  "request_id": "req_011CgMFKdq7XMnsuxYvuJwqY"
+ },
+ "raw": "{\"label\": \"NON_DELETION\", \"confidence\": \"high\", \"reason\": \"The customer asks to correct their phone number and explicitly wants the account kept active, which is a correction rather than an erasure request.\"}",
+ "parsed": {
+  "label": "NON_DELETION",
+  "confidence": "high",
+  "reason": "The customer asks to correct their phone number and explicitly wants the account kept active, which is a correction rather than an erasure request."
+ }
+}

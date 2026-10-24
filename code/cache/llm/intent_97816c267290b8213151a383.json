@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:54:39Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 544,
+  "output_tokens": 69,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.85,
+  "request_id": "req_011CgMFi6jV56vDQuG1fqaJE"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer states they no longer use the account and asks for it to be permanently deleted, along with review of data eligible for deletion or de-identification.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer states they no longer use the account and asks for it to be permanently deleted, along with review of data eligible for deletion or de-identification."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:24Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 513,
+  "output_tokens": 71,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 2.11,
+  "request_id": "req_011CgMFv8T1FcBQWTrWBPZTk"
+ },
+ "raw": "{\"label\": \"NON_DELETION\", \"confidence\": \"high\", \"reason\": \"The request asks to change the account's email address and explicitly states the person wants to keep using the service, which is a correction rather than an erasure request.\"}",
+ "parsed": {
+  "label": "NON_DELETION",
+  "confidence": "high",
+  "reason": "The request asks to change the account's email address and explicitly states the person wants to keep using the service, which is a correction rather than an erasure request."
+ }
+}

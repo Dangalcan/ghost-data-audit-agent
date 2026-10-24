@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:10Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 539,
+  "output_tokens": 60,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.91,
+  "request_id": "req_011CgMFuDT79pJrQcz28Fozr"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly asks to erase the account linked to their email address and to handle copies within the deletion scope.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly asks to erase the account linked to their email address and to handle copies within the deletion scope."
+ }
+}

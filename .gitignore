@@ -6,3 +6,4 @@ __pycache__/
 .pytest_cache/
 code.zip
 agent-trace.zip
+agent-trace/

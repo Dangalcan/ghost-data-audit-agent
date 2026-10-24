@@ -1,0 +1,124 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:50:43Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2642,
+  "output_tokens": 901,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 5.72,
+  "request_id": "req_011CgMFQHJigNYhiNLmED6Tc"
+ },
+ "raw": "{\"captured_at\":null,\"console\":\"Customer Download Center\",\"summary\":\"Data exports list in the Customer Download Center showing 4 export jobs, with export_1260 (owner ingrid.dahl@outlook.com, Ready) selected and its details and activity timeline displayed.\",\"records\":[{\"resource_id\":\"export_1261\",\"record_type\":\"USER_EXPORT\",\"system\":\"export_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"marcus.lee@northstar.shop\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"customer_export_1261.zip\"],\"timestamps\":[\"20 Jun 14:18 UTC\"],\"notes\":\"Status shown as Collecting; row is highlighted in the list.\"},{\"resource_id\":\"export_1260\",\"record_type\":\"USER_EXPORT\",\"system\":\"export_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"ingrid.dahl@outlook.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[\"SHA-256 · 41ca09...\"]},\"aliases\":[\"customer_export_1260.zip\"],\"timestamps\":[\"2026-06-18T06:42:00Z\",\"2026-06-25T06:42:00Z (expires)\",\"2026-06-18T06:43:00Z collecting customer records\",\"2026-06-18T06:45:00Z package created\",\"2026-06-18T06:46:00Z ready for download\"],\"notes\":\"Status Ready; size 18.4 MB; download count 0; included Profile, Orders, Saved addresses.\"},{\"resource_id\":\"export_1259\",\"record_type\":\"USER_EXPORT\",\"system\":\"export_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"sara.kim@northstar.shop\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"customer_export_1259.zip\"],\"timestamps\":[\"17 Jun 11:03 UTC\"],\"notes\":\"Status shown as Packaging.\"},{\"resource_id\":\"export_1258\",\"record_type\":\"USER_EXPORT\",\"system\":\"export_service\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"daniel.park@northstar.shop\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"customer_export_1258.zip\"],\"timestamps\":[\"16 Jun 09:27 UTC\"],\"notes\":\"Status shown as Ready.\"}]}",
+ "parsed": {
+  "captured_at": null,
+  "console": "Customer Download Center",
+  "summary": "Data exports list in the Customer Download Center showing 4 export jobs, with export_1260 (owner ingrid.dahl@outlook.com, Ready) selected and its details and activity timeline displayed.",
+  "records": [
+   {
+    "resource_id": "export_1261",
+    "record_type": "USER_EXPORT",
+    "system": "export_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "marcus.lee@northstar.shop"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "customer_export_1261.zip"
+    ],
+    "timestamps": [
+     "20 Jun 14:18 UTC"
+    ],
+    "notes": "Status shown as Collecting; row is highlighted in the list."
+   },
+   {
+    "resource_id": "export_1260",
+    "record_type": "USER_EXPORT",
+    "system": "export_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "ingrid.dahl@outlook.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": [
+      "SHA-256 · 41ca09..."
+     ]
+    },
+    "aliases": [
+     "customer_export_1260.zip"
+    ],
+    "timestamps": [
+     "2026-06-18T06:42:00Z",
+     "2026-06-25T06:42:00Z (expires)",
+     "2026-06-18T06:43:00Z collecting customer records",
+     "2026-06-18T06:45:00Z package created",
+     "2026-06-18T06:46:00Z ready for download"
+    ],
+    "notes": "Status Ready; size 18.4 MB; download count 0; included Profile, Orders, Saved addresses."
+   },
+   {
+    "resource_id": "export_1259",
+    "record_type": "USER_EXPORT",
+    "system": "export_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "sara.kim@northstar.shop"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "customer_export_1259.zip"
+    ],
+    "timestamps": [
+     "17 Jun 11:03 UTC"
+    ],
+    "notes": "Status shown as Packaging."
+   },
+   {
+    "resource_id": "export_1258",
+    "record_type": "USER_EXPORT",
+    "system": "export_service",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "daniel.park@northstar.shop"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "customer_export_1258.zip"
+    ],
+    "timestamps": [
+     "16 Jun 09:27 UTC"
+    ],
+    "notes": "Status shown as Ready."
+   }
+  ]
+ }
+}

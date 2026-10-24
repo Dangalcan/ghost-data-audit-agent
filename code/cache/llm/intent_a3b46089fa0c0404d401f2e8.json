@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:54:20Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 544,
+  "output_tokens": 59,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.85,
+  "request_id": "req_011CgMFggBKi6EcSFsJRFXP2"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The request explicitly asks for permanent account deletion and erasure or de-identification of the account's personal data.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The request explicitly asks for permanent account deletion and erasure or de-identification of the account's personal data."
+ }
+}

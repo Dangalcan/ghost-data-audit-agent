@@ -1,0 +1,61 @@
+{
+ "captured_at": "2026-09-01T06:00:14Z",
+ "console": "Search Console - Customer Search",
+ "summary": "Customer Search results in index customer_directory_v3 (prod-eu) for query email:g.silva76@gmail.com show 2 hits, with the raw document for search_428 open in a side panel.",
+ "records": [
+  {
+   "resource_id": "search_428",
+   "record_type": "SEARCH_INDEX_ENTRY",
+   "system": "search_service",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [
+     "g.silva76@gmail.com"
+    ],
+    "user_ids": [
+     "user_13"
+    ],
+    "phones": [],
+    "names": [
+     "Gabriel Silva"
+    ],
+    "hashes": []
+   },
+   "aliases": [
+    "customer_directory_v3",
+    "customer_reference user_13"
+   ],
+   "timestamps": [
+    "2026-09-01T05:58:21Z"
+   ],
+   "notes": "Rank 1 with score 9.84; raw document shows indexed_at 2026-09-01T05:58:21Z (printed as 2026-09-01T05:58:21Z in the raw document panel)."
+  },
+  {
+   "resource_id": "search_1874",
+   "record_type": "SEARCH_INDEX_ENTRY",
+   "system": "search_service",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [
+     "g.silva76.jr@gmail.com"
+    ],
+    "user_ids": [],
+    "phones": [],
+    "names": [],
+    "hashes": []
+   },
+   "aliases": [
+    "customer_directory_v3"
+   ],
+   "timestamps": [
+    "05:55:03 UTC"
+   ],
+   "notes": "Rank 2 with score 4.12; display name and customer reference are blank (—)."
+  }
+ ],
+ "source_file": "search_index_inspector_20260901.png"
+}

@@ -1,0 +1,114 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:50:33Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2772,
+  "output_tokens": 906,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 12.85,
+  "request_id": "req_011CgMFP3bgtAF2Zhd3eTRha"
+ },
+ "raw": "{\"captured_at\":\"2026-08-07T08:00:00Z\",\"console\":\"BridgeOps Connections\",\"summary\":\"BridgeOps Connections topology view in production (eu-west) listing four connectors, with data_flow_1121 selected and its details and activity shown in a side panel.\",\"records\":[{\"resource_id\":\"data_flow_1121\",\"record_type\":\"DATA_FLOW\",\"system\":\"integration_service\",\"status\":\"PRESENT\",\"enabled\":true,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"jain.aditi@gmail.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"data_flow_1121\"],\"timestamps\":[\"2026-08-07T07:59:42Z\"],\"notes\":\"Healthy, owner Data Platform, destination customer_analytics_warehouse, continuous sync, 1,284 events/hour, last response 200 OK 1.8 s; activity: 124 events delivered 07:59:42, checkpoint committed 07:58:10, 18 events retried 07:56:44, destination acknowledged batch 07:55:02.\"},{\"resource_id\":\"data_flow_9846\",\"record_type\":\"DATA_FLOW\",\"system\":\"integration_service\",\"status\":\"PRESENT\",\"enabled\":true,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"lucia-torres@gmail.com\"],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"data_flow_9846\"],\"timestamps\":[\"2026-08-07T07:59:36Z\"],\"notes\":\"Destination customer_analytics_warehouse, continuous mode, 842 events/hour.\"},{\"resource_id\":null,\"record_type\":\"DATA_FLOW\",\"system\":\"integration_service\",\"status\":\"PRESENT\",\"enabled\":true,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"Order notifications\"],\"timestamps\":[\"2026-08-07T07:59:28Z\"],\"notes\":\"Destination notification_service, selector 'order events', continuous, 650 events/hour.\"},{\"resource_id\":null,\"record_type\":\"DATA_FLOW\",\"system\":\"integration_service\",\"status\":\"PRESENT\",\"enabled\":true,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"Delivery tracking\"],\"timestamps\":[\"2026-08-07T07:59:13Z\"],\"notes\":\"Destination logistics_warehouse, selector 'shipment events', continuous, 420 events/hour.\"}]}",
+ "parsed": {
+  "captured_at": "2026-08-07T08:00:00Z",
+  "console": "BridgeOps Connections",
+  "summary": "BridgeOps Connections topology view in production (eu-west) listing four connectors, with data_flow_1121 selected and its details and activity shown in a side panel.",
+  "records": [
+   {
+    "resource_id": "data_flow_1121",
+    "record_type": "DATA_FLOW",
+    "system": "integration_service",
+    "status": "PRESENT",
+    "enabled": true,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "jain.aditi@gmail.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "data_flow_1121"
+    ],
+    "timestamps": [
+     "2026-08-07T07:59:42Z"
+    ],
+    "notes": "Healthy, owner Data Platform, destination customer_analytics_warehouse, continuous sync, 1,284 events/hour, last response 200 OK 1.8 s; activity: 124 events delivered 07:59:42, checkpoint committed 07:58:10, 18 events retried 07:56:44, destination acknowledged batch 07:55:02."
+   },
+   {
+    "resource_id": "data_flow_9846",
+    "record_type": "DATA_FLOW",
+    "system": "integration_service",
+    "status": "PRESENT",
+    "enabled": true,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "lucia-torres@gmail.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "data_flow_9846"
+    ],
+    "timestamps": [
+     "2026-08-07T07:59:36Z"
+    ],
+    "notes": "Destination customer_analytics_warehouse, continuous mode, 842 events/hour."
+   },
+   {
+    "resource_id": null,
+    "record_type": "DATA_FLOW",
+    "system": "integration_service",
+    "status": "PRESENT",
+    "enabled": true,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "Order notifications"
+    ],
+    "timestamps": [
+     "2026-08-07T07:59:28Z"
+    ],
+    "notes": "Destination notification_service, selector 'order events', continuous, 650 events/hour."
+   },
+   {
+    "resource_id": null,
+    "record_type": "DATA_FLOW",
+    "system": "integration_service",
+    "status": "PRESENT",
+    "enabled": true,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "Delivery tracking"
+    ],
+    "timestamps": [
+     "2026-08-07T07:59:13Z"
+    ],
+    "notes": "Destination logistics_warehouse, selector 'shipment events', continuous, 420 events/hour."
+   }
+  ]
+ }
+}

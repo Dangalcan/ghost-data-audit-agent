@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:25Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 525,
+  "output_tokens": 69,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.1,
+  "request_id": "req_011CgMFvGaPxVN8mdFykvfpE"
+ },
+ "raw": "{\"label\": \"NON_DELETION\", \"confidence\": \"high\", \"reason\": \"The customer requests a copy of their account data (an access request) and explicitly says not to delete anything, so it is not an erasure request.\"}",
+ "parsed": {
+  "label": "NON_DELETION",
+  "confidence": "high",
+  "reason": "The customer requests a copy of their account data (an access request) and explicitly says not to delete anything, so it is not an erasure request."
+ }
+}

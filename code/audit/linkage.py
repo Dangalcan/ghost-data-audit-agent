@@ -64,16 +64,34 @@ def alias_observations(skip_images: bool = False) -> List[Observation]:
     for pe in evidence_mod.all_evidence(skip_images).values():
         text = getattr(pe, "extra_text", "") or ""
         aliases = getattr(pe, "aliases", {}) or {}
+        records = getattr(pe, "records", []) or []       # screenshot extraction records
         for link in links:
-            if not (link.alias.lower() in text.lower() or link.alias in aliases):
+            matched = None
+            for rec in records:
+                ids = rec.get("identifiers") or {}
+                names = [a.lower() for a in (rec.get("aliases") or [])] + [str(rec.get("resource_id") or "").lower()]
+                names += [v.lower() for k in ("user_ids", "emails") for v in (ids.get(k) or [])]
+                if link.alias.lower() in names:
+                    matched = rec
+                    break
+            if not (link.alias.lower() in text.lower() or link.alias in aliases or matched):
                 continue
             kind = default_kind(link.resource_id)
             if link.resource_id.startswith("object_"):
                 kind = "object"
+            pii = True
+            status = "PRESENT"
+            if matched is not None:
+                ids = matched.get("identifiers") or {}
+                pii = bool(ids.get("emails") or ids.get("phones") or ids.get("names") or ids.get("hashes"))
+                if str(matched.get("status") or "").upper() in ("ABSENT", "NOT_FOUND", "DELETED"):
+                    status = "ABSENT"
+            if kind in ("object", "export", "profile", "search_entry", "marketing_profile", "support_attachment"):
+                pii = True
             out.append(Observation(
                 resource_id=link.resource_id, evidence_id=pe.evidence_id, observed_at=pe.captured_at,
-                presence="PRESENT", kind=kind, tokens=tokens_from_values([link.email, link.user_id]),
-                pii=True, source=f"alias:{link.alias}", extra={"alias": link.alias, "catalog": link.activity_id}))
+                presence=status, kind=kind, tokens=tokens_from_values([link.email, link.user_id]),
+                pii=pii, source=f"alias:{link.alias}", extra={"alias": link.alias, "catalog": link.activity_id}))
     return out
 
 
@@ -108,7 +126,13 @@ def global_links(skip_images: bool = False) -> Dict[str, Dict[str, Link]]:
         if when and (cur.first_seen is None or when < cur.first_seen):
             cur.first_seen = when
 
+    from .loaders import load_evidence_manifest
+    image_files = {e.file_id for e in load_evidence_manifest() if e.ext == "png"}
+    corroborated = {o.resource_id for o in observations_with_aliases(skip_images) if o.evidence_id not in image_files}
+    corroborated |= set(activities_by_resource()) | {cl.resource_id for cl in catalog_links()}
     for obs in observations_with_aliases(skip_images):
+        if obs.evidence_id in image_files and obs.resource_id not in corroborated:
+            continue  # a record seen only in one screenshot: no second source ties it to anyone
         for uid in owners_of(obs.tokens):
             add(obs.resource_id, uid, "identifier", obs.evidence_id, obs.observed_at, obs.source)
     for cl in catalog_links():

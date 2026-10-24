@@ -1,0 +1,77 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:50:47Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2838,
+  "output_tokens": 690,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 4.57,
+  "request_id": "req_011CgMFQhvZWKMXiCzagHiVs"
+ },
+ "raw": "{\"captured_at\":null,\"console\":\"Helpline Console\",\"summary\":\"Helpline Console ticket view for CS-5034 'Where is my delivery?' from customer Kofi Ageyman, showing a 4-message conversation and the linked order ORD-20265034 (Running shoes, in transit with SwiftShip).\",\"records\":[{\"resource_id\":\"support_1034\",\"record_type\":\"SUPPORT_MESSAGE\",\"system\":\"support_platform\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"kagyeman8947@fastmail.com\"],\"user_ids\":[],\"phones\":[],\"names\":[\"Kofi Agyeman\",\"Maya Chen\"],\"hashes\":[]},\"aliases\":[\"CS-5034\",\"Where is my delivery?\"],\"timestamps\":[],\"notes\":\"Ticket with normal priority, SLA 01:42, tags Delivery, Tracking, Order update; assigned to Maya Chen; conversation has 4 records (09:12 customer question, 09:13 Northstar Bot auto-reply, 09:28 Maya Chen reply about regional hub and delivery on 26 May, 09:35 customer thanks).\"},{\"resource_id\":null,\"record_type\":\"OTHER\",\"system\":\"support_platform\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[],\"phones\":[],\"names\":[\"Maya Chen\"],\"hashes\":[]},\"aliases\":[\"ORD-20265034\",\"SWF-884103\"],\"timestamps\":[\"2026-05-22\",\"2026-05-23\",\"2026-05-24T07:46\",\"2026-05-24T08:15\",\"2026-05-26\"],\"notes\":\"Order for Running shoes, status In transit, carrier SwiftShip, tracking SWF-884103, expected 26 May 2026; activity: 22 May order confirmed, 23 May dispatched, 24 May 07:46 reached regional hub, 24 May 08:15 in transit, 26 May delivery expected.\"}]}",
+ "parsed": {
+  "captured_at": null,
+  "console": "Helpline Console",
+  "summary": "Helpline Console ticket view for CS-5034 'Where is my delivery?' from customer Kofi Ageyman, showing a 4-message conversation and the linked order ORD-20265034 (Running shoes, in transit with SwiftShip).",
+  "records": [
+   {
+    "resource_id": "support_1034",
+    "record_type": "SUPPORT_MESSAGE",
+    "system": "support_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "kagyeman8947@fastmail.com"
+     ],
+     "user_ids": [],
+     "phones": [],
+     "names": [
+      "Kofi Agyeman",
+      "Maya Chen"
+     ],
+     "hashes": []
+    },
+    "aliases": [
+     "CS-5034",
+     "Where is my delivery?"
+    ],
+    "timestamps": [],
+    "notes": "Ticket with normal priority, SLA 01:42, tags Delivery, Tracking, Order update; assigned to Maya Chen; conversation has 4 records (09:12 customer question, 09:13 Northstar Bot auto-reply, 09:28 Maya Chen reply about regional hub and delivery on 26 May, 09:35 customer thanks)."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OTHER",
+    "system": "support_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [],
+     "phones": [],
+     "names": [
+      "Maya Chen"
+     ],
+     "hashes": []
+    },
+    "aliases": [
+     "ORD-20265034",
+     "SWF-884103"
+    ],
+    "timestamps": [
+     "2026-05-22",
+     "2026-05-23",
+     "2026-05-24T07:46",
+     "2026-05-24T08:15",
+     "2026-05-26"
+    ],
+    "notes": "Order for Running shoes, status In transit, carrier SwiftShip, tracking SWF-884103, expected 26 May 2026; activity: 22 May order confirmed, 23 May dispatched, 24 May 07:46 reached regional hub, 24 May 08:15 in transit, 26 May delivery expected."
+   }
+  ]
+ }
+}

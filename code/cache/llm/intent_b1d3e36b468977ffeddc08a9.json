@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:40Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 538,
+  "output_tokens": 67,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.59,
+  "request_id": "req_011CgMFwNJDcKLzKwwMs5AZg"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer asks to completely close the account and stop any remaining data flows to other systems, which is a request to finish erasing their account and data.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer asks to completely close the account and stop any remaining data flows to other systems, which is a request to finish erasing their account and data."
+ }
+}

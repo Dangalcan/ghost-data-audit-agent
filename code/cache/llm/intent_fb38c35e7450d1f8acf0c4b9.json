@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:30Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 531,
+  "output_tokens": 56,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.89,
+  "request_id": "req_011CgMFvetaaHcAeHx3nfeov"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer asks to close the account and remove the profile and attached personal details, which is an erasure request.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer asks to close the account and remove the profile and attached personal details, which is an erasure request."
+ }
+}

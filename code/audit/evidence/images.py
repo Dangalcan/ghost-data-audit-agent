@@ -39,14 +39,21 @@ def extraction_to_observations(extraction: dict, evidence_id: str, captured_at: 
         pii = bool(ids.get("emails") or ids.get("phones") or ids.get("hashes") or ids.get("names"))
         status = str(rec.get("status") or "").upper()
         presence = "ABSENT" if status in ("ABSENT", "NOT_FOUND", "DELETED") else "PRESENT"
+        restore = to_bool(rec.get("restore_allowed"))
+        if kind == "backup" and restore is None and presence == "PRESENT":
+            restore = status != "BLOCKED"   # an archive listed as restorable with no block = restore risk
+        enabled = to_bool(rec.get("enabled"))
+        if kind == "connector" and enabled is None and presence == "PRESENT":
+            enabled = status not in ("DISABLED", "BLOCKED")
         parsed.observations.append(Observation(
             resource_id=rid, evidence_id=evidence_id, observed_at=when, presence=presence, kind=kind,
             tokens=tokens, pii=pii if kind not in ("profile", "search_entry", "export", "support_attachment",
                                                     "object", "marketing_profile") else True,
-            enabled=to_bool(rec.get("enabled")), restore_allowed=to_bool(rec.get("restore_allowed")),
+            enabled=enabled, restore_allowed=restore,
             retention_until=None if is_null(rec.get("retention_until")) else rec.get("retention_until"),
             source=f"{source}:records[{i}]", extra={"aliases": rec.get("aliases") or [], "notes": rec.get("notes")}))
     parsed.notes.append(extraction.get("summary", ""))
+    parsed.records = extraction.get("records", [])  # type: ignore[attr-defined]
     parsed.aliases = {a: r.get("resource_id") for r in extraction.get("records", []) for a in (r.get("aliases") or [])}  # type: ignore[attr-defined]
     return parsed
 

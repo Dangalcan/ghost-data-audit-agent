@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:54:19Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 541,
+  "output_tokens": 55,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.88,
+  "request_id": "req_011CgMFgcKf5iifDnwF8199A"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly asks for permanent account deletion and for the request to be applied to account records.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly asks for permanent account deletion and for the request to be applied to account records."
+ }
+}

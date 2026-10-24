@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:42Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 544,
+  "output_tokens": 71,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.01,
+  "request_id": "req_011CgMFwa2A8TfJMx5Bzb231"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer asks to remove their profile and erase their personal details from past support conversations, which is an erasure request even though the conversations themselves are retained.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer asks to remove their profile and erase their personal details from past support conversations, which is an erasure request even though the conversations themselves are retained."
+ }
+}

@@ -1,0 +1,971 @@
+{"ts": "2026-10-24T14:49:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 523, "output_tokens": 68, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.11, "request_id": "req_011CgMFKdq7XMnsuxYvuJwqY"}
+{"ts": "2026-10-24T14:49:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 520, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.67, "request_id": "req_011CgMFKhuSBCQ2yyY6FAjz3"}
+{"ts": "2026-10-24T14:50:16Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2837, "output_tokens": 915, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 1004, "latency_s": 5.83, "request_id": "req_011CgMFNKXrtSw3JmAW471DL"}
+{"ts": "2026-10-24T14:50:20Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2643, "output_tokens": 552, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 4.11, "request_id": "req_011CgMFNjpMKZNos3BRBxeSk"}
+{"ts": "2026-10-24T14:50:33Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2772, "output_tokens": 906, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 12.85, "request_id": "req_011CgMFP3bgtAF2Zhd3eTRha"}
+{"ts": "2026-10-24T14:50:37Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2774, "output_tokens": 493, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 3.96, "request_id": "req_011CgMFPzZ9s9XY8sZjj76uj"}
+{"ts": "2026-10-24T14:50:43Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2642, "output_tokens": 901, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 5.72, "request_id": "req_011CgMFQHJigNYhiNLmED6Tc"}
+{"ts": "2026-10-24T14:50:47Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2838, "output_tokens": 690, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 4.57, "request_id": "req_011CgMFQhvZWKMXiCzagHiVs"}
+{"ts": "2026-10-24T14:50:54Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2773, "output_tokens": 1117, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 6.96, "request_id": "req_011CgMFR3Rpnrvf9e5UFbtkk"}
+{"ts": "2026-10-24T14:51:02Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2644, "output_tokens": 1194, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 7.34, "request_id": "req_011CgMFRZKfeTakaCAoGpUed"}
+{"ts": "2026-10-24T14:51:08Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2644, "output_tokens": 952, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 6.78, "request_id": "req_011CgMFS6g44jYP73jyyQoMy"}
+{"ts": "2026-10-24T14:51:16Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 2773, "output_tokens": 1434, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 8.04, "request_id": "req_011CgMFSbm34yvXRayCobBLq"}
+{"ts": "2026-10-24T14:51:20Z", "model": "claude-sonnet-5-5", "purpose": "vision", "cached": false, "input_tokens": 1822, "output_tokens": 448, "cache_read_input_tokens": 1004, "cache_creation_input_tokens": 0, "latency_s": 3.58, "request_id": "req_011CgMFTC9VXVXEvq3xgJX5h"}
+{"ts": "2026-10-24T14:51:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.05, "request_id": "req_011CgMFTtsiEkmxHvnW4mNjn"}
+{"ts": "2026-10-24T14:51:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.89, "request_id": "req_011CgMFTxrpp5dYvmh6Ep8V8"}
+{"ts": "2026-10-24T14:51:30Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFU6wFMmuq1xNBtnRKb"}
+{"ts": "2026-10-24T14:51:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.07, "request_id": "req_011CgMFUAZ2EUuKhxDFGqMkN"}
+{"ts": "2026-10-24T14:51:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.31, "request_id": "req_011CgMFUFB6LFD4wmJJALHiR"}
+{"ts": "2026-10-24T14:51:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.48, "request_id": "req_011CgMFULmwSztHAXVCLZohf"}
+{"ts": "2026-10-24T14:51:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 535, "output_tokens": 75, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFUT7vtxrYXbj35hNMr"}
+{"ts": "2026-10-24T14:51:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFUWeWD1Rd9ya9b4MZc"}
+{"ts": "2026-10-24T14:51:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.35, "request_id": "req_011CgMFUaWgn18yRzbjGA5Sp"}
+{"ts": "2026-10-24T14:51:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 46, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.76, "request_id": "req_011CgMFUgFD42j3gapB95Ko6"}
+{"ts": "2026-10-24T14:51:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFUjWui9yigGv8zxiyQ"}
+{"ts": "2026-10-24T14:51:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFUoaFMojUF2iiWtZjA"}
+{"ts": "2026-10-24T14:51:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFUsBXcVC1sD3DmtX2n"}
+{"ts": "2026-10-24T14:51:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.52, "request_id": "req_011CgMFUw2TU6agmnvSKgiAA"}
+{"ts": "2026-10-24T14:51:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFV3achLTd4fpwJm1os"}
+{"ts": "2026-10-24T14:51:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFV7v3rnyEmuMLuk7L5"}
+{"ts": "2026-10-24T14:51:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFVB4ZrWuAbPBPahtcz"}
+{"ts": "2026-10-24T14:51:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFVF3BobBy3XheAaRjq"}
+{"ts": "2026-10-24T14:51:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFVJfU7P3ksYkTR3Spf"}
+{"ts": "2026-10-24T14:51:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.25, "request_id": "req_011CgMFVNWPsrpPfb5wJSpXv"}
+{"ts": "2026-10-24T14:51:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 570, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFVTrs1xnLHoi6cHzQ3"}
+{"ts": "2026-10-24T14:51:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFVXX8bfUUEDvPoJT7U"}
+{"ts": "2026-10-24T14:51:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFVbYiTrr1Wp7zm4kmB"}
+{"ts": "2026-10-24T14:51:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFVfd2pSFmQVmRYKVbb"}
+{"ts": "2026-10-24T14:51:52Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFVjHYvFwLLfEcvdPRv"}
+{"ts": "2026-10-24T14:51:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.3, "request_id": "req_011CgMFVojwMPT52yDz1d5hr"}
+{"ts": "2026-10-24T14:51:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFVuF5YeVTgLWny2pS5"}
+{"ts": "2026-10-24T14:51:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFVxhCnCy8oMztPhqWD"}
+{"ts": "2026-10-24T14:51:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.26, "request_id": "req_011CgMFW2WQHpB1ar331x4E2"}
+{"ts": "2026-10-24T14:51:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFW7tLjaxssXBy34qQc"}
+{"ts": "2026-10-24T14:51:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFWCDYGGC2HsvysKFAr"}
+{"ts": "2026-10-24T14:51:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 584, "output_tokens": 74, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFWGBBCJbEnhWThNYgw"}
+{"ts": "2026-10-24T14:52:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFWL8HyLZCypXMqCLA4"}
+{"ts": "2026-10-24T14:52:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.04, "request_id": "req_011CgMFWQ3SdCG7cSBnX7nZ1"}
+{"ts": "2026-10-24T14:52:02Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 568, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFWUTrKYoPiEGXnfSEu"}
+{"ts": "2026-10-24T14:52:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFWYvyex2pA4yZmTktW"}
+{"ts": "2026-10-24T14:52:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFWc4ztKaudm8HvC2Am"}
+{"ts": "2026-10-24T14:52:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFWg57L6CeK92GXaxYz"}
+{"ts": "2026-10-24T14:52:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.75, "request_id": "req_011CgMFWkL6LXw6NWW1sU5Mn"}
+{"ts": "2026-10-24T14:52:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 46, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.69, "request_id": "req_011CgMFWoYp9Kgv4ySohp2SR"}
+{"ts": "2026-10-24T14:52:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.12, "request_id": "req_011CgMFWrVvLSPwqQ6zaLp6Q"}
+{"ts": "2026-10-24T14:52:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFWwMcgKMfctDMfTvoh"}
+{"ts": "2026-10-24T14:52:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 566, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.16, "request_id": "req_011CgMFX1C3fc68fp2Y7nWsr"}
+{"ts": "2026-10-24T14:52:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFX69hMa4mQ8PENbft5"}
+{"ts": "2026-10-24T14:52:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.76, "request_id": "req_011CgMFX9oi95ZspugKZcgX1"}
+{"ts": "2026-10-24T14:52:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 551, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFXD1Sd9ZFA81sAfkT5"}
+{"ts": "2026-10-24T14:52:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFXHECYV3MREf12Yciw"}
+{"ts": "2026-10-24T14:52:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFXMQDsJbtDsBChEZvu"}
+{"ts": "2026-10-24T14:52:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 581, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFXRPLQBupvKKVjti3s"}
+{"ts": "2026-10-24T14:52:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 72, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFXUxQKiXzFD8qkDmZL"}
+{"ts": "2026-10-24T14:52:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFXYumd4wsLdT5BGcp9"}
+{"ts": "2026-10-24T14:52:17Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFXd6XtvHoaYGABR4EY"}
+{"ts": "2026-10-24T14:52:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.49, "request_id": "req_011CgMFXgeN3FHsP4qdubb47"}
+{"ts": "2026-10-24T14:52:20Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFXo3at4m5twC1DPXca"}
+{"ts": "2026-10-24T14:52:21Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.36, "request_id": "req_011CgMFXrRUJek5dVuVCfnNj"}
+{"ts": "2026-10-24T14:52:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.73, "request_id": "req_011CgMFXxHSsPZPYxs9rxgCV"}
+{"ts": "2026-10-24T14:52:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFY1QUK7vywfq8Vczjs"}
+{"ts": "2026-10-24T14:52:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFY58xi84pdTCAybEyE"}
+{"ts": "2026-10-24T14:52:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFY8tBjavjUVJzL6q8c"}
+{"ts": "2026-10-24T14:52:25Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFYCFLi9gZvYFqUGbRy"}
+{"ts": "2026-10-24T14:52:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.73, "request_id": "req_011CgMFYGTMFErNPJdgeyMcr"}
+{"ts": "2026-10-24T14:52:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFYKaroujqJYtynWPu3"}
+{"ts": "2026-10-24T14:52:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFYNkMxR2dmpzAHsBbX"}
+{"ts": "2026-10-24T14:52:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFYSSrYZYobfymKuAXL"}
+{"ts": "2026-10-24T14:52:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.96, "request_id": "req_011CgMFYWArLZQuxzS4s4ki1"}
+{"ts": "2026-10-24T14:52:30Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFYaEgGhvVzGWd3ZYJW"}
+{"ts": "2026-10-24T14:52:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFYeF273LTpkFFRQ3g1"}
+{"ts": "2026-10-24T14:52:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.04, "request_id": "req_011CgMFYi7vy7PDPvPTJkQWj"}
+{"ts": "2026-10-24T14:52:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 70, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.96, "request_id": "req_011CgMFYnWraX8cLAxMrYX6K"}
+{"ts": "2026-10-24T14:52:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.71, "request_id": "req_011CgMFYrduLMBjB8s3BHFig"}
+{"ts": "2026-10-24T14:52:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFYz3eXue68jeaKjeGz"}
+{"ts": "2026-10-24T14:52:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFZ4EAXUnb3EJTrRTYq"}
+{"ts": "2026-10-24T14:52:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFZ7oiQLWQXhixVKFwT"}
+{"ts": "2026-10-24T14:52:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.77, "request_id": "req_011CgMFZBjNBRDRrfQR5yoTQ"}
+{"ts": "2026-10-24T14:52:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFZF43XHwHWvQQg36dG"}
+{"ts": "2026-10-24T14:52:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.68, "request_id": "req_011CgMFZJyBqcQbzJ2DFqNS8"}
+{"ts": "2026-10-24T14:52:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFZMx1izPFAd4XpcTBf"}
+{"ts": "2026-10-24T14:52:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.25, "request_id": "req_011CgMFZS9nWbxa5jfJfmMXa"}
+{"ts": "2026-10-24T14:52:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.99, "request_id": "req_011CgMFZXWjeScar7vNLJaga"}
+{"ts": "2026-10-24T14:52:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFZbjEdcfNPGmcWrhcn"}
+{"ts": "2026-10-24T14:52:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFZfZRhdUUgUZvBM8F5"}
+{"ts": "2026-10-24T14:52:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFZjZ2sVV7DDwXnseFW"}
+{"ts": "2026-10-24T14:52:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.77, "request_id": "req_011CgMFZo9akRn4hMExdkBES"}
+{"ts": "2026-10-24T14:52:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFZvoxfd4M7VZi826hC"}
+{"ts": "2026-10-24T14:52:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFZzbQV5BMRgFN8kA39"}
+{"ts": "2026-10-24T14:52:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFa52pS8XEScYALW2Wm"}
+{"ts": "2026-10-24T14:52:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFa8g65TUr46wNzByCB"}
+{"ts": "2026-10-24T14:52:52Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFaCbjXZTQ6z5HPcKom"}
+{"ts": "2026-10-24T14:52:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFaGYc1Vkutrx4fPEWr"}
+{"ts": "2026-10-24T14:52:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFaKiMZPHiCqFSS5W4d"}
+{"ts": "2026-10-24T14:52:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFaP8z4xaDVGB5i97zk"}
+{"ts": "2026-10-24T14:52:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 70, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.12, "request_id": "req_011CgMFaT19g6ydS2LnHq4dK"}
+{"ts": "2026-10-24T14:52:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFaXpdKU26Yakg1UEp7"}
+{"ts": "2026-10-24T14:52:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFabdKp4XdJ58QUBhr7"}
+{"ts": "2026-10-24T14:52:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.04, "request_id": "req_011CgMFafcgFC6jxPJka699e"}
+{"ts": "2026-10-24T14:53:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFak4pcdbk4NJ8DqQNQ"}
+{"ts": "2026-10-24T14:53:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFaobuQF314uh6HhN2M"}
+{"ts": "2026-10-24T14:53:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.11, "request_id": "req_011CgMFasR6AuMFnj9gBNfG5"}
+{"ts": "2026-10-24T14:53:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFb32YUBRFpqDJi4rTF"}
+{"ts": "2026-10-24T14:53:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFb6fJxXQt2oj9YY3XJ"}
+{"ts": "2026-10-24T14:53:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 49, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.72, "request_id": "req_011CgMFbAcx2JsKsbsg9XoPG"}
+{"ts": "2026-10-24T14:53:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFbDezwcSZebXwCu1sk"}
+{"ts": "2026-10-24T14:53:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFbHALjwFnrV4Kt5tpP"}
+{"ts": "2026-10-24T14:53:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFbM1HCMuzGB8V6T2ef"}
+{"ts": "2026-10-24T14:53:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFbQztGaBYEgKcT7ebR"}
+{"ts": "2026-10-24T14:53:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFbV2xpS4jDuer9GQoq"}
+{"ts": "2026-10-24T14:53:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFbZ25oZUV46qGKXdN5"}
+{"ts": "2026-10-24T14:53:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFbdL2zeK1NdUbDsQwV"}
+{"ts": "2026-10-24T14:53:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFbh42nESa5bqSgqh7g"}
+{"ts": "2026-10-24T14:53:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFbkYdAZ5cVSYwTAjRz"}
+{"ts": "2026-10-24T14:53:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFbpT2J7uWRWKP659zR"}
+{"ts": "2026-10-24T14:53:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFbt64CJTfse2Cf7kxx"}
+{"ts": "2026-10-24T14:53:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFbwuz2EzRMquQpQxyH"}
+{"ts": "2026-10-24T14:53:17Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.19, "request_id": "req_011CgMFc1ou1H2G9ZUXVxZpQ"}
+{"ts": "2026-10-24T14:53:18Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFc6tEYmqC6hifvRDqN"}
+{"ts": "2026-10-24T14:53:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFcAazabqhqTHbDGx5w"}
+{"ts": "2026-10-24T14:53:20Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.05, "request_id": "req_011CgMFcE9JR2W1Kee6g8Z1n"}
+{"ts": "2026-10-24T14:53:21Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFcJhPd2wVngSHn2DFU"}
+{"ts": "2026-10-24T14:53:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFcNGwodqr3wGEFnsTg"}
+{"ts": "2026-10-24T14:53:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.08, "request_id": "req_011CgMFcSVCSeTfG6b2FLtN9"}
+{"ts": "2026-10-24T14:53:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFcX4nAcRnhwUEkPSvM"}
+{"ts": "2026-10-24T14:53:25Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFcb87KmkVw5EYrFYio"}
+{"ts": "2026-10-24T14:53:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFceqrcrDj3cXxfGZZT"}
+{"ts": "2026-10-24T14:53:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFciwAuczyboj7wSVtk"}
+{"ts": "2026-10-24T14:53:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFco2xxenjMyCRrhz4C"}
+{"ts": "2026-10-24T14:53:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFcs3KjcgMFo4Xxeeaj"}
+{"ts": "2026-10-24T14:53:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFcvyTY4bvtXW84KNFB"}
+{"ts": "2026-10-24T14:53:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.41, "request_id": "req_011CgMFd19yXyZdwqTKPTt9E"}
+{"ts": "2026-10-24T14:53:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.18, "request_id": "req_011CgMFd7BNXJFyaSMncZvrq"}
+{"ts": "2026-10-24T14:53:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFdCGifVnTHtYxRWJiT"}
+{"ts": "2026-10-24T14:53:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFdFe8DogTtRt5K33U5"}
+{"ts": "2026-10-24T14:53:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.75, "request_id": "req_011CgMFdKERDdqc25jFLZunf"}
+{"ts": "2026-10-24T14:53:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFdSmqpLzFGqndEvVvy"}
+{"ts": "2026-10-24T14:53:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFdWuePUDp72VBrAw7K"}
+{"ts": "2026-10-24T14:53:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFdbF5sqDgmfJDjThHb"}
+{"ts": "2026-10-24T14:53:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFdfaHNs8diwLuKdhPr"}
+{"ts": "2026-10-24T14:53:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFdjTggLAUUcbG2Apz2"}
+{"ts": "2026-10-24T14:53:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 551, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.13, "request_id": "req_011CgMFdoMM9SSLiUqHEDdtR"}
+{"ts": "2026-10-24T14:53:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFdt4Nej4CrB7RLJUjY"}
+{"ts": "2026-10-24T14:53:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.11, "request_id": "req_011CgMFdx1kNWBZLtmuVN6Uj"}
+{"ts": "2026-10-24T14:53:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFe2f3tibwjWSfcSx6a"}
+{"ts": "2026-10-24T14:53:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFe6VyKHCXcSkL6Jej6"}
+{"ts": "2026-10-24T14:53:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFeAt9kh42KTHEB6E91"}
+{"ts": "2026-10-24T14:53:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.73, "request_id": "req_011CgMFeEtWA2fomQaBCexXF"}
+{"ts": "2026-10-24T14:53:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFeJ22YNB9pA9QDrMQ2"}
+{"ts": "2026-10-24T14:53:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFeMztgCzu5X5N3628Y"}
+{"ts": "2026-10-24T14:53:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFeSUGmyAu23FV5Adqj"}
+{"ts": "2026-10-24T14:53:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFeVpBcyv3t7gUEevbU"}
+{"ts": "2026-10-24T14:53:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFeZPVnxU82mTaVhm1y"}
+{"ts": "2026-10-24T14:53:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.59, "request_id": "req_011CgMFedCCCgDLMqFqcZHAv"}
+{"ts": "2026-10-24T14:53:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFejzE51CKg68ajSpCj"}
+{"ts": "2026-10-24T14:53:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.15, "request_id": "req_011CgMFeo6zFc3QLBW9FzdZF"}
+{"ts": "2026-10-24T14:53:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFet4u2ugHu45ySt7h3"}
+{"ts": "2026-10-24T14:53:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.37, "request_id": "req_011CgMFewiAhUE5bY2arQ9o3"}
+{"ts": "2026-10-24T14:53:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFf3b8bW6yZUubyZD3y"}
+{"ts": "2026-10-24T14:53:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFf76yCuDGTRzuWL5R4"}
+{"ts": "2026-10-24T14:54:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.99, "request_id": "req_011CgMFfAUcnpyvpkXYmHu8R"}
+{"ts": "2026-10-24T14:54:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFfEjME7W97BybJGSpm"}
+{"ts": "2026-10-24T14:54:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFfJLe7sahA8Vm4uDcU"}
+{"ts": "2026-10-24T14:54:02Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFfN9qaSP2RutUNwVbD"}
+{"ts": "2026-10-24T14:54:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.09, "request_id": "req_011CgMFfRkPi4iP1J56Acfaq"}
+{"ts": "2026-10-24T14:54:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFfWTezWSPsb9Z9bobu"}
+{"ts": "2026-10-24T14:54:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFfaB99E3FvtHjQX9dc"}
+{"ts": "2026-10-24T14:54:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFfe3KCrnFMyijWdzz9"}
+{"ts": "2026-10-24T14:54:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFfhgM2B1m7KXJvSKnv"}
+{"ts": "2026-10-24T14:54:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFfmWmvQCHbSiHKLRg4"}
+{"ts": "2026-10-24T14:54:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.47, "request_id": "req_011CgMFfq9Z4SJY92o7Hbfw2"}
+{"ts": "2026-10-24T14:54:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFfwTK7kgSvB7caEKMq"}
+{"ts": "2026-10-24T14:54:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFfzqU9c3q1i3oTTmae"}
+{"ts": "2026-10-24T14:54:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFg4SGQ8av7uV52FuuH"}
+{"ts": "2026-10-24T14:54:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFg8kyBe8DmJ1HLBLcX"}
+{"ts": "2026-10-24T14:54:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 70, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFgCNWFMiYM3Veq9vnr"}
+{"ts": "2026-10-24T14:54:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.13, "request_id": "req_011CgMFgGKPK5GKymNf7VWYj"}
+{"ts": "2026-10-24T14:54:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.75, "request_id": "req_011CgMFgMCpkKddw2gKHRkUM"}
+{"ts": "2026-10-24T14:54:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFgQUH7K93azcZD4sSc"}
+{"ts": "2026-10-24T14:54:17Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFgUGU9Sxn1pc8EXQAn"}
+{"ts": "2026-10-24T14:54:18Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 534, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFgYMYFQEnSKtJSB3WW"}
+{"ts": "2026-10-24T14:54:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFgcKf5iifDnwF8199A"}
+{"ts": "2026-10-24T14:54:20Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFggBKi6EcSFsJRFXP2"}
+{"ts": "2026-10-24T14:54:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.39, "request_id": "req_011CgMFgjsaNJE3JqKYP8i2f"}
+{"ts": "2026-10-24T14:54:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.34, "request_id": "req_011CgMFgqipKc6tC23bvuA67"}
+{"ts": "2026-10-24T14:54:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFgwSMjmc6X5StsecTX"}
+{"ts": "2026-10-24T14:54:25Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFgzzv2eLjwPSqYnmqR"}
+{"ts": "2026-10-24T14:54:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFh4ynG1Wx8kXHcECT1"}
+{"ts": "2026-10-24T14:54:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFh8vv6JcFPC4oJK9Wb"}
+{"ts": "2026-10-24T14:54:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFhD2USVYAUxRUFcJZy"}
+{"ts": "2026-10-24T14:54:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFhGzb9GmExhmbcintX"}
+{"ts": "2026-10-24T14:54:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFhLyx6ZHWcKuj15ueD"}
+{"ts": "2026-10-24T14:54:30Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFhQMMp4JxSBbBX3kBd"}
+{"ts": "2026-10-24T14:54:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.09, "request_id": "req_011CgMFhU9YpYrkzyMHZmP4Z"}
+{"ts": "2026-10-24T14:54:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFhd8JJ2LKhZTh9XPMM"}
+{"ts": "2026-10-24T14:54:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.11, "request_id": "req_011CgMFhgdPr9A1fF84y4De9"}
+{"ts": "2026-10-24T14:54:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFhmQNrmuowxg87NF9z"}
+{"ts": "2026-10-24T14:54:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFhqEaBVPyMYRxhfkG7"}
+{"ts": "2026-10-24T14:54:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.04, "request_id": "req_011CgMFhtyHvbsRfsFnqy8aD"}
+{"ts": "2026-10-24T14:54:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFhyPTrP7bpK59q9A2C"}
+{"ts": "2026-10-24T14:54:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFi2oqL78Xq8rJStVvL"}
+{"ts": "2026-10-24T14:54:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 69, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFi6jV56vDQuG1fqaJE"}
+{"ts": "2026-10-24T14:54:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.05, "request_id": "req_011CgMFiAKHWa5sZFu4EGuH7"}
+{"ts": "2026-10-24T14:54:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFiEptt5iH34UX95xww"}
+{"ts": "2026-10-24T14:54:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.34, "request_id": "req_011CgMFiJGGFUtdr6WMUoZYE"}
+{"ts": "2026-10-24T14:54:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFiQ4GmfJRL6Rsj3Edw"}
+{"ts": "2026-10-24T14:54:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.77, "request_id": "req_011CgMFiU5rgXfpeZ7pkrznm"}
+{"ts": "2026-10-24T14:54:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFiXU28DfDQHbZmBbHF"}
+{"ts": "2026-10-24T14:54:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFibDzK27YoKuDummPa"}
+{"ts": "2026-10-24T14:54:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFif3BANAswtzDRzRTE"}
+{"ts": "2026-10-24T14:54:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFiiSp79zq2Xxa8H9zD"}
+{"ts": "2026-10-24T14:54:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.74, "request_id": "req_011CgMFinZcRJtDwQKswBxFN"}
+{"ts": "2026-10-24T14:54:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFiu7WS6DYjRouUzpYW"}
+{"ts": "2026-10-24T14:54:52Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.56, "request_id": "req_011CgMFixvDL7sEZ9yvmFfk1"}
+{"ts": "2026-10-24T14:54:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFj5XLJtE3jmKukvQPn"}
+{"ts": "2026-10-24T14:54:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFj9JnLA8fhjUoiqHJE"}
+{"ts": "2026-10-24T14:54:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFjDACsFiN6x9iJKhmc"}
+{"ts": "2026-10-24T14:54:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFjGMCEB5nLJcG2ZTqb"}
+{"ts": "2026-10-24T14:54:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFjKs38eCipSnzYn31S"}
+{"ts": "2026-10-24T14:54:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.72, "request_id": "req_011CgMFjPFg4MnaN3NSaV99G"}
+{"ts": "2026-10-24T14:54:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFjSPCAATBUYLoPzuj4"}
+{"ts": "2026-10-24T14:54:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFjWP4EzT3TA6WS5rGd"}
+{"ts": "2026-10-24T14:54:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFjadnZN1cGEqZwSg79"}
+{"ts": "2026-10-24T14:55:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFjdwEMeZ5H56xrtGoz"}
+{"ts": "2026-10-24T14:55:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFjhvbHuz9vTW8xYkKa"}
+{"ts": "2026-10-24T14:55:02Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFjmvSv3hndAKYxEU3t"}
+{"ts": "2026-10-24T14:55:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFjqNKUi4FB3wvy2sAL"}
+{"ts": "2026-10-24T14:55:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.08, "request_id": "req_011CgMFjtvsftmggeRTEzUhX"}
+{"ts": "2026-10-24T14:55:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFjybRLieHucKaqWaw3"}
+{"ts": "2026-10-24T14:55:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFk2mf38r9Y7GYKTK2g"}
+{"ts": "2026-10-24T14:55:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFk6FkpqFkfGL7i6e93"}
+{"ts": "2026-10-24T14:55:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFk9vmyjqSimUNRyT3r"}
+{"ts": "2026-10-24T14:55:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.08, "request_id": "req_011CgMFkDcmuDaxzMYWPDqWt"}
+{"ts": "2026-10-24T14:55:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFkJN2KeDrH5dBVTeJD"}
+{"ts": "2026-10-24T14:55:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFkNJuNm9yFwpjKaQrX"}
+{"ts": "2026-10-24T14:55:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFkSJ1exGM63MZGWZXX"}
+{"ts": "2026-10-24T14:55:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFkWBgL5ZKcZaRakoDX"}
+{"ts": "2026-10-24T14:55:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFkZxe3pctiwkQnkcBH"}
+{"ts": "2026-10-24T14:55:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.09, "request_id": "req_011CgMFkdUUm963EZzSakQ13"}
+{"ts": "2026-10-24T14:55:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFkiAztn31yDnMtKWht"}
+{"ts": "2026-10-24T14:55:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.2, "request_id": "req_011CgMFknDqAThJ9i5TNZbRt"}
+{"ts": "2026-10-24T14:55:18Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.17, "request_id": "req_011CgMFksRcaqp3wAnnA17XT"}
+{"ts": "2026-10-24T14:55:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 68, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFm2mSvq8sFWZfTTJ6T"}
+{"ts": "2026-10-24T14:55:20Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFm6s1CXxH2mDAyQtku"}
+{"ts": "2026-10-24T14:55:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.51, "request_id": "req_011CgMFmAXkr7MXxHnfSLhVu"}
+{"ts": "2026-10-24T14:55:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.34, "request_id": "req_011CgMFmH1wc8eE1MwqxRXtt"}
+{"ts": "2026-10-24T14:55:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFmNjj6BN6WEDjUupMQ"}
+{"ts": "2026-10-24T14:55:25Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFmSUxu4xnoK8kqyEU3"}
+{"ts": "2026-10-24T14:55:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFmWQLv5XcZp1r4GmTc"}
+{"ts": "2026-10-24T14:55:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFmZxQpze7FTNtacQPQ"}
+{"ts": "2026-10-24T14:55:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFmdjPG7nCKMxFvxHd2"}
+{"ts": "2026-10-24T14:55:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFmhScknu6Yo9rVEwGq"}
+{"ts": "2026-10-24T14:55:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFmmMGfv37KLCJTRsuY"}
+{"ts": "2026-10-24T14:55:30Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFmpuq9BwS2jKCEfXPp"}
+{"ts": "2026-10-24T14:55:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFmu4sHg7N4f5P4bnCJ"}
+{"ts": "2026-10-24T14:55:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.76, "request_id": "req_011CgMFmxrL8bPXDA3ENjvKu"}
+{"ts": "2026-10-24T14:55:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFn282EMCySX1faKBny"}
+{"ts": "2026-10-24T14:55:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFn5gqajM5NUSK8w6Ds"}
+{"ts": "2026-10-24T14:55:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.68, "request_id": "req_011CgMFn9aF3xeL6PzBvPeFE"}
+{"ts": "2026-10-24T14:55:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFnCVciWGX3DrviYEQQ"}
+{"ts": "2026-10-24T14:55:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFnGELYMWLnQpNa6EJc"}
+{"ts": "2026-10-24T14:55:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.71, "request_id": "req_011CgMFnKp9ibEpJ2sAmMwKp"}
+{"ts": "2026-10-24T14:55:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.72, "request_id": "req_011CgMFnNsCHYjxfYxRADjWg"}
+{"ts": "2026-10-24T14:55:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFnWGSSpZv1845CEHgh"}
+{"ts": "2026-10-24T14:55:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFna9MVU62E2L8JMhAi"}
+{"ts": "2026-10-24T14:55:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFne2GZwCPFtmDAwvuM"}
+{"ts": "2026-10-24T14:55:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFnhhGvCrUnaTcpVd8N"}
+{"ts": "2026-10-24T14:55:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFnmQ29Cod7pDxxL66Q"}
+{"ts": "2026-10-24T14:55:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFnqAF6eWPZxMqn2r9V"}
+{"ts": "2026-10-24T14:55:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFntk3JFxNT9CMoXzhz"}
+{"ts": "2026-10-24T14:55:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFnxSYvV3eoRk3Hquaa"}
+{"ts": "2026-10-24T14:55:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFo1zNVGAZjKEgFi5Dd"}
+{"ts": "2026-10-24T14:55:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 50, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFo5RF5vEGVDMZZm7L3"}
+{"ts": "2026-10-24T14:55:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFo97VBMwD9NR25CqZC"}
+{"ts": "2026-10-24T14:55:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFoD1e4Rx2DKNv9qXCi"}
+{"ts": "2026-10-24T14:55:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFoGqKuCM3YcXVHNtyk"}
+{"ts": "2026-10-24T14:55:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.72, "request_id": "req_011CgMFoLQ9cZnq8puCo9y3P"}
+{"ts": "2026-10-24T14:55:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFoPSCkgHDAkWKSpvMK"}
+{"ts": "2026-10-24T14:55:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 69, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.41, "request_id": "req_011CgMFoT9wwgWfFf5oUMj9S"}
+{"ts": "2026-10-24T14:55:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.77, "request_id": "req_011CgMFoZCqM2n2rqhPrHUki"}
+{"ts": "2026-10-24T14:55:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFocYVUTMpJcDVMpJJr"}
+{"ts": "2026-10-24T14:55:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.74, "request_id": "req_011CgMFofqSdwJe1Z5owz3og"}
+{"ts": "2026-10-24T14:55:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.11, "request_id": "req_011CgMFoj4fC8ntBpRtmBU3o"}
+{"ts": "2026-10-24T14:55:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFoomC17psGRqctP788"}
+{"ts": "2026-10-24T14:55:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.71, "request_id": "req_011CgMFosSSabBPz31sMs4tW"}
+{"ts": "2026-10-24T14:55:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFovXUiPKc2jhEnSGhE"}
+{"ts": "2026-10-24T14:55:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFozN9xa64fQ9h8Ng5V"}
+{"ts": "2026-10-24T14:56:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFp4J47cKXf7MoLyCJC"}
+{"ts": "2026-10-24T14:56:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFp7wZmwkgLvYPuQzSg"}
+{"ts": "2026-10-24T14:56:02Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.99, "request_id": "req_011CgMFpBeKXtYaWZvk55UtA"}
+{"ts": "2026-10-24T14:56:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.96, "request_id": "req_011CgMFpFs4fnS8BTaNDg6GS"}
+{"ts": "2026-10-24T14:56:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 47, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFpKyNLjJKmZkaVDY7D"}
+{"ts": "2026-10-24T14:56:05Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFpPUy6G27q6oEL52gz"}
+{"ts": "2026-10-24T14:56:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 70, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.08, "request_id": "req_011CgMFpTK9sxzZBmDPxzcDz"}
+{"ts": "2026-10-24T14:56:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFpY1Rh7xygo72omKud"}
+{"ts": "2026-10-24T14:56:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFpbcia6PsChv9G4QX8"}
+{"ts": "2026-10-24T14:56:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.72, "request_id": "req_011CgMFpeyNqk2ZFMEs4Y3xk"}
+{"ts": "2026-10-24T14:56:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.72, "request_id": "req_011CgMFpi5eY6ay3jAdqPqde"}
+{"ts": "2026-10-24T14:56:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFpm9wkMK9Aq8pohgPV"}
+{"ts": "2026-10-24T14:56:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.73, "request_id": "req_011CgMFppkVBC79wrYFe42J3"}
+{"ts": "2026-10-24T14:56:11Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFpsxEYP7JUvjx8fTax"}
+{"ts": "2026-10-24T14:56:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.18, "request_id": "req_011CgMFpwb1LUH1dR5D3jCyW"}
+{"ts": "2026-10-24T14:56:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.96, "request_id": "req_011CgMFq6x5Myk4sirqY8wKV"}
+{"ts": "2026-10-24T14:56:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFqB57oFXMmYLwMgF4Q"}
+{"ts": "2026-10-24T14:56:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 53, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFqEheLg3GtQB8v2p1m"}
+{"ts": "2026-10-24T14:56:17Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFqJmy8KxJCjAeB4bcE"}
+{"ts": "2026-10-24T14:56:18Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFqNRz2upWGCZR4BbzL"}
+{"ts": "2026-10-24T14:56:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFqSRLxAw6DmKhM8VDs"}
+{"ts": "2026-10-24T14:56:20Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFqWpG9nCMHQ677oVnG"}
+{"ts": "2026-10-24T14:56:21Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFqahvWvFvu2fZDwgvy"}
+{"ts": "2026-10-24T14:56:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFqeXraHf8CMSo5chFV"}
+{"ts": "2026-10-24T14:56:23Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFqiNJQVkhZs5bb85gL"}
+{"ts": "2026-10-24T14:56:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFqnGhi3WaaASE8ydZy"}
+{"ts": "2026-10-24T14:56:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.78, "request_id": "req_011CgMFqr87Z1Sog4pTshdLB"}
+{"ts": "2026-10-24T14:56:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.05, "request_id": "req_011CgMFquSoSQqqMDEbg3LFb"}
+{"ts": "2026-10-24T14:56:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFqyxex3QsXjLASUVNH"}
+{"ts": "2026-10-24T14:56:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.06, "request_id": "req_011CgMFr3TkZEsCBP59S1UhA"}
+{"ts": "2026-10-24T14:56:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.77, "request_id": "req_011CgMFr7xsaPqLnubzKXBrN"}
+{"ts": "2026-10-24T14:56:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 52, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFrBNFfFEcEqTCtvWtn"}
+{"ts": "2026-10-24T14:56:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.68, "request_id": "req_011CgMFrFghsypxRFsmJPrjm"}
+{"ts": "2026-10-24T14:56:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.77, "request_id": "req_011CgMFrNvY37pvKnjQxvqYM"}
+{"ts": "2026-10-24T14:56:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 48, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFrS8mE7VYP8CaagM4R"}
+{"ts": "2026-10-24T14:56:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFrVer9CvsX9vCxjcpM"}
+{"ts": "2026-10-24T14:56:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFrZPL8AYBJPhKz7mbQ"}
+{"ts": "2026-10-24T14:56:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.69, "request_id": "req_011CgMFrctfmz7AmCxkHW9cu"}
+{"ts": "2026-10-24T14:56:36Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFrfsGDLb2f8cUsA3Pn"}
+{"ts": "2026-10-24T14:56:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFrjrsTJER2vswBqsSS"}
+{"ts": "2026-10-24T14:56:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFroi3eTmqGAF4rQtsc"}
+{"ts": "2026-10-24T14:56:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFrsLpzui6a3PgYzgvK"}
+{"ts": "2026-10-24T14:56:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFrw4KQ7XZ9bEtYBtAp"}
+{"ts": "2026-10-24T14:56:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.98, "request_id": "req_011CgMFrzaPyc1swik1GcLka"}
+{"ts": "2026-10-24T14:56:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFs4mAPBTcJgEefU1nd"}
+{"ts": "2026-10-24T14:56:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 549, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFs8pVeTqEqLk8hY9EJ"}
+{"ts": "2026-10-24T14:56:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFsCZTkMz4sBXCRq5Eo"}
+{"ts": "2026-10-24T14:56:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFsGJCnreakwjd7xYKd"}
+{"ts": "2026-10-24T14:56:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.86, "request_id": "req_011CgMFsKyxCoMKwjvqhsjxD"}
+{"ts": "2026-10-24T14:56:45Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFsPeiUBM3UTWgeqKwC"}
+{"ts": "2026-10-24T14:56:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.8, "request_id": "req_011CgMFsT6pp1XcHGxmtLgCp"}
+{"ts": "2026-10-24T14:56:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFsWXTk2ZLHBeRhDtyu"}
+{"ts": "2026-10-24T14:56:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFsarQwWFeg6GRqvoh4"}
+{"ts": "2026-10-24T14:56:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 55, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFseEoyy7BY4q8WKU4P"}
+{"ts": "2026-10-24T14:56:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.54, "request_id": "req_011CgMFsiAgxNpAHbJjngK4m"}
+{"ts": "2026-10-24T14:56:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFspmZZzad369zVYmNR"}
+{"ts": "2026-10-24T14:56:52Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFstRbEncpyQRyTQypE"}
+{"ts": "2026-10-24T14:56:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.89, "request_id": "req_011CgMFsx2dLAJ8YTTdN9hDc"}
+{"ts": "2026-10-24T14:56:55Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.83, "request_id": "req_011CgMFt6CkUKbdZqCqUUJUL"}
+{"ts": "2026-10-24T14:56:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 547, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFt9h79amRCXDEEQ66p"}
+{"ts": "2026-10-24T14:56:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFtDAiXTieuKfR9EM37"}
+{"ts": "2026-10-24T14:56:58Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 551, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFtH8pzBzBi9JwZKQi3"}
+{"ts": "2026-10-24T14:56:59Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 548, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFtMNaKkRAcnUeh9gPe"}
+{"ts": "2026-10-24T14:57:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 51, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFtRDFttX45TibUN579"}
+{"ts": "2026-10-24T14:57:00Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFtVYwbHAVA794VWyJb"}
+{"ts": "2026-10-24T14:57:01Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFtZHgNg7RQmxme7rVN"}
+{"ts": "2026-10-24T14:57:02Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.87, "request_id": "req_011CgMFtddNhL43KkBYZCpV8"}
+{"ts": "2026-10-24T14:57:03Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 545, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFthNbd6tpooyEQaqDe"}
+{"ts": "2026-10-24T14:57:04Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFtm9oeZk8CgvmpsHGQ"}
+{"ts": "2026-10-24T14:57:06Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.58, "request_id": "req_011CgMFtq4i6V1vXiSqbbyPw"}
+{"ts": "2026-10-24T14:57:07Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFtwq1ALu1NDb2i2F1B"}
+{"ts": "2026-10-24T14:57:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 54, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFu1k9ce8WQKvcuTzDi"}
+{"ts": "2026-10-24T14:57:08Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFu5e4GUz7msX1fvEMj"}
+{"ts": "2026-10-24T14:57:09Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFu989UPzvTARRKbbmx"}
+{"ts": "2026-10-24T14:57:10Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 60, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFuDT79pJrQcz28Fozr"}
+{"ts": "2026-10-24T14:57:12Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 550, "output_tokens": 63, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.89, "request_id": "req_011CgMFuHLFwndfDA7ZeRBYw"}
+{"ts": "2026-10-24T14:57:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 542, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFuRTQtYQD1hDzdGW6w"}
+{"ts": "2026-10-24T14:57:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.84, "request_id": "req_011CgMFuVrqEGX8iaokmy54w"}
+{"ts": "2026-10-24T14:57:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:57:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 525, "output_tokens": 74, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFuZRt7yHHxr1hSEfJF"}
+{"ts": "2026-10-24T14:57:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 518, "output_tokens": 74, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFudFLGtWK1N1p1SGTD"}
+{"ts": "2026-10-24T14:57:17Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 516, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.73, "request_id": "req_011CgMFuh5GDJrZcHCY7zcn3"}
+{"ts": "2026-10-24T14:57:18Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 519, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFukDXvx7aEvVTsCSwJ"}
+{"ts": "2026-10-24T14:57:19Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 520, "output_tokens": 82, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.31, "request_id": "req_011CgMFupbD3f3L2SdD3FB1c"}
+{"ts": "2026-10-24T14:57:21Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 523, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.72, "request_id": "req_011CgMFuvDJLzEz4LB4vDzFw"}
+{"ts": "2026-10-24T14:57:22Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 524, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFv3bHxLMkZYH1oPKUT"}
+{"ts": "2026-10-24T14:57:24Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 513, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.11, "request_id": "req_011CgMFv8T1FcBQWTrWBPZTk"}
+{"ts": "2026-10-24T14:57:25Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 525, "output_tokens": 69, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.1, "request_id": "req_011CgMFvGaPxVN8mdFykvfpE"}
+{"ts": "2026-10-24T14:57:26Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 61, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.35, "request_id": "req_011CgMFvMMe2D57CZny9ivpL"}
+{"ts": "2026-10-24T14:57:27Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 546, "output_tokens": 59, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.85, "request_id": "req_011CgMFvT4grP8cpR7ZSMzQj"}
+{"ts": "2026-10-24T14:57:28Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 543, "output_tokens": 62, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFvWnfSaHFdU8NYCVhx"}
+{"ts": "2026-10-24T14:57:29Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 58, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.97, "request_id": "req_011CgMFvakYDdfFfN7xtEXjU"}
+{"ts": "2026-10-24T14:57:30Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 531, "output_tokens": 56, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.89, "request_id": "req_011CgMFvetaaHcAeHx3nfeov"}
+{"ts": "2026-10-24T14:57:31Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 560, "output_tokens": 69, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.88, "request_id": "req_011CgMFviimBE1jXAQcEnkW9"}
+{"ts": "2026-10-24T14:57:32Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 529, "output_tokens": 76, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.94, "request_id": "req_011CgMFvnXDTBzmJu5kWotu9"}
+{"ts": "2026-10-24T14:57:33Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 533, "output_tokens": 64, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.95, "request_id": "req_011CgMFvrZK2kMQnqQz24jkt"}
+{"ts": "2026-10-24T14:57:34Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 524, "output_tokens": 70, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.03, "request_id": "req_011CgMFvvcNryd38oJG7iper"}
+{"ts": "2026-10-24T14:57:35Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 520, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.38, "request_id": "req_011CgMFw16WUutxtDXXZBDsf"}
+{"ts": "2026-10-24T14:57:37Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 521, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.64, "request_id": "req_011CgMFw6zxbZjAhmtBMQvso"}
+{"ts": "2026-10-24T14:57:38Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 528, "output_tokens": 76, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFwDzQNFeCmEnazPFTk"}
+{"ts": "2026-10-24T14:57:39Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 75, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.02, "request_id": "req_011CgMFwHx2Eyskezo76Rc5d"}
+{"ts": "2026-10-24T14:57:40Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.59, "request_id": "req_011CgMFwNJDcKLzKwwMs5AZg"}
+{"ts": "2026-10-24T14:57:41Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 527, "output_tokens": 73, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.92, "request_id": "req_011CgMFwV6zhSqkPirdG12aJ"}
+{"ts": "2026-10-24T14:57:42Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 544, "output_tokens": 71, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFwa2A8TfJMx5Bzb231"}
+{"ts": "2026-10-24T14:57:43Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 87, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.0, "request_id": "req_011CgMFwdQ4qB9WokpZW51od"}
+{"ts": "2026-10-24T14:57:44Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 66, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.82, "request_id": "req_011CgMFwhhXXYM6jkcvi9r85"}
+{"ts": "2026-10-24T14:57:46Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 529, "output_tokens": 65, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 2.08, "request_id": "req_011CgMFwmFMPdJj5DJz4poBu"}
+{"ts": "2026-10-24T14:57:47Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 538, "output_tokens": 69, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.79, "request_id": "req_011CgMFwv8eAK1UVeVPFybzF"}
+{"ts": "2026-10-24T14:57:48Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 537, "output_tokens": 57, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.81, "request_id": "req_011CgMFwyYmzNdmkqHNWs45S"}
+{"ts": "2026-10-24T14:57:49Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 532, "output_tokens": 72, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.91, "request_id": "req_011CgMFx31PVbKFdP2D8wb4q"}
+{"ts": "2026-10-24T14:57:50Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 534, "output_tokens": 67, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.01, "request_id": "req_011CgMFx6yW6S2C4DRkoH8LM"}
+{"ts": "2026-10-24T14:57:51Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 536, "output_tokens": 81, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFxBEjR17qe7HPDiq2e"}
+{"ts": "2026-10-24T14:57:52Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 541, "output_tokens": 73, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 1.72, "request_id": "req_011CgMFxFGadBncgZmYpDzFW"}
+{"ts": "2026-10-24T14:57:53Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 539, "output_tokens": 74, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.9, "request_id": "req_011CgMFxNb6suWByACRQgJQu"}
+{"ts": "2026-10-24T14:57:54Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": false, "input_tokens": 540, "output_tokens": 79, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "latency_s": 0.93, "request_id": "req_011CgMFxSUGfTxDm2AK7szLa"}
+{"ts": "2026-10-24T14:59:13Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:14Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:15Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T14:59:16Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:56Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}
+{"ts": "2026-10-24T15:00:57Z", "model": "claude-haiku-5-5", "purpose": "intent", "cached": true, "input_tokens": 0, "output_tokens": 0}

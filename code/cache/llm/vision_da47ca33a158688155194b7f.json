@@ -1,0 +1,48 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:51:20Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 1822,
+  "output_tokens": 448,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 3.58,
+  "request_id": "req_011CgMFTC9VXVXEvq3xgJX5h"
+ },
+ "raw": "{\"captured_at\":\"2026-09-15T23:40:00Z\",\"console\":\"Audience Operations\",\"summary\":\"Audience Operations profile page for Soo-jin Park (marketing_001), shown as Live, with market, opt-in status, profile activity rows and audience membership details.\",\"records\":[{\"resource_id\":\"marketing_001\",\"record_type\":\"MARKETING_PROFILE\",\"system\":\"marketing_platform\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[\"sj.park@naver.com\"],\"user_ids\":[],\"phones\":[\"+82 10-5837-9451\"],\"names\":[\"Soo-jin Park\"],\"hashes\":[]},\"aliases\":[],\"timestamps\":[\"2026-09-15T23:40:00Z\"],\"notes\":\"Status Live; market South Korea, language Korean, email opt-in Yes, SMS opt-in No; audience Returning customers — East Asia; segments Repeat customer, Home & lifestyle, Mobile shopper; preferred categories Desk accessories, Drinkware; last campaign Autumn offers; open rate 32.4%, click rate 6.8%; profile shows 4 activity records (23:40 product-category update, 23:38 campaign eligibility check, 23:35 profile refresh, 23:32 audience evaluation).\"}]}",
+ "parsed": {
+  "captured_at": "2026-09-15T23:40:00Z",
+  "console": "Audience Operations",
+  "summary": "Audience Operations profile page for Soo-jin Park (marketing_001), shown as Live, with market, opt-in status, profile activity rows and audience membership details.",
+  "records": [
+   {
+    "resource_id": "marketing_001",
+    "record_type": "MARKETING_PROFILE",
+    "system": "marketing_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [
+      "sj.park@naver.com"
+     ],
+     "user_ids": [],
+     "phones": [
+      "+82 10-5837-9451"
+     ],
+     "names": [
+      "Soo-jin Park"
+     ],
+     "hashes": []
+    },
+    "aliases": [],
+    "timestamps": [
+     "2026-09-15T23:40:00Z"
+    ],
+    "notes": "Status Live; market South Korea, language Korean, email opt-in Yes, SMS opt-in No; audience Returning customers — East Asia; segments Repeat customer, Home & lifestyle, Mobile shopper; preferred categories Desk accessories, Drinkware; last campaign Autumn offers; open rate 32.4%, click rate 6.8%; profile shows 4 activity records (23:40 product-category update, 23:38 campaign eligibility check, 23:35 profile refresh, 23:32 audience evaluation)."
+   }
+  ]
+ }
+}

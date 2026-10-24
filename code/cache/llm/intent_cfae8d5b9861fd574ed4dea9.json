@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:52:09Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 566,
+  "output_tokens": 58,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.16,
+  "request_id": "req_011CgMFX1C3fc68fp2Y7nWsr"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly requests complete deletion of the account associated with their email address under a privacy procedure.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly requests complete deletion of the account associated with their email address under a privacy procedure."
+ }
+}

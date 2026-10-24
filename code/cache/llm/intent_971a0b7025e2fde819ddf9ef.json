@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:49:36Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 520,
+  "output_tokens": 61,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.67,
+  "request_id": "req_011CgMFKhuSBCQ2yyY6FAjz3"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The French request explicitly asks for the permanent deletion (suppression définitive) of the account linked to the email address.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The French request explicitly asks for the permanent deletion (suppression définitive) of the account linked to the email address."
+ }
+}

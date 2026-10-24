@@ -53,7 +53,9 @@ def _client():
         raise LLMUnavailable("anthropic SDK not installed") from exc
     if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
         raise LLMUnavailable("ANTHROPIC_API_KEY not set (put it in .env)")
-    return anthropic.Anthropic(max_retries=3, timeout=120.0)
+    # Accept-Encoding pinned: the Windows `brotli` wheel installed here predates the
+    # httpx2 decoder API, so Brotli-compressed responses fail to decode.
+    return anthropic.Anthropic(max_retries=3, timeout=120.0, default_headers={"Accept-Encoding": "gzip, deflate"})
 
 
 def _prompt(name: str) -> str:

@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:47Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 538,
+  "output_tokens": 69,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 0.79,
+  "request_id": "req_011CgMFwv8eAK1UVeVPFybzF"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"medium\", \"reason\": \"The customer is asking to verify whether a previously submitted account and personal data erasure has actually been completed, which counts as a deletion request.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "medium",
+  "reason": "The customer is asking to verify whether a previously submitted account and personal data erasure has actually been completed, which counts as a deletion request."
+ }
+}

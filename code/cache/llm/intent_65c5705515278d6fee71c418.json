@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:53:11Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 544,
+  "output_tokens": 60,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.0,
+  "request_id": "req_011CgMFbZ25oZUV46qGKXdN5"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The request explicitly asks for a permanent account deletion for the given email address and confirmation that it has been applied.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The request explicitly asks for a permanent account deletion for the given email address and confirmation that it has been applied."
+ }
+}

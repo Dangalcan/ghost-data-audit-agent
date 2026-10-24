@@ -1,0 +1,145 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:51:08Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "vision",
+  "cached": false,
+  "input_tokens": 2644,
+  "output_tokens": 952,
+  "cache_read_input_tokens": 1004,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 6.78,
+  "request_id": "req_011CgMFS6g44jYP73jyyQoMy"
+ },
+ "raw": "{\"captured_at\":null,\"console\":\"Customer Reference Registry\",\"summary\":\"Customer reference page for user_17 (Customer key, Account Platform, eu-west) marked 'Retained reference', listing 4 linked records (one order, two support cases, one finance record), all Active.\",\"records\":[{\"resource_id\":\"user_17\",\"record_type\":\"OTHER\",\"system\":\"account_service\",\"status\":\"RETAINED\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[\"user_17\"],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"Customer key\",\"Account Platform\",\"eu-west\"],\"timestamps\":[\"2024-01-11T08:42:00Z\",\"2026-03-10T07:18:00Z\"],\"notes\":\"Retained reference; owner team Account Platform; most recent update 10 Mar 2026 07:18 UTC; history entry 'Metadata reviewed' on 10 Mar 2026.\"},{\"resource_id\":null,\"record_type\":\"OBJECT\",\"system\":\"orders\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[\"user_17\"],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"ORD-20263245\"],\"timestamps\":[\"2024-01-11T08:45:00Z\"],\"notes\":\"Order linked to customer; status Active.\"},{\"resource_id\":null,\"record_type\":\"SUPPORT_MESSAGE\",\"system\":\"support_platform\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[\"user_17\"],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"CS-3245\"],\"timestamps\":[\"2024-02-14T12:16:00Z\"],\"notes\":\"Support case linked to customer; status Active.\"},{\"resource_id\":null,\"record_type\":\"SUPPORT_MESSAGE\",\"system\":\"support_platform\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[\"user_17\"],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"CS-3378\"],\"timestamps\":[\"2024-06-03T09:27:00Z\"],\"notes\":\"Support case linked to customer; status Active.\"},{\"resource_id\":null,\"record_type\":\"OTHER\",\"system\":\"finance\",\"status\":\"PRESENT\",\"enabled\":null,\"restore_allowed\":null,\"identifiers\":{\"emails\":[],\"user_ids\":[\"user_17\"],\"phones\":[],\"names\":[],\"hashes\":[]},\"aliases\":[\"FIN-7742\"],\"timestamps\":[\"2024-08-22T15:03:00Z\"],\"notes\":\"Finance record linked to customer; status Active.\"}]}",
+ "parsed": {
+  "captured_at": null,
+  "console": "Customer Reference Registry",
+  "summary": "Customer reference page for user_17 (Customer key, Account Platform, eu-west) marked 'Retained reference', listing 4 linked records (one order, two support cases, one finance record), all Active.",
+  "records": [
+   {
+    "resource_id": "user_17",
+    "record_type": "OTHER",
+    "system": "account_service",
+    "status": "RETAINED",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [
+      "user_17"
+     ],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "Customer key",
+     "Account Platform",
+     "eu-west"
+    ],
+    "timestamps": [
+     "2024-01-11T08:42:00Z",
+     "2026-03-10T07:18:00Z"
+    ],
+    "notes": "Retained reference; owner team Account Platform; most recent update 10 Mar 2026 07:18 UTC; history entry 'Metadata reviewed' on 10 Mar 2026."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OBJECT",
+    "system": "orders",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [
+      "user_17"
+     ],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "ORD-20263245"
+    ],
+    "timestamps": [
+     "2024-01-11T08:45:00Z"
+    ],
+    "notes": "Order linked to customer; status Active."
+   },
+   {
+    "resource_id": null,
+    "record_type": "SUPPORT_MESSAGE",
+    "system": "support_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [
+      "user_17"
+     ],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "CS-3245"
+    ],
+    "timestamps": [
+     "2024-02-14T12:16:00Z"
+    ],
+    "notes": "Support case linked to customer; status Active."
+   },
+   {
+    "resource_id": null,
+    "record_type": "SUPPORT_MESSAGE",
+    "system": "support_platform",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [
+      "user_17"
+     ],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "CS-3378"
+    ],
+    "timestamps": [
+     "2024-06-03T09:27:00Z"
+    ],
+    "notes": "Support case linked to customer; status Active."
+   },
+   {
+    "resource_id": null,
+    "record_type": "OTHER",
+    "system": "finance",
+    "status": "PRESENT",
+    "enabled": null,
+    "restore_allowed": null,
+    "identifiers": {
+     "emails": [],
+     "user_ids": [
+      "user_17"
+     ],
+     "phones": [],
+     "names": [],
+     "hashes": []
+    },
+    "aliases": [
+     "FIN-7742"
+    ],
+    "timestamps": [
+     "2024-08-22T15:03:00Z"
+    ],
+    "notes": "Finance record linked to customer; status Active."
+   }
+  ]
+ }
+}

@@ -40,11 +40,14 @@ def step_sort_key(step: Step):
 
 
 def fallback_activity(resource_id: str, audit_at: str) -> Optional[str]:
-    """Latest successful policy action on the resource at or before audit_at (a claim, last resort)."""
-    best = None
+    """Latest policy action on the resource at or before audit_at (a claim, last resort when
+    no evidence shows the record's state). Successful actions are preferred."""
+    best, best_key = None, None
     for a in activities_by_resource().get(resource_id, []):
-        if a.event_time <= audit_at and a.event_type in POLICY_SUCCESS_EVENTS and a.reported_result == "SUCCESS":
-            best = a.activity_id
+        if a.event_time <= audit_at and a.event_type in POLICY_SUCCESS_EVENTS:
+            key = (1 if a.reported_result == "SUCCESS" else 0, a.event_time)
+            if best_key is None or key > best_key:
+                best, best_key = a.activity_id, key
     return best
 
 

@@ -1,0 +1,35 @@
+{
+ "captured_at": null,
+ "console": "Pulse Analytics",
+ "summary": "Pulse Analytics user profile view for Omar Darwish (analytics_7438) showing an event timeline of 5 records, summary metrics and profile attributes for the last 90 days.",
+ "records": [
+  {
+   "resource_id": "analytics_7438",
+   "record_type": "ANALYTICS_PROFILE",
+   "system": "analytics_platform",
+   "status": "PRESENT",
+   "enabled": null,
+   "restore_allowed": null,
+   "identifiers": {
+    "emails": [
+     "darwish.omar@icloud.com"
+    ],
+    "user_ids": [
+     "user_20"
+    ],
+    "phones": [],
+    "names": [
+     "Omar Darwish"
+    ],
+    "hashes": []
+   },
+   "aliases": [],
+   "timestamps": [
+    "2026-07-13T14:22:00Z",
+    "2026-04-21T09:14:00Z"
+   ],
+   "notes": "Last 90 days view; 12 sessions, 19 products viewed, 2 completed orders, revenue USD 167.42, 67% mobile / 33% desktop, acquisition Organic search, market AE, audience Returning shopper, interest Coffee & dining; last activity 13 Jul 2026 14:22 UTC, first seen 21 Apr 2026 09:14 UTC; event timeline of 5 records (Order completed USD 84.21, Checkout started, Product viewed Ceramic coffee set, Added to cart USD 42.00, Product viewed Stoneware mug USD 18.00)."
+  }
+ ],
+ "source_file": "analytics_profile_view_20260713.png"
+}

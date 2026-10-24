@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:52:42Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 545,
+  "output_tokens": 60,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.25,
+  "request_id": "req_011CgMFZS9nWbxa5jfJfmMXa"
+ },
+ "raw": "{\"label\": \"DELETION\", \"confidence\": \"high\", \"reason\": \"The customer explicitly requests deletion of their account and personal data and asks for confirmation once the review is complete.\"}",
+ "parsed": {
+  "label": "DELETION",
+  "confidence": "high",
+  "reason": "The customer explicitly requests deletion of their account and personal data and asks for confirmation once the review is complete."
+ }
+}

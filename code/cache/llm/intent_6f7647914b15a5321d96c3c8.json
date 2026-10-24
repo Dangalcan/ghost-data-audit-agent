@@ -1,0 +1,20 @@
+{
+ "usage": {
+  "ts": "2026-10-24T14:57:19Z",
+  "model": "claude-haiku-5-5",
+  "purpose": "intent",
+  "cached": false,
+  "input_tokens": 520,
+  "output_tokens": 82,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 1.31,
+  "request_id": "req_011CgMFupbD3f3L2SdD3FB1c"
+ },
+ "raw": "{\"label\": \"NON_DELETION\", \"confidence\": \"high\", \"reason\": \"The customer asks only to be removed from marketing lists and explicitly wants to keep the account and its service messages, which is a marketing opt-out rather than an erasure request.\"}",
+ "parsed": {
+  "label": "NON_DELETION",
+  "confidence": "high",
+  "reason": "The customer asks only to be removed from marketing lists and explicitly wants to keep the account and its service messages, which is a marketing opt-out rather than an erasure request."
+ }
+}
