@@ -4,7 +4,7 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
-code.zip
-agent-trace.zip
+/code.zip
+/agent-trace.zip
 agent-trace/
-chat_transcript.txt
+/chat_transcript.txt
