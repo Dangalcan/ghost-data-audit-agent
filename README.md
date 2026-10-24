@@ -92,7 +92,10 @@ closed vocabularies before code uses it. The intent and vision calls have no too
 reviewer's tools are read-only and its vetoes / proposals are re-verified by code against
 the raw evidence. API calls use bounded typed retries with backoff; refusals are
 detected. No model ever sees a secret: the API key is read from the environment only
-(`.env` is git-ignored).
+(`.env` is git-ignored). Evidence parsers treat files as untrusted too: SQL snapshots
+run in an in-memory SQLite connection under an authorizer (no ATTACH / DETACH /
+extension loading / PRAGMA other than `foreign_keys`), and reviewer tool pointers are
+resolved only through the evidence manifest. See `code/tests/test_security.py`.
 
 ## Development
 

@@ -93,6 +93,13 @@ has no write access: the deterministic planner recomputes the case with the vali
   review (`intent.note`).
 - Every model boundary is typed: JSON schemas in `schemas.py` (intent, vision, review)
   plus closed vocabularies. A non-conforming answer is an error, never a verdict.
+- Evidence files are untrusted input to the parsers as well, not only to the prompts.
+  SQL snapshots run in an in-memory SQLite connection under an authorizer that denies
+  ATTACH / DETACH / extension loading and every PRAGMA except `foreign_keys`; a script
+  that contains a file-access statement (ATTACH, VACUUM INTO) is rejected, logged and
+  skipped, so a crafted snapshot cannot read or write files on the auditor's machine.
+  Reviewer tool pointers are resolved only through the evidence manifest: no string
+  from the model ever selects a file path.
 - Retries are typed and bounded: `llm.with_retries` retries rate limits, overloads, 5xx
   and transport errors with exponential backoff and jitter (4 attempts, 30 s cap) on top
   of the SDK's own retries; 4xx errors are never retried; refusals are detected through
