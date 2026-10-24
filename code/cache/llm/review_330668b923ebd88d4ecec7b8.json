@@ -1,0 +1,101 @@
+{
+ "review": {
+  "case_id": "case_308",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence. The support message is redacted. The connector is disabled and the backup has restore blocked, both on the primary and on both replicas. The audit record is retained. I found no evidence of the account at all, which is consistent with it being absent. No other identifiers (email, phone, hash) turned up additional resources.",
+  "iterations": 5,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:40:15Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 16390,
+  "output_tokens": 792,
+  "cache_read_input_tokens": 10585,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 13.5,
+  "case_id": "case_308",
+  "iterations": 5,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_306"
+   },
+   "result_chars": 4589
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "laila.saleh@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_8353"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "971558604168"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_306"
+   },
+   "result_chars": 214
+  },
+  {
+   "iteration": 4,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "54f049d0213b78ccf069079a69758183e5680955e4484a8ac25750ac25067746"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_29",
+    "source": "customer_data_regional_replicas_20260519.sql:customer_data_primary[27]"
+   },
+   "result_chars": 360
+  },
+  {
+   "iteration": 5,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence. The support message is redacted. The connector is disabled and the backup has restore blocked, both on the primary and on both replicas. The audit record is retained. I found no evidence of the account at all, which is consistent with it being absent. No other identifiers (email, phone, hash) turned up additional resources."
+   }
+  }
+ ]
+}

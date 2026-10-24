@@ -12,6 +12,7 @@ import argparse
 import csv
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -38,6 +39,8 @@ def main(argv=None) -> int:
     ap.add_argument("--no-llm", action="store_true", help="never call a model (guard + cached extractions only)")
     ap.add_argument("--skip-images", action="store_true", help="ignore screenshot evidence entirely")
     ap.add_argument("--out", help="output csv path (default: repo-root output.csv, or code/evaluation/sample_predictions.csv with --sample)")
+    ap.add_argument("--review", choices=["none", "uncertain", "all"], default="uncertain",
+                    help="run the tool-using reviewer on uncertain cases (default), on all cases, or not at all")
     args = ap.parse_args(argv)
 
     if not args.no_llm:
@@ -52,16 +55,30 @@ def main(argv=None) -> int:
         cases = [c for c in cases if c.case_id in wanted]
     t0 = time.time()
     results = []
+    review_stats = Counter()
     for c in cases:
         r = audit_case(c, skip_images=args.skip_images, use_llm=not args.no_llm)
+        if not args.no_llm and args.review != "none" and r.deletion_status != "NOT_APPLICABLE":
+            from audit.agent import needs_review, review_case, validate_review
+            from audit.planner import apply_review
+            reasons = needs_review(r)
+            if args.review == "all" or reasons:
+                review = validate_review(c, r, review_case(c, r))
+                review_stats[review.verdict if not review.error else "error"] += 1
+                review_stats["accepted_vetoes"] += len(review.accepted_vetoes)
+                review_stats["accepted_proposals"] += len(review.accepted_proposals)
+                review_stats["rejected"] += len(review.rejected)
+                r = apply_review(c, r, review, skip_images=args.skip_images, use_llm=not args.no_llm)
+                r.notes.append("review reasons: " + "; ".join(reasons))
         results.append(r)
         if args.explain:
             print(explain(r))
             print()
     out = Path(args.out) if args.out else (REPO_ROOT / "code" / "evaluation" / "sample_predictions.csv" if args.sample else OUTPUT_PATH)
     write_output(results, out)
-    from collections import Counter
     print(f"{len(results)} cases -> {out} in {time.time() - t0:.1f}s; status mix: {dict(Counter(r.deletion_status for r in results))}")
+    if review_stats:
+        print(f"reviewer: {dict(review_stats)}")
     if not args.no_llm:
         try:
             from audit.llm import usage_summary

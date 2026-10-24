@@ -1,0 +1,84 @@
+{
+ "review": {
+  "case_id": "case_354",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no evidence that contradicts the draft. A search on the user id returned only audit_record_9286. It is present in the primary and both replicas, which fits the retention policy. Searches on the email and phone returned nothing. Searching account_3918 directly also returned nothing, so its ABSENT state rests on the draft's scope-based evidence and a deletion worker claim. I could not independently confirm it.",
+  "iterations": 4,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:41:08Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5368,
+  "output_tokens": 590,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.7,
+  "case_id": "case_354",
+  "iterations": 4,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_352"
+   },
+   "result_chars": 1183
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "nmenon2217@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_3918"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919881574743"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_3918"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no evidence that contradicts the draft. A search on the user id returned only audit_record_9286. It is present in the primary and both replicas, which fits the retention policy. Searches on the email and phone returned nothing. Searching account_3918 directly also returned nothing, so its ABSENT state rests on the draft's scope-based evidence and a deletion worker claim. I could not independently confirm it."
+   }
+  }
+ ]
+}

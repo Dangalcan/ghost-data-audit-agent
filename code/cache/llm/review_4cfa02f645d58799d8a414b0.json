@@ -1,0 +1,84 @@
+{
+ "review": {
+  "case_id": "case_57",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The evidence for user_55 matches the draft. The audit record is retained, the backup has restore blocked, the connector is disabled, and the support message shows pii=False in both the primary and the read replica. Searches on the email address and both phone numbers returned nothing, and the search on account_1298 also returned nothing. I found no missed resources and no contradicting lines. I did not read the raw source lines.",
+  "iterations": 3,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:33:37Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 6875,
+  "output_tokens": 604,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 6.4,
+  "case_id": "case_57",
+  "iterations": 3,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_55"
+   },
+   "result_chars": 2980
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "e.parker74@yahoo.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_1298"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "14155550105"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "16175550155"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The evidence for user_55 matches the draft. The audit record is retained, the backup has restore blocked, the connector is disabled, and the support message shows pii=False in both the primary and the read replica. Searches on the email address and both phone numbers returned nothing, and the search on account_1298 also returned nothing. I found no missed resources and no contradicting lines. I did not read the raw source lines."
+   }
+  }
+ ]
+}

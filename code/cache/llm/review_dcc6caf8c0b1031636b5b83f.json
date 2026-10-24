@@ -1,0 +1,77 @@
+{
+ "review": {
+  "case_id": "case_53",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "support_1034 is present at audit_at in evidence_28. It holds the customer's email and name plus an agent's name, so it is a shared-context conversation and should be redacted. The only other evidence for this subject is evidence_02, captured in September 2026, which is after audit_at. It shows search_2912 and audit_record_9644 as present, but I excluded it from the verdict as the rules require. I found nothing that contradicts the draft.",
+  "iterations": 3,
+  "tool_calls": 5,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:33:23Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5560,
+  "output_tokens": 608,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.1,
+  "case_id": "case_53",
+  "iterations": 3,
+  "tool_calls": 5
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_22"
+   },
+   "result_chars": 1093
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "support_1034"
+   },
+   "result_chars": 727
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "kagyeman8947@fastmail.com"
+   },
+   "result_chars": 1078
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_28",
+    "source": "support_ticket_console_20260524.png:records[0]"
+   },
+   "result_chars": 786
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "support_1034 is present at audit_at in evidence_28. It holds the customer's email and name plus an agent's name, so it is a shared-context conversation and should be redacted. The only other evidence for this subject is evidence_02, captured in September 2026, which is after audit_at. It shows search_2912 and audit_record_9644 as present, but I excluded it from the verdict as the rules require. I found nothing that contradicts the draft."
+   }
+  }
+ ]
+}

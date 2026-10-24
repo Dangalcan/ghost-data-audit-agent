@@ -1,0 +1,101 @@
+{
+ "review": {
+  "case_id": "case_512",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no evidence that contradicts the draft. Searches on user_510, the email, both phone numbers and account_5281 found only audit_record_4219, which is PRESENT in both the primary and the reporting replica. Its source line is a security audit event, so it is retained under the retention policy. account_5281 has no evidence of presence at audit_at. Its absence rests on the account_service scope snapshot, and the deletion worker's SUCCESS claim is consistent with that. I found no missed resources.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:45:25Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5506,
+  "output_tokens": 789,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.2,
+  "case_id": "case_512",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_510"
+   },
+   "result_chars": 794
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "hannah.carter@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_5281"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "447700900510"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "447700900010"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_47",
+    "source": "customer_data_reporting_replica_20260208.sql:customer_data_primary[6]"
+   },
+   "result_chars": 476
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_5281"
+   },
+   "result_chars": 319
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no evidence that contradicts the draft. Searches on user_510, the email, both phone numbers and account_5281 found only audit_record_4219, which is PRESENT in both the primary and the reporting replica. Its source line is a security audit event, so it is retained under the retention policy. account_5281 has no evidence of presence at audit_at. Its absence rests on the account_service scope snapshot, and the deletion worker's SUCCESS claim is consistent with that. I found no missed resources."
+   }
+  }
+ ]
+}

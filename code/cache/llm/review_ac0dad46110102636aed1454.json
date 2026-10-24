@@ -1,0 +1,100 @@
+{
+ "review": {
+  "case_id": "case_103",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence. Searches on the user id, email, email hash, phone and account_4070 returned only the audit_record_9522 observations, which are PRESENT in both primary and replica. That fits the retained-audit-record policy. account_4070 has no evidence lines. The only record for it is a deletion-worker SUCCESS claim, so its ABSENT state rests on the draft's scope line. I could not verify that line independently.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:35:00Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5388,
+  "output_tokens": 727,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.3,
+  "case_id": "case_103",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_101"
+   },
+   "result_chars": 776
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "mandla.m4548@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_4070"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_101"
+   },
+   "result_chars": 216
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "742359c95b526d935d8d47066794f11096e8fc0d3d2aa8efd76c503e1019d2f2"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "27725993929"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_4070"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence. Searches on the user id, email, email hash, phone and account_4070 returned only the audit_record_9522 observations, which are PRESENT in both primary and replica. That fits the retained-audit-record policy. account_4070 has no evidence lines. The only record for it is a deletion-worker SUCCESS claim, so its ABSENT state rests on the draft's scope line. I could not verify that line independently."
+   }
+  }
+ ]
+}

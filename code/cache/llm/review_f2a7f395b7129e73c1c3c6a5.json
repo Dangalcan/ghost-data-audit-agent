@@ -1,0 +1,84 @@
+{
+ "review": {
+  "case_id": "case_155",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "Searches on user_153, both emails and the phone number found no contradicting or missing evidence. Every observation is from audit_at. The audit record is retained, the backup has restore blocked, the connector is disabled, and the support message has pii=false. Searching account_1992 directly returned no observations, so its ABSENT state rests on the draft's scope line, which I did not read. I did not call read_source or lookup_activity.",
+  "iterations": 3,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:36:25Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7073,
+  "output_tokens": 623,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 6.7,
+  "case_id": "case_155",
+  "iterations": 3,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_153"
+   },
+   "result_chars": 2976
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "thandiwe-dlamini99@proton.me"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "thandiwe-dlamini@proton.me"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "27725613552"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_1992"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "Searches on user_153, both emails and the phone number found no contradicting or missing evidence. Every observation is from audit_at. The audit record is retained, the backup has restore blocked, the connector is disabled, and the support message has pii=false. Searching account_1992 directly returned no observations, so its ABSENT state rests on the draft's scope line, which I did not read. I did not call read_source or lookup_activity."
+   }
+  }
+ ]
+}

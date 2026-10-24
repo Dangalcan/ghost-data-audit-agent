@@ -1,0 +1,100 @@
+{
+ "review": {
+  "case_id": "case_543",
+  "verdict": "DISAGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The account_8931 state at audit_at is UNKNOWN. The only basis for the draft's \"ABSENT\" step is activity_3717, a deletion-worker claim that it submitted the delete. No evidence line shows the account absent. Searches on the email, phone, email hash and account id returned no observation of account_8931. A COMPLETE verdict therefore rests on a claim. Audit_record_6244 (retained) and tombstone_205 (pii=False) both look correct, and I found no contradicting evidence, so I am filing no vetoes or proposals.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:46:09Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7385,
+  "output_tokens": 881,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 11.0,
+  "case_id": "case_543",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_543"
+   },
+   "result_chars": 1538
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_8931"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "thandiwe-molefe@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_8931"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_543"
+   },
+   "result_chars": 219
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "b8e7c4d26790075403789731bdca425630809e6407d8dbca3ccb23c50208b8c1"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "27725081740"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The account_8931 state at audit_at is UNKNOWN. The only basis for the draft's \"ABSENT\" step is activity_3717, a deletion-worker claim that it submitted the delete. No evidence line shows the account absent. Searches on the email, phone, email hash and account id returned no observation of account_8931. A COMPLETE verdict therefore rests on a claim. Audit_record_6244 (retained) and tombstone_205 (pii=False) both look correct, and I found no contradicting evidence, so I am filing no vetoes or proposals."
+   }
+  }
+ ]
+}

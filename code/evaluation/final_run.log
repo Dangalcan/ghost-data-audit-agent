@@ -1,0 +1,9 @@
+518 cases -> output.csv in 866.6s; status mix: {'INCOMPLETE': 355, 'COMPLETE': 153, 'NOT_APPLICABLE': 10}
+reviewer: {'AGREE': 85, 'accepted_vetoes': 0, 'accepted_proposals': 0, 'rejected': 1, 'DISAGREE': 8}
+| model | purpose | calls (cache hits) | input tok | output tok | cache read | cache write | est. cost USD |
+|---|---|---|---|---|---|---|---|
+| claude-haiku-5-5 | intent | 518 (518) | 0 | 0 | 0 | 0 | 0.0000 |
+| claude-sonnet-5-5 | review | 93 (0) | 565343 | 68464 | 736716 | 0 | 1.9627 |
+| **total** | | 611 | 1302059 | 68464 | | | **1.9627** |
+
+Requests audited: 518. Total tokens: 1370523 (avg 2645.8 per request). Estimated cost: 1.9627 USD total, 0.003789 USD per request.

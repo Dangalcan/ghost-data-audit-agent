@@ -1,0 +1,117 @@
+{
+ "review": {
+  "case_id": "case_497",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "Searches on the user id, email, both phones, the email hash and account_445 turned up no contradicting or missed evidence. The audit record (audit_record_9796) is retained until 2033, so keeping it is within policy. The account_445 deletion is only a claim from the deletion worker (activity_225). No later evidence shows the account present, so ABSENT stands. This is why confidence is medium rather than high.",
+  "iterations": 4,
+  "tool_calls": 10,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:44:57Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5789,
+  "output_tokens": 949,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.7,
+  "case_id": "case_497",
+  "iterations": 4,
+  "tool_calls": 10
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_495"
+   },
+   "result_chars": 410
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "priya-mehta@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_495"
+   },
+   "result_chars": 228
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919152880291"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919376674109"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "83f69dba071e0d7167cc7d1935adc33a6643037ba95d20eda25da2a19c4abbd7"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_445"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_63",
+    "source": "customer_data_inventory_20260213.sql:security_audit_records[3]"
+   },
+   "result_chars": 232
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_445"
+   },
+   "result_chars": 318
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "Searches on the user id, email, both phones, the email hash and account_445 turned up no contradicting or missed evidence. The audit record (audit_record_9796) is retained until 2033, so keeping it is within policy. The account_445 deletion is only a claim from the deletion worker (activity_225). No later evidence shows the account present, so ABSENT stands. This is why confidence is medium rather than high."
+   }
+  }
+ ]
+}

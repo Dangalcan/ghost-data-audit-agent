@@ -1,0 +1,77 @@
+{
+ "review": {
+  "case_id": "case_05",
+  "verdict": "AGREE",
+  "confidence": "high",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The only evidence is evidence_54. It is a failover replica row for account_005, captured 2026-09-02, which is before audit_at. The row shows user_05, the subject's email, and a phone number that matches the subject's phone. Its status is ACTIVE. No later evidence shows the record deleted. I found no other resources linked to the subject. The INCOMPLETE verdict stands.",
+  "iterations": 3,
+  "tool_calls": 5,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:29:37Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 3473,
+  "output_tokens": 602,
+  "cache_read_input_tokens": 4234,
+  "cache_creation_input_tokens": 2117,
+  "latency_s": 15.6,
+  "case_id": "case_05",
+  "iterations": 3,
+  "tool_calls": 5
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_005"
+   },
+   "result_chars": 416
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "leila.haddad@yahoo.com"
+   },
+   "result_chars": 416
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_54",
+    "source": "customer_accounts_failover_replica_20260902.sql:customer_profiles_failover_replica[0]"
+   },
+   "result_chars": 257
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_05"
+   },
+   "result_chars": 416
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "high",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The only evidence is evidence_54. It is a failover replica row for account_005, captured 2026-09-02, which is before audit_at. The row shows user_05, the subject's email, and a phone number that matches the subject's phone. Its status is ACTIVE. No later evidence shows the record deleted. I found no other resources linked to the subject. The INCOMPLETE verdict stands."
+   }
+  }
+ ]
+}

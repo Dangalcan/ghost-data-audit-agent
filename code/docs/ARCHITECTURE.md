@@ -44,7 +44,26 @@ policy.py          deletion_rules.csv: kind → category → DELETE / REDACT / A
 planner.py         COMPLETE (verification with proof) | INCOMPLETE (findings +
                    remediation + verification); order = phase ▸ operation table ▸
                    system_id ▸ resource_id; consecutive step numbers; JSON
+        │
+        ▼
+agent.py           reviewer loop (Claude Sonnet 5.5) on uncertain cases: tools
+                   search_evidence / read_source / lookup_activity / resolve_identity,
+                   iteration cap, strict submit_review schema; vetoes and proposals are
+                   accepted only when code re-reads the cited source and confirms it;
+                   accepted changes re-enter planner.py (never written directly)
 ```
+
+## Where the model acts, and where it cannot
+
+| stage | model | what it may do | what code checks |
+|---|---|---|---|
+| intent | Haiku 5.5 | label DELETION / NON_DELETION for untrusted request text | closed enum; deterministic guard flags disagreement |
+| screenshots | Sonnet 5.5 | transcribe console UI into typed records | schema + vocabulary; records without a second source are ignored |
+| review | Sonnet 5.5 + tools | investigate a draft, veto a finding, propose a missed resource | cited source must exist, predate audit_at, name the resource, contain the verbatim quote and a compliance marker |
+
+The reviewer is a real agent loop (model-driven tool selection, up to 8 iterations, strict
+tool schemas, retries at the SDK level, timeouts, cached transcripts), but it has no write
+access: the deterministic planner recomputes the case with the validated inputs.
 
 ## Key design decisions
 
@@ -59,6 +78,7 @@ planner.py         COMPLETE (verification with proof) | INCOMPLETE (findings +
 | Kind beats system | `analytics_9914` keyed only by the hash of an old email is a SECONDARY_IDENTIFIER (delete), not an analytics profile (anonymise); `support_*` can be a message (redact), an attachment or a legacy contact entry (delete). |
 | Screenshot-only records need a second source | The data catalog (`LINK_RESOURCE_IDENTITY`) ties each intended screenshot record to a person; records seen only in one screenshot without any other mention are ignored (console noise). |
 | Deterministic ordering and serialisation | `step_sort_key` implements the contract literally; the validator re-checks every row before submission. |
+| Agent as reviewer, not as decider | Uncertain cases (low-confidence links, screenshot states, unproven resources) get a tool-using second opinion; its claims are re-verified against the raw evidence so a hallucinated citation cannot change `output.csv`. |
 
 ## Security and robustness
 

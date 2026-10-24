@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_55",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The only evidence at or before audit_at is evidence_32, which shows backup_9287 present with restore allowed. That supports the draft. The other observations (account_9494, search_4882, audit_record_2857) come from evidence_01, captured in September 2026, after the cut-off. They can't change the verdict, so I did not propose them. The activity rows for those resources are also dated after the cut-off. A search on the email hash returned nothing.",
+  "iterations": 3,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:33:31Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 4794,
+  "output_tokens": 778,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.2,
+  "case_id": "case_55",
+  "iterations": 3,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_16"
+   },
+   "result_chars": 367
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "areed1433@gmail.com"
+   },
+   "result_chars": 1344
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_16"
+   },
+   "result_chars": 209
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "7001f88650909c41c862cc4394921012deaa96f9d5ef925f4b052ad6f30aeb62"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "search_4882"
+   },
+   "result_chars": 322
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_9494"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The only evidence at or before audit_at is evidence_32, which shows backup_9287 present with restore allowed. That supports the draft. The other observations (account_9494, search_4882, audit_record_2857) come from evidence_01, captured in September 2026, after the cut-off. They can't change the verdict, so I did not propose them. The activity rows for those resources are also dated after the cut-off. A search on the email hash returned nothing."
+   }
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "review": {
+  "case_id": "case_480",
+  "verdict": "DISAGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The audit_record, backup, connector and support findings are supported by evidence_45. The support message reads \"[REDACTED]\". The connector is disabled. Restore is blocked on the backup. The audit record is retained. The one weak point is account_9449. The draft's ABSENT step cites only activity_314, a deletion-worker claim that it \"submitted\" the profile to account_service. No evidence observation exists for account_9449 at or before audit_at, so its state is UNKNOWN, as the draft itself lists it. Absence is therefore unproven and a COMPLETE verdict is not justified. I found no contradicting line to veto and no missed resources. Searches on the email, phone and hash returned nothing.",
+  "iterations": 4,
+  "tool_calls": 9,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:44:28Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8868,
+  "output_tokens": 1038,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 12.4,
+  "case_id": "case_480",
+  "iterations": 4,
+  "tool_calls": 9
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_478"
+   },
+   "result_chars": 1441
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "znkosi0011@fastmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_9449"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_9449"
+   },
+   "result_chars": 319
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_478"
+   },
+   "result_chars": 214
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "1ff5f64252c16b552e488f56d26faf7f470a170f72d7cae1ab03efdd38dab6af"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "27725728569"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_45",
+    "source": "customer_data_snapshot_bundle_20260223.json:snapshots[9][2]"
+   },
+   "result_chars": 239
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The audit_record, backup, connector and support findings are supported by evidence_45. The support message reads \"[REDACTED]\". The connector is disabled. Restore is blocked on the backup. The audit record is retained. The one weak point is account_9449. The draft's ABSENT step cites only activity_314, a deletion-worker claim that it \"submitted\" the profile to account_service. No evidence observation exists for account_9449 at or before audit_at, so its state is UNKNOWN, as the draft itself lists it. Absence is therefore unproven and a COMPLETE verdict is not justified. I found no contradicting line to veto and no missed resources. Searches on the email, phone and hash returned nothing."
+   }
+  }
+ ]
+}

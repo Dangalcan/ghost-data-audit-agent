@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_204",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. Searches on the user id, email, phone and email hash turned up nothing beyond the four resources in the draft. In evidence_20, the support message has pii=False, the connector is disabled, the backup has restore blocked, and the audit record is retained. account_9268 has no explicit observation. Its ABSENT state rests on the scope line from account_service, so confidence is medium rather than high.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:37:35Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 10207,
+  "output_tokens": 726,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.3,
+  "case_id": "case_204",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_202"
+   },
+   "result_chars": 2978
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "sdarwish4367@fastmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "971500707476"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_202"
+   },
+   "result_chars": 218
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "8c1feb5f664f3ed7d14f31441a8f0c2e19b6cd131963452f0b1a3580d37e86fe"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_9268"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. Searches on the user id, email, phone and email hash turned up nothing beyond the four resources in the draft. In evidence_20, the support message has pii=False, the connector is disabled, the backup has restore blocked, and the audit record is retained. account_9268 has no explicit observation. Its ABSENT state rests on the scope line from account_service, so confidence is medium rather than high."
+   }
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "review": {
+  "case_id": "case_50",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The only evidence at or before audit_at is evidence_19, which shows analytics_7438 PRESENT with PII on 2026-07-13. I found nothing that contradicts it. The other observations for this subject (search_4639, account_3270, audit_record_5080) were captured on 2026-09-15, after audit_at, so I excluded them. I did not search by phone number.",
+  "iterations": 2,
+  "tool_calls": 4,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:33:08Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 2833,
+  "output_tokens": 505,
+  "cache_read_input_tokens": 4234,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 5.3,
+  "case_id": "case_50",
+  "iterations": 2,
+  "tool_calls": 4
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_20"
+   },
+   "result_chars": 713
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_7438"
+   },
+   "result_chars": 715
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "darwish.omar@icloud.com"
+   },
+   "result_chars": 1372
+  },
+  {
+   "iteration": 2,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The only evidence at or before audit_at is evidence_19, which shows analytics_7438 PRESENT with PII on 2026-07-13. I found nothing that contradicts it. The other observations for this subject (search_4639, account_3270, audit_record_5080) were captured on 2026-09-15, after audit_at, so I excluded them. I did not search by phone number."
+   }
+  }
+ ]
+}

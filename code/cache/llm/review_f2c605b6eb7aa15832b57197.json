@@ -1,0 +1,118 @@
+{
+ "review": {
+  "case_id": "case_456",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. Searches on the email, phone and email hash returned nothing, and the identity resolves cleanly to user_454. account_3584 is absent only by omission: the snapshot doesn't list it, and the deletion worker's activity row is only a claim. The security audit record audit_record_8176 is present as a primary and a replica copy. I'm treating it as retained under the security audit retention rule. I didn't confirm that it is still within its retention period.",
+  "iterations": 5,
+  "tool_calls": 10,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:43:49Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8861,
+  "output_tokens": 994,
+  "cache_read_input_tokens": 10585,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 12.1,
+  "case_id": "case_456",
+  "iterations": 5,
+  "tool_calls": 10
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_454"
+   },
+   "result_chars": 796
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "hhan9955@fastmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_454"
+   },
+   "result_chars": 213
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "f76f9b7ab9e23fb9907426bbcb3b38e6b03efbc25e5551f870ba4a9233546d43"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "821044892731"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_3584"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_43",
+    "source": "scope:evidence_43:account_service"
+   },
+   "result_chars": 210
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_3584"
+   },
+   "result_chars": 319
+  },
+  {
+   "iteration": 4,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_43",
+    "source": "customer_data_reporting_replica_20260305.sql:customer_data_primary[13]"
+   },
+   "result_chars": 476
+  },
+  {
+   "iteration": 5,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. Searches on the email, phone and email hash returned nothing, and the identity resolves cleanly to user_454. account_3584 is absent only by omission: the snapshot doesn't list it, and the deletion worker's activity row is only a claim. The security audit record audit_record_8176 is present as a primary and a replica copy. I'm treating it as retained under the security audit retention rule. I didn't confirm that it is still within its retention period."
+   }
+  }
+ ]
+}

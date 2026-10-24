@@ -1,0 +1,94 @@
+{
+ "review": {
+  "case_id": "case_33",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "export_1842 was present on 2026-07-18, before audit_at. The data catalog linked it to user_18 and the subject's email. export_1260 expired on 2026-06-25 and is treated as absent. I found no contradicting evidence and no missed resources. The only later evidence is from September, after audit_at, and I ignored it.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:32:27Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 6830,
+  "output_tokens": 745,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.3,
+  "case_id": "case_33",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_18"
+   },
+   "result_chars": 657
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "export_1842"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_18",
+    "source": "alias:NST-2026-0718-1842"
+   },
+   "result_chars": 120
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "export_1260"
+   },
+   "result_chars": 688
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_23",
+    "source": "customer_export_console_20260618.png:records[1]"
+   },
+   "result_chars": 773
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "export_1842"
+   },
+   "result_chars": 343
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "export_1842 was present on 2026-07-18, before audit_at. The data catalog linked it to user_18 and the subject's email. export_1260 expired on 2026-06-25 and is treated as absent. I found no contradicting evidence and no missed resources. The only later evidence is from September, after audit_at, and I ignored it."
+   }
+  }
+ ]
+}

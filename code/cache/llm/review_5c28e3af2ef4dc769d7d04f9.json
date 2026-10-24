@@ -1,0 +1,86 @@
+{
+ "review": {
+  "case_id": "case_52",
+  "verdict": "AGREE",
+  "confidence": "high",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "export_1260 is present at 2026-06-18T12:00Z, before audit_at, and holds the subject's email. The only other evidence is after audit_at (export_1842 alias on 2026-07-18, a later log, and a PARTIAL delete activity on 2026-08-19), so none of it changes the verdict. The INCOMPLETE verdict stands.",
+  "iterations": 4,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:33:16Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 6647,
+  "output_tokens": 686,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.9,
+  "case_id": "case_52",
+  "iterations": 4,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_18"
+   },
+   "result_chars": 657
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "export_1260"
+   },
+   "result_chars": 688
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_23",
+    "source": "customer_export_console_20260618.png:records[1]"
+   },
+   "result_chars": 773
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_18",
+    "source": "alias:NST-2026-0718-1842"
+   },
+   "result_chars": 120
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "export_1260"
+   },
+   "result_chars": 633
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "high",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "export_1260 is present at 2026-06-18T12:00Z, before audit_at, and holds the subject's email. The only other evidence is after audit_at (export_1842 alias on 2026-07-18, a later log, and a PARTIAL delete activity on 2026-08-19), so none of it changes the verdict. The INCOMPLETE verdict stands."
+   }
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "review": {
+  "case_id": "case_23",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found nothing that contradicts the draft. evidence_92 shows export_7364 and search_898 as PRESENT, with observation times at or before audit_at. The later snapshot, evidence_02, also shows both as PRESENT. No evidence exists for account_7015, so its UNKNOWN state is unsupported but not contradicted. The audit_record_4128 evidence shows it PRESENT, which fits the retention policy. I searched on user_23 and found no additional resources. I did not read the raw sources with read_source or call lookup_activity or resolve_identity, so confidence is medium.",
+  "iterations": 3,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:29:55Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5897,
+  "output_tokens": 628,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.4,
+  "case_id": "case_23",
+  "iterations": 3,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "export_7364"
+   },
+   "result_chars": 731
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "search_898"
+   },
+   "result_chars": 760
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_7015"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_23"
+   },
+   "result_chars": 737
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "audit_record_4128"
+   },
+   "result_chars": 387
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found nothing that contradicts the draft. evidence_92 shows export_7364 and search_898 as PRESENT, with observation times at or before audit_at. The later snapshot, evidence_02, also shows both as PRESENT. No evidence exists for account_7015, so its UNKNOWN state is unsupported but not contradicted. The audit_record_4128 evidence shows it PRESENT, which fits the retention policy. I searched on user_23 and found no additional resources. I did not read the raw sources with read_source or call lookup_activity or resolve_identity, so confidence is medium."
+   }
+  }
+ ]
+}

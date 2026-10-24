@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_343",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no evidence that contradicts the draft. Searches on the user id, email, email hash, phone and account_1949 returned only evidence_71. That evidence shows account_1949 ABSENT, observed 2026-04-29T07:42:28Z, before the audit cut-off. It also shows audit_record_9233 PRESENT, which is retained under policy. The hash and phone searches returned nothing, so I found no missed resources. I did not use read_source or lookup_activity to read the raw lines.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:40:33Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5011,
+  "output_tokens": 677,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.5,
+  "case_id": "case_343",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_341"
+   },
+   "result_chars": 406
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "liam.s5108@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_1949"
+   },
+   "result_chars": 396
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_341"
+   },
+   "result_chars": 214
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "8f6928e3250f6288cd860508f9db51870cde16cbc228f330cce20994ad68a251"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "16465550141"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no evidence that contradicts the draft. Searches on the user id, email, email hash, phone and account_1949 returned only evidence_71. That evidence shows account_1949 ABSENT, observed 2026-04-29T07:42:28Z, before the audit cut-off. It also shows audit_record_9233 PRESENT, which is retained under policy. The hash and phone searches returned nothing, so I found no missed resources. I did not use read_source or lookup_activity to read the raw lines."
+   }
+  }
+ ]
+}

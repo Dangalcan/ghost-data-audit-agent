@@ -1,0 +1,109 @@
+{
+ "review": {
+  "case_id": "case_63",
+  "verdict": "DISAGREE",
+  "confidence": "high",
+  "vetoes": [
+   {
+    "resource_id": "marketing_001",
+    "evidence_id": "evidence_60",
+    "source": "marketing_profile_console.png:records[0]",
+    "quote": "\"names\": [\"Soo-jin Park\"]",
+    "reason": "The marketing profile belongs to Soo-jin Park (sj.park@naver.com, +82 10-5837-9451). It has none of user_09's identifiers, so it is not the subject's record."
+   }
+  ],
+  "proposals": [],
+  "notes": "No evidence turned up for user_09's email, phone or user id. The only linked resource is another person's record, so no remediation is needed for it.",
+  "iterations": 3,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:34:23Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 3635,
+  "output_tokens": 712,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.7,
+  "case_id": "case_63",
+  "iterations": 3,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_09"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "marketing_001"
+   },
+   "result_chars": 369
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "kwame-mensah@proton.me"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "233244561267"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_09"
+   },
+   "result_chars": 213
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_60",
+    "source": "marketing_profile_console.png:records[0]"
+   },
+   "result_chars": 946
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "high",
+    "vetoes": [
+     {
+      "resource_id": "marketing_001",
+      "evidence_id": "evidence_60",
+      "source": "marketing_profile_console.png:records[0]",
+      "quote": "\"names\": [\"Soo-jin Park\"]",
+      "reason": "The marketing profile belongs to Soo-jin Park (sj.park@naver.com, +82 10-5837-9451). It has none of user_09's identifiers, so it is not the subject's record."
+     }
+    ],
+    "proposals": [],
+    "notes": "No evidence turned up for user_09's email, phone or user id. The only linked resource is another person's record, so no remediation is needed for it."
+   }
+  }
+ ]
+}

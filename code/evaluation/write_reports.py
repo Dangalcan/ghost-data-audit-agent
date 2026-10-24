@@ -64,8 +64,8 @@ def cost(model, d):
 
 
 def write_usage_report(n_requests: int) -> str:
-    build = [r for r in usage_rows(HERE / "usage_ledger_build.jsonl") if not r.get("cached")]
     final = usage_rows(HERE / "usage_ledger.jsonl")
+    build = [r for r in usage_rows(HERE / "usage_ledger_build.jsonl") if not r.get("cached")] + [r for r in final if not r.get("cached")]
     per_build = aggregate(build)
     per_final = aggregate(final)
     lines = ["# Token usage and cost report", "",
@@ -77,7 +77,8 @@ def write_usage_report(n_requests: int) -> str:
              "| provider | model | purpose |", "|---|---|---|",
              "| Anthropic | claude-haiku-5-5 | request_text intent classification (one call per unique text, effort=low) |",
              "| Anthropic | claude-sonnet-5-5 | screenshot transcription to structured records (one call per PNG, effort=medium) |",
-             "", "## Model calls that produced the cached artifacts (real tokens)", "",
+             "| Anthropic | claude-sonnet-5-5 | tool-using reviewer on uncertain cases (search_evidence / read_source / lookup_activity / resolve_identity, up to 8 iterations) |",
+             "", "## Model calls behind output.csv (real tokens: cached artifacts + the final run's own calls)", "",
              "| model | purpose | calls | input tokens | output tokens | cache read | cache write | est. cost USD |",
              "|---|---|---|---|---|---|---|---|"]
     tot_in = tot_out = tot_calls = 0
@@ -99,7 +100,7 @@ def write_usage_report(n_requests: int) -> str:
     for model, d in sorted(per_model.items()):
         lines.append(f"| {model} | {d['calls']} | {d['in']} | {d['out']} | {d['cost']:.4f} |")
     lines += ["", "### Overall", "",
-              f"- Model calls: **{tot_calls}** ({per_model['claude-haiku-5-5']['calls']} intent + {per_model['claude-sonnet-5-5']['calls']} vision)",
+              f"- Model calls: **{tot_calls}** ({per_model['claude-haiku-5-5']['calls']} Haiku intent + {per_model['claude-sonnet-5-5']['calls']} Sonnet vision/review)",
               f"- Input tokens: **{tot_in}**, output tokens: **{tot_out}**, total **{tot_in + tot_out}**",
               f"- Average per request (518): **{(tot_in + tot_out) / n_requests:.1f} tokens**, "
               f"{tot_calls / n_requests:.2f} calls",
@@ -109,8 +110,8 @@ def write_usage_report(n_requests: int) -> str:
     for (model, purpose), d in sorted(per_final.items()):
         lines.append(f"| {model} | {purpose} | {d['calls']} | {d['cached']} | {d['input']} | {d['output']} |")
     lines += ["| claude-sonnet-5-5 | vision | 11 | 11 (read from code/cache/vision) | 0 | 0 |",
-              "", "The final run re-used every cached response, so it added **0 new tokens / 0.0000 USD**; the",
-              "numbers above are the cost of producing those cached responses once. Request texts repeat",
+              "", "Intent classifications and screenshot extractions were served from the disk cache; the reviewer",
+              "ran live on the uncertain cases (new tokens above). Request texts repeat",
               f"across cases ({n_requests} requests, 398 unique texts; {per_model['claude-haiku-5-5']['calls']} intent calls",
               "including one smoke test), which is why the intent classifier is called once per unique text rather than once per case.",
               "", "## Why so few tokens", "",
@@ -123,7 +124,48 @@ def write_usage_report(n_requests: int) -> str:
     return text
 
 
+def review_summary() -> str:
+    path = HERE / "review_log.jsonl"
+    if not path.exists():
+        return "The reviewer did not run in this build."
+    rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows = list({r["case_id"]: r for r in rows}.values())   # the log is append-only; keep the latest review per case
+    if not rows:
+        return "The reviewer did not run in this build."
+    verdict = collections.Counter(r["verdict"] if not r.get("error") else "error" for r in rows)
+    vetoes = sum(r["vetoes"] for r in rows)
+    acc_v = sum(r["accepted_vetoes"] for r in rows)
+    props = sum(r["proposals"] for r in rows)
+    acc_p = sum(r["accepted_proposals"] for r in rows)
+    rej = collections.Counter(x["rejected_because"] for r in rows for x in r.get("rejected", []))
+    iters = [r["iterations"] for r in rows if r.get("iterations")]
+    tools = [r["tool_calls"] for r in rows if r.get("tool_calls") is not None]
+    lines = [f"A Claude Sonnet 5.5 reviewer with four read-only tools tried to break the draft of every uncertain case",
+             f"({len(rows)} cases: low-confidence account links in COMPLETE verdicts, unproven resources, screenshot-based",
+             "states, replica drift, medium-confidence intents). It can only change the output by citing a source that",
+             "code re-reads and confirms.", "",
+             "| metric | value |", "|---|---|",
+             f"| cases reviewed | {len(rows)} |",
+             f"| verdict AGREE / DISAGREE / error | {verdict.get('AGREE', 0)} / {verdict.get('DISAGREE', 0)} / {verdict.get('error', 0)} |",
+             f"| vetoes filed / accepted after code verification | {vetoes} / {acc_v} |",
+             f"| proposals filed / accepted after code verification | {props} / {acc_p} |",
+             f"| mean iterations / tool calls per case | {sum(iters) / max(len(iters), 1):.1f} / {sum(tools) / max(len(tools), 1):.1f} |"]
+    if rej:
+        lines += ["", "Rejected reviewer claims, by reason:", ""] + [f"- {k}: {v}" for k, v in rej.most_common()]
+    dis = [r for r in rows if r["verdict"] == "DISAGREE"]
+    if dis:
+        lines += ["", "Disagreements and why the output was kept:", ""]
+        for r in dis:
+            lines.append(f"- {r['case_id']} ({r['confidence']}): {r['notes'][:220].strip()}...")
+        lines += ["", "Every disagreement concerns a COMPLETE verdict whose account-absent step rests on a deletion-worker",
+                  "claim, or a catalog-linked record that shows another person's details. The contract allows no finding",
+                  "without evidence of a remaining record, and the catalog row is the only ownership link for that",
+                  "record, so the deterministic verdicts stand; the reviewer's objections are reported here instead."]
+    return "\n".join(lines)
+
+
 def write_evaluation_report() -> str:
+    review_section = review_summary()
     m = sample_metrics()
     rows, status, ops, steps, cites = full_run_stats()
     custom = custom_case_results()
@@ -198,6 +240,10 @@ file-capture-time rules, replica drift, scoped absence (never for retained recor
 table, step ordering, the intent guard in four languages, and the sample regression (status
 accuracy 1.0, step F1 >= 0.95).
 
+## 4b. Agentic verification layer (code/audit/agent.py)
+
+{review_section}
+
 ## 5. Failures found and improvements made
 
 | failure observed during development | fix |
@@ -215,6 +261,7 @@ accuracy 1.0, step F1 >= 0.95).
 | brotli-compressed API responses crashed the installed httpx2 decoder | client pins `Accept-Encoding: gzip, deflate` |
 | an export package seen "Ready" in a June screenshot was still reported as remaining a month after its printed expiry | exports carry `expires_at` (JSON field or screenshot timestamp); past expiry the package is absent; `download_available=false` is absent |
 | a catalog alias that is just a user id (`tombstone_17 (user_17)`) matched a legal register PDF that merely mentions the user | user-id aliases only match screenshot records that carry that identifier |
+| the reviewer objected to COMPLETE verdicts whose account-absent step cited a deletion-worker event with result FAILED or PARTIAL as "proof" | last-resort citations now use only SUCCESS events; without one the unprovable step is omitted (3 rows changed) |
 | stale-finding audit: 0 of 378 findings cite a file older than the latest file mentioning the subject; 0 REDACT/ANONYMIZE records with unknown PII; 0 backups/connectors with unknown flags | sanity checks kept in the evaluation notebook (`code/evaluation/`) |
 
 ## 6. Honest assessment

@@ -1,0 +1,100 @@
+{
+ "review": {
+  "case_id": "case_82",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence. The profile is absent. Analytics is present with pii=false, which is consistent with anonymised. Support is present with pii=false, consistent with redacted. The connector is disabled, and the backup has restore blocked. The audit record is retained under the security-retention rule. Searches on the email hash and both phone numbers returned nothing, so no resources were missed. The post-audit snapshot (evidence_07) agrees with the draft but was not used.",
+  "iterations": 3,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:34:41Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8402,
+  "output_tokens": 734,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.7,
+  "case_id": "case_82",
+  "iterations": 3,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_80"
+   },
+   "result_chars": 2792
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "castillo.camila@icloud.com"
+   },
+   "result_chars": 361
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_80"
+   },
+   "result_chars": 234
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "96b36a651fd0c6d89263f283b2e20b8a3ddb467b9abeb688e4e923a0ecd88795"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "34652311707"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "34745988368"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_2176"
+   },
+   "result_chars": 734
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence. The profile is absent. Analytics is present with pii=false, which is consistent with anonymised. Support is present with pii=false, consistent with redacted. The connector is disabled, and the backup has restore blocked. The audit record is retained under the security-retention rule. Searches on the email hash and both phone numbers returned nothing, so no resources were missed. The post-audit snapshot (evidence_07) agrees with the draft but was not used."
+   }
+  }
+ ]
+}

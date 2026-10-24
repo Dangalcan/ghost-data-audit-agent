@@ -1,0 +1,76 @@
+{
+ "review": {
+  "case_id": "case_423",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The draft holds up. At audit_at, account_2420 was ABSENT (evidence_68, observed 2026-03-20T06:07Z). The only later line showing it PRESENT is evidence_40, observed 2026-03-22, which is after the cut-off, so it can't change the verdict. analytics_6249 shows pii=false, which fits anonymised. audit_record_8082 is retained under the security retention rule. I found no missed resources.",
+  "iterations": 3,
+  "tool_calls": 5,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:42:55Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5609,
+  "output_tokens": 585,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.8,
+  "case_id": "case_423",
+  "iterations": 3,
+  "tool_calls": 5
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_421"
+   },
+   "result_chars": 1111
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "e.dahl28@gmail.com"
+   },
+   "result_chars": 378
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_6249"
+   },
+   "result_chars": 766
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_2420"
+   },
+   "result_chars": 744
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The draft holds up. At audit_at, account_2420 was ABSENT (evidence_68, observed 2026-03-20T06:07Z). The only later line showing it PRESENT is evidence_40, observed 2026-03-22, which is after the cut-off, so it can't change the verdict. analytics_6249 shows pii=false, which fits anonymised. audit_record_8082 is retained under the security retention rule. I found no missed resources."
+   }
+  }
+ ]
+}

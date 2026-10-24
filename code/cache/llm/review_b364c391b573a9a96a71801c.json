@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_380",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence. The account is absent. The analytics profile is present with pii=false, which counts as anonymised. The audit record is retained. Searches on the phone number and email hash returned no other resources.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:41:34Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7462,
+  "output_tokens": 641,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.3,
+  "case_id": "case_380",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_378"
+   },
+   "result_chars": 729
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "rohan.jain@outlook.com"
+   },
+   "result_chars": 361
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_9326"
+   },
+   "result_chars": 735
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919821100875"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_378"
+   },
+   "result_chars": 212
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "9ba1c5f7d14e5af7224e110703a78ff7cebd2a4fd08ece51cf9085b32ffe3606"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence. The account is absent. The analytics profile is present with pii=false, which counts as anonymised. The audit record is retained. Searches on the phone number and email hash returned no other resources."
+   }
+  }
+ ]
+}

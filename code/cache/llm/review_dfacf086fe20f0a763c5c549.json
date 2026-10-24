@@ -1,0 +1,85 @@
+{
+ "review": {
+  "case_id": "case_61",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The only in-window evidence is evidence_46, which shows object_19 PRESENT on 2026-02-13. The catalog activity says object_19 belongs only to user_07. evidence_58 was captured in September 2026, after audit_at, so I ignored it. I found no contradiction and no missed resource. Ownership rests on an alias match plus the catalog claim, so confidence is medium.",
+  "iterations": 4,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:34:15Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5631,
+  "output_tokens": 650,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.8,
+  "case_id": "case_61",
+  "iterations": 4,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_07"
+   },
+   "result_chars": 328
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "priya.raman@gmail.com"
+   },
+   "result_chars": 660
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "object_19"
+   },
+   "result_chars": 328
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_46",
+    "source": "alias:delivery_confirmation_19.pdf"
+   },
+   "result_chars": 130
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "object_19"
+   },
+   "result_chars": 399
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The only in-window evidence is evidence_46, which shows object_19 PRESENT on 2026-02-13. The catalog activity says object_19 belongs only to user_07. evidence_58 was captured in September 2026, after audit_at, so I ignored it. I found no contradiction and no missed resource. Ownership rests on an alias match plus the catalog claim, so confidence is medium."
+   }
+  }
+ ]
+}

@@ -1,0 +1,117 @@
+{
+ "review": {
+  "case_id": "case_107",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found nothing that contradicts the draft. Searches on the email, both phone numbers and the email hash returned no evidence. The audit record is still present, as the draft says. It is a security audit event and is retained under policy. account_687 has no direct observation. It is marked absent only because the scope snapshot shows no record, and the deletion worker's SUCCESS claim is consistent with that.",
+  "iterations": 4,
+  "tool_calls": 10,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:35:10Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 6330,
+  "output_tokens": 923,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.3,
+  "case_id": "case_107",
+  "iterations": 4,
+  "tool_calls": 10
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_105"
+   },
+   "result_chars": 776
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "priya-patel@proton.me"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_105"
+   },
+   "result_chars": 228
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919416797786"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919610528868"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "9abd47f9b8bd1d760c9695d208b1fd0a01201531b6d8426c2650dac7609c35d3"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_687"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_10",
+    "source": "customer_data_read_replica_20260827.sql:customer_data_primary[11]"
+   },
+   "result_chars": 476
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_687"
+   },
+   "result_chars": 319
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found nothing that contradicts the draft. Searches on the email, both phone numbers and the email hash returned no evidence. The audit record is still present, as the draft says. It is a security audit event and is retained under policy. account_687 has no direct observation. It is marked absent only because the scope snapshot shows no record, and the deletion worker's SUCCESS claim is consistent with that."
+   }
+  }
+ ]
+}

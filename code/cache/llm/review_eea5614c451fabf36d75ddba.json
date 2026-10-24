@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_346",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I searched on the user id, email, phone, email hash and account_5214. Only evidence_71 came back. It shows account_5214 ABSENT and audit_record_1700 PRESENT, and both observations are before audit_at. I found no contradicting evidence and no missed resources. A retained audit record is allowed by policy. I did not read the source text or run lookup_activity.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:40:49Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5205,
+  "output_tokens": 644,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.3,
+  "case_id": "case_346",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_344"
+   },
+   "result_chars": 406
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "stojanovic.marek@icloud.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "48555962450"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_5214"
+   },
+   "result_chars": 396
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_344"
+   },
+   "result_chars": 222
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "3cd818c23625e61fe0b24a32523cb6b30418a8cc73d8f1baeb0bfed79abf4c28"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I searched on the user id, email, phone, email hash and account_5214. Only evidence_71 came back. It shows account_5214 ABSENT and audit_record_1700 PRESENT, and both observations are before audit_at. I found no contradicting evidence and no missed resources. A retained audit record is allowed by policy. I did not read the source text or run lookup_activity."
+   }
+  }
+ ]
+}

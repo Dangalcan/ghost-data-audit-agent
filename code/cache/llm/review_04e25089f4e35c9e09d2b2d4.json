@@ -1,0 +1,93 @@
+{
+ "review": {
+  "case_id": "case_112",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. The support message reads \"[REDACTED]\". The connector is disabled and the backup has restore blocked, on both the primary and the read replica. The audit record is retained, which policy allows. Searches on the email and both phone numbers returned nothing. The account has no direct evidence line under its own id, so its ABSENT state is implicit rather than directly observed.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:35:35Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 10241,
+  "output_tokens": 716,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.3,
+  "case_id": "case_112",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_110"
+   },
+   "result_chars": 2978
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "ionescu.pavel@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "48580245825"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "48842819569"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_2259"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_10",
+    "source": "customer_data_read_replica_20260827.sql:customer_data_primary[27]"
+   },
+   "result_chars": 360
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. The support message reads \"[REDACTED]\". The connector is disabled and the backup has restore blocked, on both the primary and the read replica. The audit record is retained, which policy allows. Searches on the email and both phone numbers returned nothing. The account has no direct evidence line under its own id, so its ABSENT state is implicit rather than directly observed."
+   }
+  }
+ ]
+}

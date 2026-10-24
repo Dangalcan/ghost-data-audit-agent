@@ -1,0 +1,101 @@
+{
+ "review": {
+  "case_id": "case_151",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. Searches on the email, phone and email hash returned nothing. Searches on the user id and account_874 returned only evidence_86. The support ticket (support_5400) has the requester email, name and phone set to null, so it is redacted. The connector is disabled, the backup has restore blocked, and the audit record is retained. account_874 is absent.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:36:10Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8863,
+  "output_tokens": 761,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.2,
+  "case_id": "case_151",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_149"
+   },
+   "result_chars": 1513
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "elena.i4660@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "48714169201"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_874"
+   },
+   "result_chars": 395
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_149"
+   },
+   "result_chars": 215
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "100c56bb311ad3b36460ad720fa690d25e23a17e11fa0284650c6032c330f7f5"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_86",
+    "source": "service_resource_export_20260807_074104.json:support_platform.tickets[0]"
+   },
+   "result_chars": 347
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. Searches on the email, phone and email hash returned nothing. Searches on the user id and account_874 returned only evidence_86. The support ticket (support_5400) has the requester email, name and phone set to null, so it is redacted. The connector is disabled, the backup has restore blocked, and the audit record is retained. account_874 is absent."
+   }
+  }
+ ]
+}

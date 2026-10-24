@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_253",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I searched on the user id, email, phone, email hash and account_6073. I found no evidence that contradicts the draft and no resources it missed. The only observation is audit_record_2927, which is present in both primary and replica. It is a security audit record, which policy allows to be retained. There is no evidence for account_6073 under its own id, so its ABSENT state rests on the draft's scope line. I did not verify that line myself.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:38:29Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 5262,
+  "output_tokens": 654,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.7,
+  "case_id": "case_253",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_251"
+   },
+   "result_chars": 774
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "mathis.l2398@zoho.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_251"
+   },
+   "result_chars": 214
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_6073"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "33606690952"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "532cfb4c4fb9a17f0f867577d68a89458ba17f72f794ec073a0dfd90548e86ff"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I searched on the user id, email, phone, email hash and account_6073. I found no evidence that contradicts the draft and no resources it missed. The only observation is audit_record_2927, which is present in both primary and replica. It is a security audit record, which policy allows to be retained. There is no evidence for account_6073 under its own id, so its ABSENT state rests on the draft's scope line. I did not verify that line myself."
+   }
+  }
+ ]
+}

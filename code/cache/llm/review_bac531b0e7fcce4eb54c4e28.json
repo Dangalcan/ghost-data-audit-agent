@@ -1,0 +1,101 @@
+{
+ "review": {
+  "case_id": "case_351",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. The email, hash and phone searches returned nothing beyond evidence_71. Account_5059 is ABSENT. Support_7137 is redacted: the requester email, name and phone are null. The connector is disabled and the backup has restore blocked. The audit record is retained, which policy allows.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:41:00Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 9299,
+  "output_tokens": 771,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.7,
+  "case_id": "case_351",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_349"
+   },
+   "result_chars": 1512
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "m.kobayashi60@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_349"
+   },
+   "result_chars": 216
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "43a2ccbe7d85ef2fc58afff74850b7c90121413fccb1a775918729867814c8f4"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "819077776048"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_5059"
+   },
+   "result_chars": 396
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_71",
+    "source": "service_resource_export_20260429_083222.json:support_platform.tickets[2]"
+   },
+   "result_chars": 352
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. The email, hash and phone searches returned nothing beyond evidence_71. Account_5059 is ABSENT. Support_7137 is redacted: the requester email, name and phone are null. The connector is disabled and the backup has restore blocked. The audit record is retained, which policy allows."
+   }
+  }
+ ]
+}

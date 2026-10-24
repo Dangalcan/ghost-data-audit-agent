@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_108",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "Searches on user id, email, phone, hash and account_6750 found nothing that contradicts the draft. The only evidence is audit_record_1469, which is present in both the primary and the replica and is retained under security retention. account_6750 has no evidence lines, so its ABSENT state is implicit rather than directly observed.",
+  "iterations": 3,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:35:17Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 3934,
+  "output_tokens": 654,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 7.4,
+  "case_id": "case_108",
+  "iterations": 3,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_106"
+   },
+   "result_chars": 774
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "vfernandez4143@fastmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_106"
+   },
+   "result_chars": 223
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "bd7188428643aa19a43263767ad9e1bb69cb86c2b0ef22542d461caf28a45f37"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "34640824380"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_6750"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "Searches on user id, email, phone, hash and account_6750 found nothing that contradicts the draft. The only evidence is audit_record_1469, which is present in both the primary and the replica and is retained under security retention. account_6750 has no evidence lines, so its ABSENT state is implicit rather than directly observed."
+   }
+  }
+ ]
+}

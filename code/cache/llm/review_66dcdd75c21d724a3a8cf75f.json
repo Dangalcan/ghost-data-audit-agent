@@ -1,0 +1,93 @@
+{
+ "review": {
+  "case_id": "case_297",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no evidence that contradicts the draft, and no missed resources.\n\n- Searches on user_295, the email, both phone numbers and account_3275 returned only evidence_75. That evidence covers the four resources already in the draft. The email and phone searches returned nothing.\n- support_1983 has pii=false, which is consistent with it being redacted. Its text is \"Customer supplied contact details for a delivery query.\"\n- data_flow_3391 is disabled and backup_7308 has restore blocked. audit_record_7878 is a security audit record, which policy retains.\n- account_3275 is ABSENT only through the scope record. The search found no direct observation of it, so I could not check that independently. That is why confidence is medium rather than high.",
+  "iterations": 4,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:39:44Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8166,
+  "output_tokens": 830,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 9.8,
+  "case_id": "case_297",
+  "iterations": 4,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_295"
+   },
+   "result_chars": 1523
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "a.osei34@yahoo.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_75",
+    "source": "customer_data_inventory_20260524.sql:support_records[0]"
+   },
+   "result_chars": 246
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "233248633363"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "233243527302"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_3275"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no evidence that contradicts the draft, and no missed resources.\n\n- Searches on user_295, the email, both phone numbers and account_3275 returned only evidence_75. That evidence covers the four resources already in the draft. The email and phone searches returned nothing.\n- support_1983 has pii=false, which is consistent with it being redacted. Its text is \"Customer supplied contact details for a delivery query.\"\n- data_flow_3391 is disabled and backup_7308 has restore blocked. audit_record_7878 is a security audit record, which policy retains.\n- account_3275 is ABSENT only through the scope record. The search found no direct observation of it, so I could not check that independently. That is why confidence is medium rather than high."
+   }
+  }
+ ]
+}

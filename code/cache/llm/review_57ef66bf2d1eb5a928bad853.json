@@ -1,0 +1,85 @@
+{
+ "review": {
+  "case_id": "case_191",
+  "verdict": "DISAGREE",
+  "confidence": "low",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The draft's four findings hold up, but the verdict of COMPLETE is not supported for the profile. account_6608 is UNKNOWN at audit_at. It has no evidence at all. The only trace is a deletion_worker activity (activity_2591) reporting PARTIAL on 2026-06-30. That is a claim, not proof of deletion. Without evidence the profile is gone, the draft can't call the case COMPLETE. The support ticket is redacted (requester fields null, pii false). The connector is disabled, restore is blocked on the backup, and the audit record is retained. I have no line of evidence to veto or propose, so I am filing a low-confidence disagreement based only on the verification gap for the profile.",
+  "iterations": 4,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:49:24Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7955,
+  "output_tokens": 853,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 13.3,
+  "case_id": "case_191",
+  "iterations": 4,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_189"
+   },
+   "result_chars": 1513
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_6608"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_6608"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "karim-haddad@proton.me"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_83",
+    "source": "service_resource_export_20260718_104335.json:support_platform.tickets[1]"
+   },
+   "result_chars": 347
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "low",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The draft's four findings hold up, but the verdict of COMPLETE is not supported for the profile. account_6608 is UNKNOWN at audit_at. It has no evidence at all. The only trace is a deletion_worker activity (activity_2591) reporting PARTIAL on 2026-06-30. That is a claim, not proof of deletion. Without evidence the profile is gone, the draft can't call the case COMPLETE. The support ticket is redacted (requester fields null, pii false). The connector is disabled, restore is blocked on the backup, and the audit record is retained. I have no line of evidence to veto or propose, so I am filing a low-confidence disagreement based only on the verification gap for the profile."
+   }
+  }
+ ]
+}

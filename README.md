@@ -15,11 +15,13 @@ The challenge contract is in [`problem_statement.md`](./problem_statement.md) an
 one stream of grounded *observations* (resource, time, presence, identifiers, flags,
 evidence id). Code links observations to the subject, picks the latest observation the
 auditor could have seen at `audit_at`, applies the policy and orders the steps.
-Claude is used only where code cannot read the input: Claude Haiku 5.5 classifies the
-multilingual `request_text` (deletion vs. non-deletion) and Claude Sonnet 5.5
-transcribes the 11 console screenshots into a fixed JSON schema. Both are cached on disk
-and logged, so a full run is reproducible and costs about 0.2 USD (see
-`code/evaluation/usage_report.md`).
+Claude is used where code cannot read the input and as an independent reviewer:
+Claude Haiku 5.5 classifies the multilingual `request_text` (deletion vs. non-deletion),
+Claude Sonnet 5.5 transcribes the 11 console screenshots into a fixed JSON schema, and a
+Sonnet 5.5 tool-using reviewer (`code/audit/agent.py`) investigates every uncertain case
+and may veto a finding or propose a missed resource, but only with a citation that code
+re-verifies against the raw evidence. Everything is cached on disk and logged
+(`code/evaluation/usage_report.md`).
 
 ## Setup
 
@@ -43,8 +45,9 @@ python -m pytest code/tests -q          # unit tests
 python code/main.py --cases case_11 --explain   # evidence chain for one case
 ```
 
-Useful flags: `--no-llm` (never call a model: deterministic intent guard + cached
-screenshot extractions; the shipped caches make the full run reproducible offline),
+Useful flags: `--review uncertain|all|none` (tool-using reviewer; default `uncertain`),
+`--no-llm` (never call a model: deterministic intent guard + cached screenshot
+extractions; the shipped caches make the full run reproducible offline),
 `--skip-images` (ignore screenshot evidence), `--out path.csv`.
 
 ## Layout
@@ -52,7 +55,7 @@ screenshot extractions; the shipped caches make the full run reproducible offlin
 ```
 code/main.py                 CLI entry point
 code/audit/                  engine: config, loaders, identity, activity, evidence/*,
-                             linkage, state, policy, planner, intent, llm, prompts/
+                             linkage, state, policy, planner, intent, llm, agent, prompts/
 code/evaluation/main.py      evaluation harness (case / row / step / field / sequence)
 code/evaluation/custom_cases.py   additional evaluation cases
 code/evaluation/evaluation_report.md, usage_report.md   required reports

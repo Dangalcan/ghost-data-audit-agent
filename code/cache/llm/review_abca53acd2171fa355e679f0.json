@@ -1,0 +1,92 @@
+{
+ "review": {
+  "case_id": "case_545",
+  "verdict": "DISAGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "account_2577 has no evidence observation at all, so its state at audit_at is UNKNOWN. The draft's step 1 marks it ABSENT based only on activity_3718. That activity is a deletion-worker claim with reported_result PARTIAL, and it says the profile was only \"submitted\". Activity results are claims, not proof of state, so COMPLETE is unsupported. The audit record and tombstone look fine: the audit record is retained, and the tombstone shows pii=False in both the primary and the replica. I found no other resources for the email or the two phone numbers. I have no line that contradicts the draft, so I filed no veto. I'm disagreeing because the draft has no evidence that the profile was deleted.",
+  "iterations": 3,
+  "tool_calls": 7,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:46:17Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 4890,
+  "output_tokens": 807,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.6,
+  "case_id": "case_545",
+  "iterations": 3,
+  "tool_calls": 7
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_545"
+   },
+   "result_chars": 1540
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_2577"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "soojin.k584@outlook.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_2577"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "821037025161"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "821043148697"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "account_2577 has no evidence observation at all, so its state at audit_at is UNKNOWN. The draft's step 1 marks it ABSENT based only on activity_3718. That activity is a deletion-worker claim with reported_result PARTIAL, and it says the profile was only \"submitted\". Activity results are claims, not proof of state, so COMPLETE is unsupported. The audit record and tombstone look fine: the audit record is retained, and the tombstone shows pii=False in both the primary and the replica. I found no other resources for the email or the two phone numbers. I have no line that contradicts the draft, so I filed no veto. I'm disagreeing because the draft has no evidence that the profile was deleted."
+   }
+  }
+ ]
+}

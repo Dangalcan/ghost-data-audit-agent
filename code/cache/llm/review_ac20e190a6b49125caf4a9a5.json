@@ -1,0 +1,100 @@
+{
+ "review": {
+  "case_id": "case_547",
+  "verdict": "DISAGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The draft says COMPLETE, but the primary profile account_410 has no evidence at all, so its state is UNKNOWN. The only activity for it is activity_3662, a DELETE_RECORD that the deletion worker reported as FAILED on 2026-09-05. No evidence shows the profile was deleted. The audit record (retained) and the tombstone (PRESENT, pii=false) are consistent with policy. I searched the email, phone, email hash and user id and found nothing else, so I have no evidence line to cite for a veto or a proposal. The draft should not be COMPLETE until account_410's deletion is verified.",
+  "iterations": 4,
+  "tool_calls": 8,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:49:46Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7154,
+  "output_tokens": 842,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 10.6,
+  "case_id": "case_547",
+  "iterations": 4,
+  "tool_calls": 8
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_547"
+   },
+   "result_chars": 1542
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_410"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "a.patel22@yahoo.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_410"
+   },
+   "result_chars": 318
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_547"
+   },
+   "result_chars": 211
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "0a2dc8163cec749b62977904aca1d8e380cafa3ce71631625d135108de661263"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "919000447450"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The draft says COMPLETE, but the primary profile account_410 has no evidence at all, so its state is UNKNOWN. The only activity for it is activity_3662, a DELETE_RECORD that the deletion worker reported as FAILED on 2026-09-05. No evidence shows the profile was deleted. The audit record (retained) and the tombstone (PRESENT, pii=false) are consistent with policy. I searched the email, phone, email hash and user id and found nothing else, so I have no evidence line to cite for a veto or a proposal. The draft should not be COMPLETE until account_410's deletion is verified."
+   }
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "review": {
+  "case_id": "case_378",
+  "verdict": "AGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "I found no contradicting evidence and no missed resources. account_976 is absent. analytics_3234 is present with pii=False, which is consistent with anonymised. The audit record is retained. A search on the old email, the phone number and both email hashes returned no further evidence.",
+  "iterations": 4,
+  "tool_calls": 10,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:41:25Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 8296,
+  "output_tokens": 838,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.3,
+  "case_id": "case_378",
+  "iterations": 4,
+  "tool_calls": 10
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_376"
+   },
+   "result_chars": 729
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "jkim227380@gmail.com"
+   },
+   "result_chars": 360
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_3234"
+   },
+   "result_chars": 734
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "jkim2273@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "821052817798"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_376"
+   },
+   "result_chars": 301
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "b85c27d0a04c20aa2be4dbea96def68f86381fc664ea369b7c454cd552aa93bc"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "f3c2d9f159780c594a58116eb7a0681d07e1d088cd28bcad5fd11d636e764b55"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "analytics_3234"
+   },
+   "result_chars": 295
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "I found no contradicting evidence and no missed resources. account_976 is absent. analytics_3234 is present with pii=False, which is consistent with anonymised. The audit record is retained. A search on the old email, the phone number and both email hashes returned no further evidence."
+   }
+  }
+ ]
+}

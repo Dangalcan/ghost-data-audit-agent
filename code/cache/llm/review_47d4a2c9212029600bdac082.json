@@ -1,0 +1,109 @@
+{
+ "review": {
+  "case_id": "case_424",
+  "verdict": "AGREE",
+  "confidence": "high",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The profile is absent. The analytics profile has no identifiers (email, hash, phone and customer reference are all null), so it counts as anonymised. The audit record is retained under policy. Searches on the email, phone and hash found no other resources.",
+  "iterations": 4,
+  "tool_calls": 9,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:43:04Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7942,
+  "output_tokens": 763,
+  "cache_read_input_tokens": 8468,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.8,
+  "case_id": "case_424",
+  "iterations": 4,
+  "tool_calls": 9
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_422"
+   },
+   "result_chars": 763
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "varga.tomasz@gmail.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "analytics_3845"
+   },
+   "result_chars": 766
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_2696"
+   },
+   "result_chars": 396
+  },
+  {
+   "iteration": 2,
+   "tool": "resolve_identity",
+   "input": {
+    "email_or_user_id": "user_422"
+   },
+   "result_chars": 213
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "48799125827"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "02c16a5a9ffd3a401710816b51b2cee6796fdb0b37630df955fa2552f69d9e58"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "read_source",
+   "input": {
+    "evidence_id": "evidence_68",
+    "source": "service_resource_export_20260320_072349.json:analytics_platform.profiles[0]"
+   },
+   "result_chars": 289
+  },
+  {
+   "iteration": 4,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "AGREE",
+    "confidence": "high",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The profile is absent. The analytics profile has no identifiers (email, hash, phone and customer reference are all null), so it counts as anonymised. The audit record is retained under policy. Searches on the email, phone and hash found no other resources."
+   }
+  }
+ ]
+}

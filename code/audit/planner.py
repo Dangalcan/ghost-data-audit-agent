@@ -40,31 +40,48 @@ def step_sort_key(step: Step):
 
 
 def fallback_activity(resource_id: str, audit_at: str) -> Optional[str]:
-    """Latest policy action on the resource at or before audit_at (a claim, last resort when
-    no evidence shows the record's state). Successful actions are preferred."""
-    best, best_key = None, None
+    """Latest *successful* policy action on the resource at or before audit_at: a claim, cited
+    only as a last resort when no file shows the record's state. FAILED / PARTIAL claims are
+    never cited as proof of a compliant state (the reviewer objected to that, rightly)."""
+    best = None
     for a in activities_by_resource().get(resource_id, []):
-        if a.event_time <= audit_at and a.event_type in POLICY_SUCCESS_EVENTS:
-            key = (1 if a.reported_result == "SUCCESS" else 0, a.event_time)
-            if best_key is None or key > best_key:
-                best, best_key = a.activity_id, key
+        if a.event_time <= audit_at and a.event_type in POLICY_SUCCESS_EVENTS and a.reported_result == "SUCCESS":
+            best = a.activity_id
     return best
 
 
-def audit_case(case: CaseRequest, skip_images: bool = False, use_llm: bool = True) -> CaseResult:
+def _compliant_copy(st: ResourceState, evidence_id: str) -> ResourceState:
+    """State override used when a validated veto shows the record was already compliant."""
+    from dataclasses import replace
+    kind = st.kind
+    return replace(st, presence="ABSENT" if kind in ("profile", "search_entry", "export", "support_attachment", "object",
+                                                       "marketing_profile", "support_contact", "analytics_contact", "unknown")
+                   else "PRESENT",
+                   pii=False, enabled=False if kind == "connector" else st.enabled,
+                   restore_allowed=False if kind == "backup" else st.restore_allowed, evidence_id=evidence_id)
+
+
+def audit_case(case: CaseRequest, skip_images: bool = False, use_llm: bool = True,
+               vetoes: Optional[Dict[str, str]] = None, extra_links: Optional[Dict[str, Link]] = None) -> CaseResult:
+    """vetoes: resource_id -> evidence_id of a validated reviewer veto (record treated as compliant);
+    extra_links: validated reviewer proposals to add to the subject's resources."""
     intent = classify_intent(case, use_llm=use_llm)
     if intent["label"] != "DELETION":
         return CaseResult(case.case_id, "NOT_APPLICABLE", [], None, intent, notes=[intent.get("reason", "")])
     subject = resolve_subject(case.email)
     if subject is None:
         return CaseResult(case.case_id, "COMPLETE", [], None, intent, notes=["email matches no identity"])
-    links = linked_resources(case, subject, skip_images)
+    links = dict(linked_resources(case, subject, skip_images))
+    for rid, link in (extra_links or {}).items():
+        links.setdefault(rid, link)
     usable_scopes = evidence_mod.scopes_for(subject.user_id, skip_images)
     obs_by_rid = observations_by_resource(skip_images)
     states: Dict[str, ResourceState] = {}
     plans: Dict[str, ResourcePlan] = {}
     for rid in links:
         st = state_at(rid, case.audit_at, obs_by_rid.get(rid, []), usable_scopes)
+        if vetoes and rid in vetoes:
+            st = _compliant_copy(st, vetoes[rid])
         states[rid] = st
         plans[rid] = plan_resource(st, fallback_activity(rid, case.audit_at))
     findings = [s for p in plans.values() for s in p.findings]
@@ -84,6 +101,20 @@ def audit_case(case: CaseRequest, skip_images: bool = False, use_llm: bool = Tru
                     steps.append(s)
     steps.sort(key=step_sort_key)
     return CaseResult(case.case_id, status, steps, subject, intent, links, states, plans)
+
+
+def apply_review(case: CaseRequest, result: CaseResult, review, skip_images: bool = False, use_llm: bool = True) -> CaseResult:
+    """Re-plan with the validated parts of a reviewer's answer; untouched when nothing was accepted."""
+    if not review.accepted_vetoes and not review.accepted_proposals:
+        result.notes.append(f"review: {review.verdict} ({review.confidence}); nothing accepted")
+        return result
+    vetoes = {v["resource_id"]: v["evidence_id"] for v in review.accepted_vetoes}
+    extra = {p["resource_id"]: Link(p["resource_id"], result.subject.user_id, "identifier", {p["evidence_id"]}, None,
+                                    f"reviewer proposal validated against {p['evidence_id']} {p['source']}")
+             for p in review.accepted_proposals}
+    new = audit_case(case, skip_images, use_llm, vetoes=vetoes, extra_links=extra)
+    new.notes.append(f"review applied: vetoes={sorted(vetoes)} proposals={sorted(extra)}")
+    return new
 
 
 def explain(result: CaseResult) -> str:

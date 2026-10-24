@@ -1,0 +1,84 @@
+{
+ "review": {
+  "case_id": "case_277",
+  "verdict": "DISAGREE",
+  "confidence": "medium",
+  "vetoes": [],
+  "proposals": [],
+  "notes": "The draft's account_2352 ABSENT step rests only on activity_1847. That is a deletion-worker claim of SUCCESS. No evidence observation exists for account_2352 at or before audit_at, so its state is UNKNOWN and the COMPLETE verdict is not proven. The other four resources look consistent with policy in evidence_77: the connector is disabled, the backup has restore blocked, the audit record is retained, and the support ticket has pii=false. I found nothing that contradicts these. I also found no missed resources. The searches on the email and phone returned nothing, and I did not search the email hash. I filed no vetoes because I found no evidence line that contradicts any finding.",
+  "iterations": 3,
+  "tool_calls": 6,
+  "cached": false,
+  "error": null,
+  "accepted_vetoes": [],
+  "accepted_proposals": [],
+  "rejected": []
+ },
+ "usage": {
+  "ts": "2026-10-24T15:39:16Z",
+  "model": "claude-sonnet-5-5",
+  "purpose": "review",
+  "cached": false,
+  "input_tokens": 7005,
+  "output_tokens": 735,
+  "cache_read_input_tokens": 6351,
+  "cache_creation_input_tokens": 0,
+  "latency_s": 8.1,
+  "case_id": "case_277",
+  "iterations": 3,
+  "tool_calls": 6
+ },
+ "transcript": [
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "user_275"
+   },
+   "result_chars": 2924
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "account_2352"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 1,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "lucia.r2454@zoho.com"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 2,
+   "tool": "lookup_activity",
+   "input": {
+    "resource_id": "account_2352"
+   },
+   "result_chars": 320
+  },
+  {
+   "iteration": 2,
+   "tool": "search_evidence",
+   "input": {
+    "identifier": "34628427174"
+   },
+   "result_chars": 32
+  },
+  {
+   "iteration": 3,
+   "tool": "submit_review",
+   "input": {
+    "verdict": "DISAGREE",
+    "confidence": "medium",
+    "vetoes": [],
+    "proposals": [],
+    "notes": "The draft's account_2352 ABSENT step rests only on activity_1847. That is a deletion-worker claim of SUCCESS. No evidence observation exists for account_2352 at or before audit_at, so its state is UNKNOWN and the COMPLETE verdict is not proven. The other four resources look consistent with policy in evidence_77: the connector is disabled, the backup has restore blocked, the audit record is retained, and the support ticket has pii=false. I found nothing that contradicts these. I also found no missed resources. The searches on the email and phone returned nothing, and I did not search the email hash. I filed no vetoes because I found no evidence line that contradicts any finding."
+   }
+  }
+ ]
+}
