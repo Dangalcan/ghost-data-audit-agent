@@ -77,8 +77,8 @@ Per case (matched = steps identical in all six fields):
 
 - Status mix: {'INCOMPLETE': 355, 'COMPLETE': 153, 'NOT_APPLICABLE': 10}
 - Steps per case: min 0, median 6, max 14; 10 rows with `[]` (10 NOT_APPLICABLE)
-- Operations emitted: VERIFY_RECORD_ABSENT 823, VERIFY_RECORD_PRESENT 425, REPORT_REMAINING_RECORD 378, DELETE_RECORD 378, REPORT_EXPOSED_PII 206, VERIFY_RECORD_REDACTED 171, VERIFY_DATA_FLOW_DISABLED 146, REDACT_RECORD 133, REPORT_ACTIVE_DATA_FLOW 113, DISABLE_DATA_FLOW 113, VERIFY_RECORD_ANONYMIZED 82, ANONYMIZE_RECORD 73, VERIFY_RESTORE_BLOCKED 59, REPORT_RESTORE_RISK 26, BLOCK_RESTORE 26
-- Citations: {'evidence': 1133, 'activity': 8} (activity ids only as last resort when no file shows the record's state)
+- Operations emitted: VERIFY_RECORD_ABSENT 823, VERIFY_RECORD_PRESENT 425, REPORT_REMAINING_RECORD 377, DELETE_RECORD 377, REPORT_EXPOSED_PII 206, VERIFY_RECORD_REDACTED 171, VERIFY_DATA_FLOW_DISABLED 146, REDACT_RECORD 133, REPORT_ACTIVE_DATA_FLOW 113, DISABLE_DATA_FLOW 113, VERIFY_RECORD_ANONYMIZED 82, ANONYMIZE_RECORD 73, VERIFY_RESTORE_BLOCKED 59, REPORT_RESTORE_RISK 26, BLOCK_RESTORE 26
+- Citations: {'evidence': 1132, 'activity': 8} (activity ids only as last resort when no file shows the record's state)
 - `python code/validate_output.py output.csv`: 518 rows, 0 contract errors.
 - Intent classifier vs deterministic guard: 398 unique request texts, 388 DELETION / 10 NON_DELETION, 0 disagreements;
   the 10 NON_DELETION texts coincide with the 10 `CLASSIFY_REQUEST ... non-deletion` intake rows.
@@ -119,6 +119,9 @@ accuracy 1.0, step F1 >= 0.95).
 | anonymised analytics could not be linked (no identifiers) | bundle collections are ordered by user id; anchors + deletion-worker run membership + account state give a unique assignment in most buckets (+5 steps on the sample) |
 | deleted accounts named by no file | status-consistent one-to-one assignment of deletion-worker `DELETE_RECORD` events next to `reported_at` (+12 steps on the sample) |
 | brotli-compressed API responses crashed the installed httpx2 decoder | client pins `Accept-Encoding: gzip, deflate` |
+| an export package seen "Ready" in a June screenshot was still reported as remaining a month after its printed expiry | exports carry `expires_at` (JSON field or screenshot timestamp); past expiry the package is absent; `download_available=false` is absent |
+| a catalog alias that is just a user id (`tombstone_17 (user_17)`) matched a legal register PDF that merely mentions the user | user-id aliases only match screenshot records that carry that identifier |
+| stale-finding audit: 0 of 378 findings cite a file older than the latest file mentioning the subject; 0 REDACT/ANONYMIZE records with unknown PII; 0 backups/connectors with unknown flags | sanity checks kept in the evaluation notebook (`code/evaluation/`) |
 
 ## 6. Honest assessment
 

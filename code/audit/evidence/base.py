@@ -140,10 +140,18 @@ def presence_from_result(result: str) -> str:
     return "UNKNOWN"
 
 
-def flags_from_result(kind: str, result: str) -> dict:
-    """Map the ledger-style result vocabulary to pii / enabled / restore_allowed."""
+def flags_from_result(kind: str, result: str, subject: Optional[str] = None) -> dict:
+    """Map the ledger-style result vocabulary to pii / enabled / restore_allowed.
+
+    `subject` is the record's subject reference: a direct identifier (email / phone)
+    means identifiers are still exposed; a bare user_id means only the stable
+    reference remains.
+    """
     r = (result or "").upper()
     out: dict = {}
+    if r == "FOUND" and kind in ("support_message", "analytics_profile", "tombstone", "email_delivery_log") and subject:
+        sub = str(subject).strip().lower()
+        out["pii"] = not sub.startswith("user_")
     if kind == "connector":
         out["enabled"] = True if r == "ACTIVE" else False if r == "DISABLED" else None
     elif kind == "backup":

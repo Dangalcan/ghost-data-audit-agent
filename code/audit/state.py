@@ -71,6 +71,13 @@ def state_at(resource_id: str, audit_at: str, observations: List[Observation], s
                 hist.append(Observation(resource_id=resource_id, evidence_id=sc.evidence_id, observed_at=sc.observed_at,
                                         presence="ABSENT", kind=kind, tokens=observations[0].tokens if observations else EMPTY_TOKENS,
                                         implicit=True, source=f"scope:{sc.evidence_id}:{system}", captured_at=sc.captured_at))
+    if kind == "export":  # a download package past its expiry no longer exists
+        for o in list(hist):
+            exp = o.extra.get("expires_at") if o.extra else None
+            if o.presence == "PRESENT" and isinstance(exp, str) and o.observed_at < exp <= audit_at:
+                hist.append(Observation(resource_id=resource_id, evidence_id=o.evidence_id, observed_at=exp,
+                                        presence="ABSENT", kind=kind, tokens=o.tokens, implicit=True,
+                                        source=f"expiry:{o.source}", captured_at=o.captured_at))
     hist.sort(key=_rank, reverse=True)
     if not hist:
         return ResourceState(resource_id, kind, "UNKNOWN", None, None, None, None, None, None, None, [])

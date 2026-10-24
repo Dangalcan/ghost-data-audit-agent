@@ -150,7 +150,7 @@ def line_to_observation(line: LogLine, started_kv: Dict[str, str], evidence_id: 
     if "record_type" in kv:  # record_lookup ledger lines
         kind = KIND_BY_RECORD_TYPE.get(kv["record_type"].strip('"').upper(), kind)
         presence = presence_from_result(kv.get("result", ""))
-        flags = flags_from_result(kind, kv.get("result", ""))
+        flags = flags_from_result(kind, kv.get("result", ""), kv.get("subject_reference", "").strip('"'))
         pii = flags.get("pii", pii)
         enabled = flags.get("enabled", enabled)
         restore_allowed = flags.get("restore_allowed", restore_allowed)

@@ -20,7 +20,7 @@ def parse_text(path, evidence_id: str, captured_at: str) -> ParsedEvidence:
             continue
         when, system, rid, rtype, result, subject = m.groups()
         kind = KIND_BY_RECORD_TYPE.get(rtype.upper(), default_kind(rid))
-        flags = flags_from_result(kind, result)
+        flags = flags_from_result(kind, result, subject.strip())
         parsed.observations.append(Observation(
             resource_id=rid, evidence_id=evidence_id, observed_at=when, presence=presence_from_result(result),
             kind=kind, tokens=tokens_from_values([subject.strip()]), pii=flags.get("pii"),

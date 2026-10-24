@@ -37,7 +37,7 @@ at the documented multipliers).
 
 | model | purpose | calls | served from cache | new input tokens | new output tokens |
 |---|---|---|---|---|---|
-| claude-haiku-5-5 | intent | 550 | 550 | 0 | 0 |
+| claude-haiku-5-5 | intent | 4241 | 4241 | 0 | 0 |
 | claude-sonnet-5-5 | vision | 11 | 11 (read from code/cache/vision) | 0 | 0 |
 
 The final run re-used every cached response, so it added **0 new tokens / 0.0000 USD**; the

@@ -213,6 +213,9 @@ accuracy 1.0, step F1 >= 0.95).
 | anonymised analytics could not be linked (no identifiers) | bundle collections are ordered by user id; anchors + deletion-worker run membership + account state give a unique assignment in most buckets (+5 steps on the sample) |
 | deleted accounts named by no file | status-consistent one-to-one assignment of deletion-worker `DELETE_RECORD` events next to `reported_at` (+12 steps on the sample) |
 | brotli-compressed API responses crashed the installed httpx2 decoder | client pins `Accept-Encoding: gzip, deflate` |
+| an export package seen "Ready" in a June screenshot was still reported as remaining a month after its printed expiry | exports carry `expires_at` (JSON field or screenshot timestamp); past expiry the package is absent; `download_available=false` is absent |
+| a catalog alias that is just a user id (`tombstone_17 (user_17)`) matched a legal register PDF that merely mentions the user | user-id aliases only match screenshot records that carry that identifier |
+| stale-finding audit: 0 of 378 findings cite a file older than the latest file mentioning the subject; 0 REDACT/ANONYMIZE records with unknown PII; 0 backups/connectors with unknown flags | sanity checks kept in the evaluation notebook (`code/evaluation/`) |
 
 ## 6. Honest assessment
 

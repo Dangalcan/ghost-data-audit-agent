@@ -21,6 +21,7 @@ case when something (an observation or an activity row) places it inside
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import timedelta
 from functools import lru_cache
@@ -74,7 +75,8 @@ def alias_observations(skip_images: bool = False) -> List[Observation]:
                 if link.alias.lower() in names:
                     matched = rec
                     break
-            if not (link.alias.lower() in text.lower() or link.alias in aliases or matched):
+            generic = bool(re.fullmatch(r"user_\d+", link.alias.lower()))
+            if not (matched or (not generic and (link.alias.lower() in text.lower() or link.alias in aliases))):
                 continue
             kind = default_kind(link.resource_id)
             if link.resource_id.startswith("object_"):

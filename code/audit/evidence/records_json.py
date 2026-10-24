@@ -75,8 +75,13 @@ def record_observation(rec: dict, kind: str, evidence_id: str, observed_at: str,
     restore_allowed = to_bool(rec.get("restore_allowed"))
     retention = rec.get("retention_until") or rec.get("retained_until")
     extra = {k: rec.get(k) for k in ("account_status", "download_available", "last_delivery_status", "event_code",
-                                      "event_name", "file_name", "archive_path", "object_key", "status_code")
+                                      "event_name", "file_name", "archive_path", "object_key", "status_code", "expires_at")
              if k in rec}
+    if kind == "export":
+        if rec.get("download_available") is False:
+            presence = "ABSENT"
+        if isinstance(rec.get("expires_at"), str) and rec["expires_at"] <= observed_at:
+            presence = "ABSENT"
     return Observation(resource_id=rid, evidence_id=evidence_id, observed_at=observed_at, presence=presence,
                        kind=kind, tokens=_tokens(rec), pii=pii, enabled=enabled, restore_allowed=restore_allowed,
                        retention_until=retention, source=source, extra=extra)
@@ -90,8 +95,8 @@ def ledger_observation(rec: dict, evidence_id: str, source: str, default_time: s
     kind = KIND_BY_RECORD_TYPE.get(str(rec.get("record_type", "")).upper(), default_kind(rid))
     result = str(rec.get("result", ""))
     presence = presence_from_result(result)
-    flags = flags_from_result(kind, result)
     subject = rec.get("subject_reference") or rec.get("lookup_value")
+    flags = flags_from_result(kind, result, subject)
     return Observation(resource_id=rid, evidence_id=evidence_id, observed_at=rec.get("recorded_at") or default_time,
                        presence=presence, kind=kind, tokens=tokens_from_values([subject]), pii=flags.get("pii"),
                        enabled=flags.get("enabled"), restore_allowed=flags.get("restore_allowed"),
