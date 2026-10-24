@@ -39,15 +39,6 @@ def step_sort_key(step: Step):
     return (PHASE_ORDER.index(step.phase), OPERATION_ORDER.index(step.operation), step.system_id, step.resource_id)
 
 
-@lru_cache(maxsize=None)
-def file_subjects(skip_images: bool = False) -> Dict[str, Set[str]]:
-    """evidence_id -> user ids mentioned anywhere in that file (bundle scopes apply only to them)."""
-    out: Dict[str, Set[str]] = {}
-    for o in evidence_mod.all_observations(skip_images):
-        out.setdefault(o.evidence_id, set()).update(owners_of(o.tokens))
-    return out
-
-
 def fallback_activity(resource_id: str, audit_at: str) -> Optional[str]:
     """Latest successful policy action on the resource at or before audit_at (a claim, last resort)."""
     best = None
@@ -65,14 +56,11 @@ def audit_case(case: CaseRequest, skip_images: bool = False, use_llm: bool = Tru
     if subject is None:
         return CaseResult(case.case_id, "COMPLETE", [], None, intent, notes=["email matches no identity"])
     links = linked_resources(case, subject, skip_images)
-    scopes = evidence_mod.all_scopes(skip_images)
-    fsubj = file_subjects(skip_images)
+    usable_scopes = evidence_mod.scopes_for(subject.user_id, skip_images)
     obs_by_rid = observations_by_resource(skip_images)
     states: Dict[str, ResourceState] = {}
     plans: Dict[str, ResourcePlan] = {}
     for rid in links:
-        usable_scopes = [sc for sc in scopes
-                         if sc.present or subject.user_id in fsubj.get(sc.evidence_id, set())]
         st = state_at(rid, case.audit_at, obs_by_rid.get(rid, []), usable_scopes)
         states[rid] = st
         plans[rid] = plan_resource(st, fallback_activity(rid, case.audit_at))

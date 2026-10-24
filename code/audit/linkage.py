@@ -264,3 +264,135 @@ def linked_resources(case: CaseRequest, subject: Subject, skip_images: bool = Fa
         rid, act = assigned
         out[rid] = Link(rid, subject.user_id, "run", {act}, None, f"deletion-worker event {act} next to reported_at")
     return out
+
+
+_linked_resources_base = linked_resources
+
+
+# --------------------------------------------------------------------------- anonymised analytics
+# Records-assurance snapshot bundles list the records of one collection ordered by the
+# owner's user id. Anonymised analytics profiles carry no identifier, but their position
+# between identifiable neighbours bounds the owner's user id; the deletion-worker run that
+# anonymised them bounds the owner further (only users whose account was processed in the
+# same run). When those constraints leave exactly one consistent assignment, we use it.
+def _uid_num(uid: str) -> int:
+    return int(uid.rsplit("_", 1)[1])
+
+
+@lru_cache(maxsize=None)
+def _case_accounts(skip_images: bool = False) -> Dict[str, Tuple[str, str]]:
+    """case_id -> (user_id, account_id) for every case with a linked account."""
+    out = {}
+    for c in list(load_requests()) + list(load_requests(sample=True)):
+        s = resolve_subject(c.email)
+        if s is None:
+            continue
+        acc = [r for r in _linked_resources_base(c, s, skip_images) if r.startswith("account_")]
+        if acc:
+            out[c.case_id] = (s.user_id, acc[0])
+    return out
+
+
+@lru_cache(maxsize=None)
+def _run_users(skip_images: bool = False) -> List[Tuple[object, Dict[str, str]]]:
+    """[(run, {user_id: case_id})] from the account deletion events inside each run."""
+    acc_to_case = {acc: (cid, uid) for cid, (uid, acc) in _case_accounts(skip_images).items()}
+    out = []
+    for run in worker_runs():
+        users: Dict[str, str] = {}
+        for ev in run.events:
+            if ev.event_type == "DELETE_RECORD" and ev.resource_id in acc_to_case:
+                cid, uid = acc_to_case[ev.resource_id]
+                users[uid] = cid
+        out.append((run, users))
+    return out
+
+
+def _run_for_activity(activity_id: str):
+    for run, users in _run_users():
+        if any(e.activity_id == activity_id for e in run.events):
+            return run, users
+    return None, {}
+
+
+@lru_cache(maxsize=None)
+def orphan_analytics_assignments(skip_images: bool = False) -> Dict[str, Link]:
+    """case_id -> Link for anonymised analytics records attributed by bundle order."""
+    from .state import state_at
+    from . import evidence as evmod
+    glinks = global_links(skip_images)
+    obs_by_rid = observations_by_resource(skip_images)
+    users_with_analytics = {uid for rid, by_user in glinks.items() if rid.startswith("analytics_") for uid in by_user}
+    acc_by_case = _case_accounts(skip_images)
+    assignments: Dict[str, Link] = {}
+    for pe in evmod.all_evidence(skip_images).values():
+        seq = [o for o in pe.observations if o.resource_id.startswith("analytics_") and "snapshot_bundle" in o.source]
+        # group by snapshot index (source like name:snapshots[i][j])
+        groups: Dict[str, List[Observation]] = {}
+        for o in seq:
+            groups.setdefault(o.source.split("]")[0], []).append(o)
+        for _, items in groups.items():
+            owners = [sorted(glinks.get(o.resource_id, {})) for o in items]
+            if all(owners):
+                continue
+            snap_time = items[0].observed_at
+            cands: List[List[str]] = []
+            for k, o in enumerate(items):
+                if owners[k]:
+                    cands.append([owners[k][0]])
+                    continue
+                prev = max([_uid_num(owners[j][0]) for j in range(k) if owners[j]] or [0])
+                nxt = min([_uid_num(owners[j][0]) for j in range(k + 1, len(items)) if owners[j]] or [10 ** 9])
+                acts = [a for a in activities_by_resource().get(o.resource_id, []) if a.event_type == "ANONYMIZE_RECORD"]
+                run_users: Dict[str, str] = {}
+                for a in acts:
+                    _, ru = _run_for_activity(a.activity_id)
+                    run_users.update(ru)
+                pool = []
+                for uid, cid in run_users.items():
+                    n = _uid_num(uid)
+                    if not (prev < n < nxt) or uid in users_with_analytics:
+                        continue
+                    acc = acc_by_case.get(cid, (None, None))[1]
+                    st = state_at(acc, snap_time, obs_by_rid.get(acc, []), evmod.scopes_for(uid, skip_images)) if acc else None
+                    if st is not None and st.presence == "PRESENT":
+                        continue
+                    pool.append(uid)
+                cands.append(sorted(set(pool), key=_uid_num))
+            # enumerate strictly increasing assignments
+            solutions: List[List[str]] = []
+
+            def rec(k: int, prev_n: int, acc: List[str]):
+                if len(solutions) > 50:
+                    return
+                if k == len(cands):
+                    solutions.append(list(acc))
+                    return
+                for uid in cands[k]:
+                    if _uid_num(uid) > prev_n:
+                        rec(k + 1, _uid_num(uid), acc + [uid])
+            rec(0, 0, [])
+            if not solutions:
+                continue
+            for k, o in enumerate(items):
+                if owners[k]:
+                    continue
+                choices = {sol[k] for sol in solutions}
+                if len(choices) != 1:
+                    continue
+                uid = choices.pop()
+                cid = next((c for c, (u, _) in acc_by_case.items() if u == uid), None)
+                if cid is None or cid in assignments:
+                    continue
+                assignments[cid] = Link(o.resource_id, uid, "run", {pe.evidence_id}, o.observed_at,
+                                        f"anonymised analytics attributed by bundle order in {pe.evidence_id}")
+    return assignments
+
+
+def linked_resources(case: CaseRequest, subject: Subject, skip_images: bool = False) -> Dict[str, Link]:  # noqa: F811
+    out = _linked_resources_base(case, subject, skip_images)
+    if not any(r.startswith("analytics_") for r in out):
+        extra = orphan_analytics_assignments(skip_images).get(case.case_id)
+        if extra and relevant_for(case, extra.resource_id, skip_images):
+            out[extra.resource_id] = extra
+    return out

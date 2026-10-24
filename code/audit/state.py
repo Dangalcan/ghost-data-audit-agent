@@ -12,6 +12,9 @@ from dataclasses import dataclass
 from typing import Dict, Iterable, List, Optional
 
 from .evidence.base import Observation, Scope, default_kind
+from .identity import Tokens
+
+EMPTY_TOKENS = Tokens(frozenset(), frozenset(), frozenset(), frozenset())
 
 KIND_PRIORITY = {  # more specific kinds win when sources disagree
     "support_attachment": 3, "support_contact": 3, "analytics_contact": 3, "object": 3,
@@ -66,7 +69,7 @@ def state_at(resource_id: str, audit_at: str, observations: List[Observation], s
         for sc in scopes:
             if sc.system_id == system and sc.usable_at(audit_at) and resource_id not in sc.present:
                 hist.append(Observation(resource_id=resource_id, evidence_id=sc.evidence_id, observed_at=sc.observed_at,
-                                        presence="ABSENT", kind=kind, tokens=observations[0].tokens if observations else None,
+                                        presence="ABSENT", kind=kind, tokens=observations[0].tokens if observations else EMPTY_TOKENS,
                                         implicit=True, source=f"scope:{sc.evidence_id}:{system}", captured_at=sc.captured_at))
     hist.sort(key=_rank, reverse=True)
     if not hist:

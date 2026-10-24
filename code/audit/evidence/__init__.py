@@ -60,3 +60,24 @@ def all_observations(skip_images: bool = False) -> List[Observation]:
 
 def all_scopes(skip_images: bool = False) -> List[Scope]:
     return [s for pe in all_evidence(skip_images).values() for s in pe.scopes]
+
+
+@lru_cache(maxsize=None)
+def file_subjects(skip_images: bool = False) -> Dict[str, set]:
+    """evidence_id -> user ids mentioned anywhere in that file."""
+    from ..identity import owners_of
+    out: Dict[str, set] = {}
+    for o in all_observations(skip_images):
+        out.setdefault(o.evidence_id, set()).update(owners_of(o.tokens))
+    return out
+
+
+def scopes_for(user_id: str, skip_images: bool = False) -> List[Scope]:
+    """Scopes usable for one subject.
+
+    A snapshot proves absence only for the people it was taken for: the inventory and
+    replica captures list the records of the users under review at that time, so a
+    record missing from a capture that never mentions the subject proves nothing.
+    """
+    fs = file_subjects(skip_images)
+    return [sc for sc in all_scopes(skip_images) if user_id in fs.get(sc.evidence_id, set())]

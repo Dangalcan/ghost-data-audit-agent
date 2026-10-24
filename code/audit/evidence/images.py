@@ -54,6 +54,10 @@ def extraction_to_observations(extraction: dict, evidence_id: str, captured_at: 
 def parse_image(path, evidence_id: str, captured_at: str) -> ParsedEvidence:
     extraction = cached_extraction(evidence_id)
     if extraction is None:
-        from ..llm import extract_screenshot  # lazy: only when the cache is cold
-        extraction = extract_screenshot(path, evidence_id)
+        try:
+            from ..llm import extract_screenshot  # lazy: only when the cache is cold
+            extraction = extract_screenshot(path, evidence_id)
+        except Exception as exc:  # no key / offline: the screenshot contributes nothing
+            return ParsedEvidence(evidence_id=evidence_id, captured_at=captured_at,
+                                  notes=[f"screenshot not extracted ({type(exc).__name__}: {exc})"])
     return extraction_to_observations(extraction, evidence_id, captured_at, path.name)
