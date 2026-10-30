@@ -1,6 +1,6 @@
 """Stage the Claude Code session traces of this checkout into agent-trace/ and zip them.
 
-Follows the organizer's agent_trace_instructions.md: session JSONL files (plus their
+Follows the organizer's trace-export guide: session JSONL files (plus their
 tool-result folders) go to agent-trace/claude-code/, a readable transcript export sits
 next to them, personal memory files and settings are never copied, and the staged text
 is redacted before zipping.

@@ -6,8 +6,8 @@ identifiers, reads every evidence file (logs, JSON, SQL snapshots, PDFs, screens
 reconstructs each record's state at `audit_at`, applies `deletion_rules.csv` and
 writes the ordered findings / remediation / verification plan for all 518 requests.
 
-The challenge contract is in [`problem_statement.md`](./problem_statement.md) and
-[`AGENTS.md`](./AGENTS.md). Design notes: [`code/docs/ARCHITECTURE.md`](./code/docs/ARCHITECTURE.md).
+The challenge contract is in [`problem_statement.md`](./problem_statement.md).
+Design notes: [`code/docs/ARCHITECTURE.md`](./code/docs/ARCHITECTURE.md).
 
 ![HackerRank Orchestrate certificate: Daniel Galván, final rank #538 of 4,094](docs/media/orchestrate-certificate.png)
 
@@ -88,7 +88,7 @@ code/validate_output.py      submission validator
 code/tests/                  pytest unit tests
 code/cache/vision/           screenshot extractions (JSON, reviewed)
 code/cache/llm/              cached model responses keyed by prompt + content
-code/docs/                   ARCHITECTURE.md, INTERVIEW_NOTES.md
+code/docs/                   ARCHITECTURE.md (design decisions, security, limitations)
 pyproject.toml               project metadata, ruff and pytest configuration
 tools/package.py             builds code.zip;  tools/collect_agent_trace.py stages agent-trace.zip
 ```
