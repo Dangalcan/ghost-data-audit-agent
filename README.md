@@ -9,13 +9,17 @@ writes the ordered findings / remediation / verification plan for all 518 reques
 The challenge contract is in [`problem_statement.md`](./problem_statement.md) and
 [`AGENTS.md`](./AGENTS.md). Design notes: [`code/docs/ARCHITECTURE.md`](./code/docs/ARCHITECTURE.md).
 
+![HackerRank Orchestrate certificate: Daniel Galván, final rank #538 of 4,094](docs/media/orchestrate-certificate.png)
+
 ## Result
 
-Submitted 2026-10-24. Live leaderboard at submission time: **#15 of 300** evaluated
-entries (final results announced 2026-10-27). Scores: chat transcript 5.4/10,
-AI judge interview 11.7/30, output CSV 26.4/30, **code zip 21.6/30 (highest code score
-among the top 30)**, total 65.1/100. Everything that was uploaded is archived under
-[`submission/`](./submission/README.md).
+Final result (announced 2026-10-27): **#538 of 4,090 participants** (top 13 %), score
+**65.4 / 100**: chat transcript 5.4/10, AI judge interview 11.7/30, output CSV 26.7/30,
+code zip 21.6/30 (winner: 88.6). The code score sits close to the winners' range (22-25);
+the 30-minute AI-judge interview is where the points went. Everything that was uploaded is
+archived under [`submission/`](./submission/README.md).
+
+![HackerRank Orchestrate share card](docs/media/orchestrate-share.gif)
 
 ## Approach in one paragraph
 

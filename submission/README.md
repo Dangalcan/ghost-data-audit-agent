@@ -10,5 +10,5 @@ Exact copies of the solution files uploaded on 2026-10-24 (UTC):
 The chat transcript and the agent traces that the platform also required were uploaded
 separately and are not part of this repository.
 
-Live leaderboard at submission time: #15 of 300 (chat 5.4 / interview 11.7 / output 26.4 / code 21.6 = 65.1).
-Final results: 2026-10-27.
+Final result (2026-10-27): #538 of 4,090, score 65.4 / 100
+(chat 5.4 / interview 11.7 / output 26.7 / code 21.6). Winner: 88.6.
